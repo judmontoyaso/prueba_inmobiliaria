@@ -2,14 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Google Font ────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Design tokens ──────────────────────────────────── */
 :root {
-  --bg: #0f1117;
-  --surface: #1a1d27;
-  --border: #2a2d3a;
-  --primary: #6366f1;
+  --bg:          #06080f;
+  --surface:     rgba(255,255,255,0.04);
+  --surface-2:   rgba(255,255,255,0.07);
+  --border:      rgba(255,255,255,0.08);
+  --border-2:    rgba(255,255,255,0.14);
+  --primary:     #818cf8;
+  --primary-glow: rgba(129,140,248,0.3);
+  --cyan:        #22d3ee;
+  --cyan-glow:   rgba(34,211,238,0.25);
+  --text:        #e2e8f0;
+  --muted:       #64748b;
+  --success:     #34d399;
+  --danger:      #f87171;
+  --warning:     #fbbf24;
 }
 
+/* ── Base ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-family: 'Inter', sans-serif; }
+
 body {
-  background: var(--bg);
-  color: #e2e8f0;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
+/* Aurora background blobs */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  border-radius: 9999px;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+body::before {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 70%);
+  top: -200px; left: -200px;
+}
+body::after {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(34,211,238,0.12) 0%, transparent 70%);
+  bottom: -150px; right: -150px;
+}
+
+/* ── Glass utilities ────────────────────────────────── */
+@layer components {
+  .glass {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-2 {
+    background: var(--surface-2);
+    border: 1px solid var(--border-2);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .glass-hover {
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .glass-hover:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(255,255,255,0.15);
+    box-shadow: 0 0 24px var(--primary-glow);
+  }
+
+  .glow-text {
+    background: linear-gradient(135deg, #a5b4fc 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: #fff;
+    border: 1px solid rgba(129,140,248,0.4);
+    box-shadow: 0 0 16px var(--primary-glow);
+    transition: all 0.2s;
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    box-shadow: 0 0 28px var(--primary-glow);
+  }
+  .btn-primary:disabled { opacity: 0.45; }
+
+  .btn-danger {
+    background: linear-gradient(135deg, #b91c1c, #991b1b);
+    color: #fff;
+    border: 1px solid rgba(248,113,113,0.3);
+    box-shadow: 0 0 14px rgba(248,113,113,0.2);
+    transition: all 0.2s;
+  }
+  .btn-danger:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    box-shadow: 0 0 22px rgba(248,113,113,0.35);
+  }
+  .btn-danger:disabled { opacity: 0.45; }
+
+  .btn-ghost {
+    background: rgba(255,255,255,0.05);
+    color: #94a3b8;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background: rgba(255,255,255,0.09);
+    color: #e2e8f0;
+    border-color: var(--border-2);
+  }
+  .btn-ghost:disabled { opacity: 0.45; }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: box-shadow 0.2s;
+  }
+  .stat-card:hover {
+    box-shadow: 0 0 20px var(--primary-glow);
+  }
+}
+
+/* ── Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }

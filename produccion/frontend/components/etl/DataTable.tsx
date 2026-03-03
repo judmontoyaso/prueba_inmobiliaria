@@ -1,7 +1,7 @@
 type Row = Record<string, unknown>;
 
 function cell(v: unknown): string {
-  if (v === null || v === undefined) return "";
+  if (v === null || v === undefined) return "—";
   if (typeof v === "object") return JSON.stringify(v);
   return String(v);
 }
@@ -11,19 +11,28 @@ export default function DataTable({ rows, title }: { rows: Row[]; title: string 
   const keys = Object.keys(rows[0]);
 
   return (
-    <div
-      className="rounded-xl border p-4"
-      style={{ borderColor: "var(--border)", background: "var(--surface)" }}
-    >
-      <h3 className="text-sm font-semibold mb-3">{title}</h3>
+    <div className="glass rounded-xl overflow-hidden">
+      <div
+        className="px-4 py-2.5 flex items-center gap-2"
+        style={{ borderBottom: "1px solid var(--border)" }}
+      >
+        <span className="text-xs font-semibold text-slate-300 tracking-wide uppercase">{title}</span>
+        <span
+          className="ml-auto text-xs px-2 py-0.5 rounded-full"
+          style={{ background: "rgba(129,140,248,0.15)", color: "#a5b4fc" }}
+        >
+          {rows.length} filas
+        </span>
+      </div>
       <div className="overflow-x-auto">
         <table className="w-full text-xs">
           <thead>
-            <tr>
+            <tr style={{ background: "rgba(255,255,255,0.03)" }}>
               {keys.map((k) => (
                 <th
                   key={k}
-                  className="text-left pb-2 pr-4 text-slate-400 font-medium uppercase tracking-wide whitespace-nowrap"
+                  className="text-left px-4 py-2 text-slate-500 font-medium uppercase tracking-wider whitespace-nowrap"
+                  style={{ borderBottom: "1px solid var(--border)" }}
                 >
                   {k}
                 </th>
@@ -34,11 +43,17 @@ export default function DataTable({ rows, title }: { rows: Row[]; title: string 
             {rows.map((row, i) => (
               <tr
                 key={i}
-                className="border-t hover:bg-indigo-900/10 transition-colors"
-                style={{ borderColor: "var(--border)" }}
+                className="transition-colors"
+                style={{ borderBottom: "1px solid var(--border)" }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "rgba(129,140,248,0.06)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "transparent";
+                }}
               >
                 {keys.map((k) => (
-                  <td key={k} className="py-1.5 pr-4 whitespace-nowrap">
+                  <td key={k} className="px-4 py-2 text-slate-300 whitespace-nowrap">
                     {cell(row[k])}
                   </td>
                 ))}

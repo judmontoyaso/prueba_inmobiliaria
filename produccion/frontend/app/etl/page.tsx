@@ -17,6 +17,13 @@ interface UploadResult {
   error?: string;
 }
 
+/* ── tiny Spinner ─────────────────────────────────────────────────────────── */
+function Spinner() {
+  return (
+    <span className="inline-block w-3.5 h-3.5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+  );
+}
+
 export default function ETLPage() {
   const inputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading]     = useState(false);
@@ -27,18 +34,14 @@ export default function ETLPage() {
   const [dbAnun, setDbAnun]       = useState<Row[]>([]);
   const [dbLoading, setDbLoading] = useState(false);
 
-  // Carga preview (20 filas) de ambas tablas al montar
   const cargarBD = useCallback(async () => {
     setDbLoading(true);
     try {
       const [rp, ra] = await Promise.all([getPropiedades(20), getAnuncios(20)]);
       setDbProp(rp.data);
       setDbAnun(ra.data);
-    } catch {
-      // silencioso — la BD puede estar vacía
-    } finally {
-      setDbLoading(false);
-    }
+    } catch { /* silencioso */ }
+    finally { setDbLoading(false); }
   }, []);
 
   useEffect(() => { cargarBD(); }, [cargarBD]);
@@ -59,32 +62,22 @@ export default function ETLPage() {
   }, []);
 
   const handleFile = useCallback(async (file: File) => {
-    if (!file.name.endsWith(".csv")) {
-      alert("Solo se aceptan archivos .csv");
-      return;
-    }
-    // Resetea el input para aceptar el mismo archivo nuevamente
+    if (!file.name.endsWith(".csv")) { alert("Solo se aceptan archivos .csv"); return; }
     if (inputRef.current) inputRef.current.value = "";
-
     const id = Date.now();
     setLoading(true);
     try {
       const data = await uploadCSV(file);
       setUploads((prev) => [{
-        id,
-        filename: file.name,
-        ok: true,
+        id, filename: file.name, ok: true,
         reporte: data.reporte,
         preview_propiedades: data.preview_propiedades,
         preview_anuncios: data.preview_anuncios,
       }, ...prev]);
-      // Refresca vista de BD tras cada carga exitosa
       cargarBD();
     } catch (e: unknown) {
       setUploads((prev) => [{
-        id,
-        filename: file.name,
-        ok: false,
+        id, filename: file.name, ok: false,
         error: e instanceof Error ? e.message : "Error desconocido",
       }, ...prev]);
     } finally {
@@ -99,34 +92,62 @@ export default function ETLPage() {
   };
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between gap-3 flex-wrap">
-        <h1 className="text-xl font-semibold">📊 ETL Propiedades</h1>
+    <div className="space-y-7">
+
+      {/* ── Page header ─────────────────────────────────────────────── */}
+      <div className="flex items-start justify-between gap-4 flex-wrap">
+        <div>
+          <h1 className="text-2xl font-bold glow-text">ETL Propiedades</h1>
+          <p className="text-slate-500 text-sm mt-1">
+            Carga y procesa datos de propiedades hacia Supabase
+          </p>
+        </div>
         <button
           onClick={handleReset}
           disabled={resetting || loading}
-          className="px-4 py-2 rounded-lg text-sm font-medium bg-red-700 hover:bg-red-600 disabled:opacity-50 transition-colors"
+          className="btn-danger px-4 py-2 rounded-xl text-sm font-medium"
         >
-          {resetting ? "Reiniciando…" : "🗑️ Reiniciar BD"}
+          {resetting ? <span className="flex items-center gap-2"><Spinner /> Reiniciando…</span> : "🗑️ Reiniciar BD"}
         </button>
       </div>
 
-      {/* Upload zone */}
-      <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+      {/* ── Upload zone ─────────────────────────────────────────────── */}
+      <div className="glass rounded-2xl p-1">
         <label
           onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
           onDragLeave={() => setDragging(false)}
           onDrop={onDrop}
-          className={`flex flex-col items-center justify-center gap-2 border-2 border-dashed rounded-xl py-10 cursor-pointer transition-colors ${
-            dragging ? "border-indigo-500 bg-indigo-900/10" : loading ? "border-yellow-600 bg-yellow-900/10" : "border-slate-700"
-          }`}
+          className="flex flex-col items-center justify-center gap-3 rounded-xl py-12 cursor-pointer transition-all border-2 border-dashed"
+          style={{
+            borderColor: dragging
+              ? "var(--primary)"
+              : loading
+              ? "rgba(251,191,36,0.5)"
+              : "rgba(255,255,255,0.1)",
+            background: dragging
+              ? "rgba(99,102,241,0.06)"
+              : loading
+              ? "rgba(251,191,36,0.04)"
+              : "transparent",
+          }}
         >
-          <span className="text-4xl">{loading ? "⏳" : "📄"}</span>
-          <span className="font-medium text-sm">
-            {loading ? "Procesando CSV… espera" : "Arrastra tu CSV aquí o haz clic (acepta múltiples archivos uno a uno)"}
-          </span>
-          <span className="text-slate-500 text-xs">Solo archivos .csv</span>
+          <div
+            className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
+            style={{
+              background: "linear-gradient(135deg, rgba(99,102,241,0.25), rgba(34,211,238,0.15))",
+              border: "1px solid rgba(129,140,248,0.3)",
+            }}
+          >
+            {loading ? "⏳" : "📄"}
+          </div>
+          <div className="text-center">
+            <p className="font-medium text-sm text-slate-200">
+              {loading
+                ? "Procesando CSV…"
+                : "Arrastra tu CSV aquí o haz clic para seleccionar"}
+            </p>
+            <p className="text-slate-600 text-xs mt-1">Solo archivos .csv</p>
+          </div>
           <input
             ref={inputRef}
             type="file"
@@ -138,62 +159,129 @@ export default function ETLPage() {
         </label>
       </div>
 
-      {/* Historial de cargas */}
+      {/* ── Upload history ──────────────────────────────────────────── */}
       {uploads.length > 0 && (
         <div className="space-y-4">
-          <h2 className="text-sm font-semibold text-slate-400">Historial de cargas ({uploads.length})</h2>
+          <div className="flex items-center gap-3">
+            <h2 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+              Historial de cargas
+            </h2>
+            <span
+              className="text-xs px-2 py-0.5 rounded-full"
+              style={{ background: "rgba(129,140,248,0.15)", color: "#a5b4fc" }}
+            >
+              {uploads.length}
+            </span>
+          </div>
+
           {uploads.map((u, i) => (
             <div
               key={u.id}
-              className="rounded-xl border p-4 space-y-3"
-              style={{ borderColor: u.ok ? "var(--border)" : "#7f1d1d", background: "var(--surface)" }}
+              className="glass rounded-2xl overflow-hidden"
+              style={{
+                borderLeft: u.ok
+                  ? "3px solid rgba(52,211,153,0.6)"
+                  : "3px solid rgba(248,113,113,0.6)",
+              }}
             >
-              <div className="flex items-center gap-2 text-sm font-medium">
-                <span>{u.ok ? "✅" : "❌"}</span>
-                <span className="font-mono">{u.filename}</span>
-                {i === 0 && <span className="text-xs text-indigo-400 ml-auto">← última</span>}
+              {/* Card header */}
+              <div
+                className="flex items-center gap-3 px-5 py-3"
+                style={{ borderBottom: "1px solid var(--border)" }}
+              >
+                <span className="text-base">{u.ok ? "✅" : "❌"}</span>
+                <span className="font-mono text-sm text-slate-200">{u.filename}</span>
+                {i === 0 && (
+                  <span
+                    className="ml-auto text-xs px-2 py-0.5 rounded-full"
+                    style={{ background: "rgba(129,140,248,0.15)", color: "#a5b4fc" }}
+                  >
+                    última
+                  </span>
+                )}
               </div>
-              {u.ok && u.reporte ? (
-                <>
-                  <ReporteStats reporte={u.reporte} />
-                  <p className="text-xs text-green-400">
-                    Props: {u.reporte.propiedades_nuevas} nuevas • {u.reporte.propiedades_omitidas} omitidas • {u.reporte.propiedades_rechazadas} rechazadas
-                    {" | "}
-                    Anuncios: {u.reporte.anuncios_nuevos} nuevos • {u.reporte.anuncios_actualizados} actualizados • {u.reporte.anuncios_rechazados} idénticos
-                  </p>
-                  <DataTable rows={u.preview_propiedades ?? []} title="🏗️ Preview propiedades (20 filas)" />
-                  <DataTable rows={u.preview_anuncios ?? []}    title="💰 Preview anuncios (20 filas)" />
-                </>
-              ) : (
-                <p className="text-sm text-red-400">{u.error}</p>
-              )}
+
+              {/* Card body */}
+              <div className="p-5 space-y-4">
+                {u.ok && u.reporte ? (
+                  <>
+                    <ReporteStats reporte={u.reporte} />
+                    <div
+                      className="text-xs rounded-xl px-4 py-2.5 flex flex-wrap gap-x-4 gap-y-1"
+                      style={{ background: "rgba(52,211,153,0.06)", border: "1px solid rgba(52,211,153,0.18)" }}
+                    >
+                      <span className="text-emerald-400">
+                        <strong>{u.reporte.propiedades_nuevas}</strong> props nuevas
+                      </span>
+                      <span className="text-slate-400">
+                        <strong>{u.reporte.propiedades_omitidas}</strong> omitidas
+                      </span>
+                      <span className="text-red-400">
+                        <strong>{u.reporte.propiedades_rechazadas}</strong> rechazadas
+                      </span>
+                      <span className="text-slate-500">·</span>
+                      <span className="text-emerald-400">
+                        <strong>{u.reporte.anuncios_nuevos}</strong> anuncios nuevos
+                      </span>
+                      <span className="text-yellow-400">
+                        <strong>{u.reporte.anuncios_actualizados}</strong> actualizados
+                      </span>
+                      <span className="text-slate-500">
+                        <strong>{u.reporte.anuncios_rechazados}</strong> idénticos
+                      </span>
+                    </div>
+                    <DataTable rows={u.preview_propiedades ?? []} title="🏗️ Preview propiedades" />
+                    <DataTable rows={u.preview_anuncios    ?? []} title="💰 Preview anuncios" />
+                  </>
+                ) : (
+                  <p className="text-sm text-red-400">{u.error}</p>
+                )}
+              </div>
             </div>
           ))}
         </div>
       )}
 
-      {/* Datos actuales en BD */}
-      <div className="rounded-xl border p-4 space-y-3" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
-        <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold">🗄️ Propiedades en BD ({dbProp.length}{dbProp.length === 100 ? "+" : ""})</h2>
+      {/* ── DB current data ─────────────────────────────────────────── */}
+      <div className="glass rounded-2xl overflow-hidden">
+        <div
+          className="flex items-center justify-between px-5 py-4"
+          style={{ borderBottom: "1px solid var(--border)" }}
+        >
+          <div className="flex items-center gap-2">
+            <span className="text-base">🗄️</span>
+            <h2 className="text-sm font-semibold text-slate-200">
+              Datos en Supabase
+            </h2>
+            <span
+              className="text-xs px-2 py-0.5 rounded-full"
+              style={{ background: "rgba(34,211,238,0.12)", color: "#67e8f9" }}
+            >
+              {dbProp.length} props · {dbAnun.length} anuncios
+            </span>
+          </div>
           <button
             onClick={cargarBD}
             disabled={dbLoading}
-            className="text-xs px-3 py-1 rounded-lg bg-slate-700 hover:bg-slate-600 disabled:opacity-50"
+            className="btn-ghost px-3 py-1.5 rounded-lg text-xs font-medium"
           >
-            {dbLoading ? "Cargando…" : "🔄 Refrescar"}
+            {dbLoading ? <span className="flex items-center gap-1.5"><Spinner /> Cargando…</span> : "🔄 Refrescar"}
           </button>
         </div>
-        {dbLoading ? (
-          <p className="text-slate-500 text-sm">Cargando desde Supabase…</p>
-        ) : dbProp.length > 0 || dbAnun.length > 0 ? (
-          <div className="space-y-4">
-            <DataTable rows={dbProp} title="🏗️ Propiedades — preview 20 filas" />
-            <DataTable rows={dbAnun} title="💰 Anuncios — preview 20 filas" />
-          </div>
-        ) : (
-          <p className="text-slate-500 text-sm">La BD está vacía. Sube un CSV para comenzar.</p>
-        )}
+        <div className="p-5 space-y-4">
+          {dbLoading ? (
+            <p className="text-slate-600 text-sm text-center py-4">Cargando desde Supabase…</p>
+          ) : dbProp.length > 0 || dbAnun.length > 0 ? (
+            <>
+              <DataTable rows={dbProp} title="🏗️ Propiedades — últimas 20 filas" />
+              <DataTable rows={dbAnun} title="💰 Anuncios — últimas 20 filas" />
+            </>
+          ) : (
+            <p className="text-slate-600 text-sm text-center py-4">
+              La BD está vacía. Sube un CSV para comenzar.
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );

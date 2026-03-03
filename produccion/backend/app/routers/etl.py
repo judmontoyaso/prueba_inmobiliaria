@@ -209,16 +209,18 @@ async def upload_csv(file: UploadFile = File(...)):
     CHUNK = 500
 
     # Detectar cuáles IDs ya existen — consultando en lotes
-    ids_validas = [int(r["id_propiedad"]) for _, r in dp.iterrows()]
-    ids_en_db: set = set()
+    ids_validas: list[int] = [int(r["id_propiedad"]) for _, r in dp.iterrows()]
+    ids_en_db: set[int] = set()
     for i in range(0, len(ids_validas), CHUNK):
         chunk_ids = ids_validas[i : i + CHUNK]
         resp = db.table("propiedad").select("id_propiedad").in_("id_propiedad", chunk_ids).execute()
-        ids_en_db.update(r["id_propiedad"] for r in resp.data)
+        ids_en_db.update(int(r["id_propiedad"]) for r in resp.data)  # normalizar a int Python
 
-    ids_set = set(ids_validas)
+    ids_set: set[int] = set(ids_validas)
     n_nuevas   = len(ids_set - ids_en_db)
     n_omitidas = len(ids_set & ids_en_db)  # ya existen, no se tocan
+    log.info("IDs en CSV: %d | en BD: %d | nuevas: %d | omitidas: %d",
+             len(ids_set), len(ids_en_db), n_nuevas, n_omitidas)
 
     # INSERT propiedades nuevas — las existentes se omiten (ON CONFLICT DO NOTHING)
     prop_rows = [

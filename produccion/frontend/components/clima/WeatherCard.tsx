@@ -4,15 +4,15 @@ import { useState } from "react";
 import type { ClimaRow } from "@/lib/api";
 import { actualizarClima } from "@/lib/api";
 
-function weatherIcon(code: number) {
-  if (code === 0) return "☀️";
-  if (code <= 2) return "🌤️";
-  if (code === 3) return "☁️";
-  if (code <= 48) return "🌫️";
-  if (code <= 57) return "🌦️";
-  if (code <= 67) return "🌧️";
-  if (code <= 77) return "❄️";
-  return "⛈️";
+function weatherInfo(code: number): { icon: string; glow: string } {
+  if (code === 0)  return { icon: "☀️",  glow: "rgba(251,191,36,0.22)" };
+  if (code <= 2)   return { icon: "🌤️", glow: "rgba(251,191,36,0.14)" };
+  if (code === 3)  return { icon: "☁️",  glow: "rgba(148,163,184,0.12)" };
+  if (code <= 48)  return { icon: "🌫️", glow: "rgba(148,163,184,0.1)" };
+  if (code <= 57)  return { icon: "🌦️", glow: "rgba(96,165,250,0.14)" };
+  if (code <= 67)  return { icon: "🌧️", glow: "rgba(96,165,250,0.22)" };
+  if (code <= 77)  return { icon: "❄️",  glow: "rgba(186,230,253,0.18)" };
+  return             { icon: "⛈️",  glow: "rgba(251,191,36,0.18)" };
 }
 
 function formatFecha(f: string | null | undefined) {
@@ -26,6 +26,12 @@ function formatFecha(f: string | null | undefined) {
   });
 }
 
+function tempGradient(t: number): string {
+  if (t >= 28) return "linear-gradient(135deg, #fbbf24, #f97316)";
+  if (t >= 22) return "linear-gradient(135deg, #a5b4fc, #818cf8)";
+  return "linear-gradient(135deg, #38bdf8, #22d3ee)";
+}
+
 export default function WeatherCard({
   d: initial,
   onUpdate,
@@ -33,7 +39,7 @@ export default function WeatherCard({
   d: ClimaRow;
   onUpdate?: (updated: ClimaRow) => void;
 }) {
-  const [d, setD]           = useState<ClimaRow>(initial);
+  const [d, setD]             = useState<ClimaRow>(initial);
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState<string | null>(null);
 
@@ -53,35 +59,69 @@ export default function WeatherCard({
     }
   };
 
+  const { icon, glow } = weatherInfo(d.weather_code);
+
   return (
     <div
-      className="rounded-xl border p-4 flex flex-col gap-2"
-      style={{ borderColor: "var(--border)", background: "var(--bg)" }}
+      className="glass glass-hover rounded-2xl p-5 flex flex-col gap-3 relative overflow-hidden"
+      style={{ boxShadow: `0 4px 30px ${glow}` }}
     >
+      {/* Watermark icon */}
+      <span
+        aria-hidden
+        className="absolute -right-2 -top-1 text-7xl opacity-[0.08] pointer-events-none select-none"
+      >
+        {icon}
+      </span>
+
+      {/* Header */}
       <div className="flex items-start justify-between gap-2">
-        <p className="font-semibold text-sm">
-          {weatherIcon(d.weather_code)} {d.municipio}
-        </p>
+        <div>
+          <p className="font-semibold text-sm text-white tracking-wide">{d.municipio}</p>
+          <p className="text-xs mt-0.5" style={{ color: "rgba(100,116,139,0.9)" }}>
+            {d.latitud}°N · {d.longitud}°W
+          </p>
+        </div>
         <button
           onClick={handleActualizar}
           disabled={loading}
-          title="Actualizar este municipio"
-          className="text-xs px-2 py-1 rounded-lg bg-indigo-700 hover:bg-indigo-600 disabled:opacity-50 transition-colors flex items-center gap-1 shrink-0"
+          title="Actualizar"
+          className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-sm transition-all disabled:opacity-40"
+          style={{
+            background: "rgba(129,140,248,0.12)",
+            border: "1px solid rgba(129,140,248,0.28)",
+          }}
         >
           {loading ? (
-            <span className="inline-block w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+            <span className="inline-block w-3 h-3 border-2 border-white/20 border-t-white rounded-full animate-spin" />
           ) : (
             "🔄"
           )}
         </button>
       </div>
 
-      <p className="text-3xl font-bold text-indigo-400">{d.temperatura_c}°C</p>
-      <p className="text-slate-400 text-xs">{d.descripcion_clima}</p>
-      <p className="text-slate-600 text-xs">📍 {d.latitud}, {d.longitud}</p>
+      {/* Temperature */}
+      <div>
+        <p
+          className="text-4xl font-bold leading-none"
+          style={{
+            background: tempGradient(d.temperatura_c),
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          {d.temperatura_c}°C
+        </p>
+        <p className="text-slate-400 text-xs mt-1.5">{d.descripcion_clima}</p>
+      </div>
 
+      {/* Timestamp */}
       {d.ultima_actualizacion && (
-        <p className="text-slate-500 text-xs border-t border-slate-700 pt-2 mt-1">
+        <p
+          className="text-xs pt-2.5"
+          style={{ borderTop: "1px solid var(--border)", color: "rgba(100,116,139,0.8)" }}
+        >
           🕒 {formatFecha(d.ultima_actualizacion)}
         </p>
       )}
