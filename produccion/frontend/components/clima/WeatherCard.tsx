@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ClimaRow } from "@/lib/api";
 import { actualizarClima } from "@/lib/api";
 import {
@@ -47,6 +47,10 @@ export default function WeatherCard({
   const [d, setD]             = useState<ClimaRow>(initial);
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState<string | null>(null);
+
+  useEffect(() => {
+    setD(initial);
+  }, [initial]);
 
   const handleActualizar = async () => {
     setLoading(true);
