@@ -27,9 +27,6 @@ export default function Navbar() {
           </div>
           <span className="font-bold text-sm" style={{ color: "var(--primary)" }}>
             Inmobiliaria
-            <span className="font-normal ml-1 hidden sm:inline" style={{ color: "var(--muted)" }}>
-              Medellín
-            </span>
           </span>
         </div>
 
