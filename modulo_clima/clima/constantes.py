@@ -1,22 +1,32 @@
 # constantes.py
-# Archivo maestro de municipios y códigos WMO.
-# Editar aquí para agregar o quitar municipios.
+# Códigos WMO y carga de municipios desde CSV.
+
+import os
+import csv
 
 URL_API = "https://api.open-meteo.com/v1/forecast"
 
-# Municipios del Área Metropolitana del Valle de Aburrá
-MUNICIPIOS = [
-    {"nombre": "Medellín",    "lat":  6.2442, "lon": -75.5812},
-    {"nombre": "Envigado",    "lat":  6.1720, "lon": -75.5872},
-    {"nombre": "Itagüí",      "lat":  6.1847, "lon": -75.5996},
-    {"nombre": "La Estrella", "lat":  6.1564, "lon": -75.6433},
-    {"nombre": "Bello",       "lat":  6.3367, "lon": -75.5569},
-    {"nombre": "Copacabana",  "lat":  6.3488, "lon": -75.5100},
-    {"nombre": "Sabaneta",    "lat":  6.1514, "lon": -75.6167},
-    {"nombre": "Caldas",      "lat":  6.0940, "lon": -75.6371},
-    {"nombre": "Girardota",   "lat":  6.3797, "lon": -75.4461},
-    {"nombre": "Barbosa",     "lat":  6.4394, "lon": -75.3328},
-]
+# ── Municipios: se leen desde municipios.csv ─────────────────────────────────
+# El CSV debe tener columnas: municipio, latitud, longitud
+# Editar el CSV para agregar o quitar municipios (sin tocar código).
+
+_CSV_MUNICIPIOS = os.path.join(os.path.dirname(__file__), "..", "municipios.csv")
+
+
+def _cargar_municipios(ruta: str = _CSV_MUNICIPIOS) -> list[dict]:
+    """Lee municipios.csv y retorna lista de dicts con nombre/lat/lon."""
+    municipios = []
+    with open(ruta, encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f):
+            municipios.append({
+                "nombre": row["municipio"].strip(),
+                "lat":    float(row["latitud"]),
+                "lon":    float(row["longitud"]),
+            })
+    return municipios
+
+
+MUNICIPIOS = _cargar_municipios()
 
 # Campos que se actualizan en cada ejecución (no se tocan latitud/longitud)
 CAMPOS_CLIMA = [

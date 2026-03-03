@@ -28,9 +28,12 @@ import os
 import sys
 import re
 import math
+import logging
 import unicodedata
 from datetime import datetime
 import pandas as pd
+
+log = logging.getLogger(__name__)
 
 
 # ── Catalogos maestros ────────────────────────────────────────────────────────
@@ -81,7 +84,7 @@ TIPO_MAPPING = {
 ZONA_MAPPING = {
     "el poblado": 1, "poblado": 1,
     "laureles": 2, "laureles - estadio": 2, "laureles estadio": 2,
-    "belen": 3, "belen": 3,
+    "belen": 3, "belén": 3,
     "robledo": 4,
     "centro": 5, "centro - medellin": 5,
     "el hueco": 6,
@@ -200,9 +203,9 @@ def sql_val(v):
 # ── Extraccion ────────────────────────────────────────────────────────────────
 
 def extraer(csv_path):
-    print(f"Leyendo {csv_path}...")
+    log.info("Leyendo %s...", csv_path)
     df = pd.read_csv(csv_path, encoding="utf-8-sig")
-    print(f"  {df.shape[0]:,} filas, {df.shape[1]} columnas")
+    log.info("  %s filas, %d columnas", f"{df.shape[0]:,}", df.shape[1])
     return df
 
 
@@ -355,36 +358,42 @@ def generar_sql(resultado):
 # ── Reporte de calidad ────────────────────────────────────────────────────────
 
 def imprimir_reporte(r):
-    print(f"Procesados: {r['raw']:,} registros\n")
+    log.info("Procesados: %s registros", f"{r['raw']:,}")
 
-    print("Limpieza:")
-    print(f"- Duplicados eliminados: {r['duplicados']}")
-    print(f"- Metrajes inválidos → nulo: {r['metraje_null']}")
-    print(f"- Sin tipo reconocido: {r['sin_tipo']}")
+    log.info("Limpieza:")
+    log.info("- Duplicados eliminados: %d", r["duplicados"])
+    log.info("- Metrajes inválidos → nulo: %d", r["metraje_null"])
+    log.info("- Sin tipo reconocido: %d", r["sin_tipo"])
 
-    print("\nDescartados:")
-    print(f"- Sin zona: {r['prop_rechazadas']}")
-    print(f"- Sin precio: {r['precio_null']}")
-    print(f"- Sin fecha: {r['sin_fecha_vacio']}")
+    log.info("Descartados:")
+    log.info("- Sin zona: %d", r["prop_rechazadas"])
+    log.info("- Sin precio: %d", r["precio_null"])
+    log.info("- Sin fecha: %d", r["sin_fecha_vacio"])
 
-    print("\nListos para insertar:")
-    print(f"- Propiedades: {r['prop_validas']:,}")
-    print(f"- Anuncios: {r['anuncios_ok']:,}")
+    log.info("Listos para insertar:")
+    log.info("- Propiedades: %s", f"{r['prop_validas']:,}")
+    log.info("- Anuncios: %s", f"{r['anuncios_ok']:,}")
 
     if r["sin_fecha_formato"]:
-        print(f"Fechas con formato no reconocido: {r['sin_fecha_formato']}")
+        log.warning("Fechas con formato no reconocido: %d", r["sin_fecha_formato"])
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        datefmt="%H:%M:%S",
+    )
+
     if len(sys.argv) < 2:
-        print("Uso: python etl_propiedades.py ruta/al/archivo.csv")
+        log.error("Uso: python etl_propiedades.py ruta/al/archivo.csv")
         sys.exit(1)
 
     csv_path = sys.argv[1]
     if not os.path.exists(csv_path):
-        print(f"Archivo no encontrado: {csv_path}")
+        log.error("Archivo no encontrado: %s", csv_path)
         sys.exit(1)
 
     df_raw    = extraer(csv_path)

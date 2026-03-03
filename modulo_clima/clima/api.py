@@ -1,6 +1,8 @@
 # api.py
 # Lógica de consulta a Open-Meteo.
 # obtener_clima() consulta, imprime y guarda en CSV en una sola llamada.
+import logging
+import unicodedata
 from datetime import datetime
 
 import requests
@@ -8,7 +10,18 @@ import requests
 from .constantes import URL_API, MUNICIPIOS, WMO_CODES
 from .storage    import cargar_csv, upsert, guardar_csv
 
+log = logging.getLogger(__name__)
+
 CSV_DEFAULT = "clima_municipios.csv"
+
+
+def _normalizar(texto: str) -> str:
+    """Lowercase + sin tildes para matching flexible."""
+    texto = texto.strip().lower()
+    return "".join(
+        c for c in unicodedata.normalize("NFD", texto)
+        if unicodedata.category(c) != "Mn"
+    )
 
 
 def decode_weather(code: int) -> str:
@@ -66,19 +79,25 @@ def obtener_clima(nombres: list[str] | None = None, csv: str = CSV_DEFAULT) -> l
     """
     import pandas as pd
 
-    nombres_disponibles = {m["nombre"] for m in MUNICIPIOS}
+    # Índice normalizado para matching flexible (case + accent insensitive)
+    indice_norm = {_normalizar(m["nombre"]): m for m in MUNICIPIOS}
 
     if nombres is None:
         seleccion = MUNICIPIOS
     else:
-        desconocidos = [n for n in nombres if n not in nombres_disponibles]
-        if desconocidos:
-            print(f"[AVISO] Municipios no encontrados: {desconocidos}")
-            print(f"        Disponibles: {sorted(nombres_disponibles)}")
-        seleccion = [m for m in MUNICIPIOS if m["nombre"] in nombres]
+        seleccion = []
+        for n in nombres:
+            clave = _normalizar(n)
+            if clave in indice_norm:
+                seleccion.append(indice_norm[clave])
+            else:
+                log.warning("Municipio no encontrado: '%s'", n)
+
+        if not seleccion:
+            log.info("Disponibles: %s", sorted(m["nombre"] for m in MUNICIPIOS))
 
     if not seleccion:
-        print("[ERROR] Ningún municipio válido para consultar.")
+        log.error("Ningún municipio válido para consultar.")
         return []
 
     # Cargar CSV existente (o vacío si no existe)
@@ -88,6 +107,9 @@ def obtener_clima(nombres: list[str] | None = None, csv: str = CSV_DEFAULT) -> l
     with requests.Session() as session:
         for mun in seleccion:
             try:
+                # Verificar si ya existe ANTES del upsert
+                ya_existe = mun["nombre"] in db["municipio"].values
+
                 fila = fetch_municipio(session, mun)
 
                 # Upsert inmediato en el CSV
@@ -97,16 +119,16 @@ def obtener_clima(nombres: list[str] | None = None, csv: str = CSV_DEFAULT) -> l
 
                 resultados.append(fila)
 
-                # Print en tiempo real
-                accion = "actualizado" if mun["nombre"] in db["municipio"].values else "insertado"
-                print(
-                    f"  {fila['municipio']:<15} "
-                    f"{fila['temperatura_c']:>5.1f} °C  "
-                    f"{fila['descripcion_clima']:<35} "
-                    f"→ CSV {accion}"
+                accion = "actualizado" if ya_existe else "insertado"
+                log.info(
+                    "  %-15s %5.1f °C  %-35s → CSV %s",
+                    fila["municipio"],
+                    fila["temperatura_c"],
+                    fila["descripcion_clima"],
+                    accion,
                 )
 
             except requests.RequestException as e:
-                print(f"  [ERROR] {mun['nombre']}: {e} — se omite")
+                log.error("  %s: %s — se omite", mun["nombre"], e)
 
     return resultados

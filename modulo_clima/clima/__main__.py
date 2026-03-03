@@ -6,8 +6,11 @@
 #   python -m clima --csv otra_ruta.csv      # CSV personalizado
 
 import sys
+import logging
 import argparse
 from .api import obtener_clima, CSV_DEFAULT
+
+log = logging.getLogger("clima")
 
 
 def main():
@@ -26,15 +29,21 @@ def main():
     )
     args = parser.parse_args()
 
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+        datefmt="%H:%M:%S",
+    )
+
     nombres = args.municipios if args.municipios else None
 
-    print(f"Consultando clima → {args.csv}\n")
+    log.info("Consultando clima → %s", args.csv)
     resultados = obtener_clima(nombres, csv=args.csv)
 
     if not resultados:
         sys.exit(1)
 
-    print(f"\nTotal: {len(resultados)} municipio(s) procesado(s)")
+    log.info("Total: %d municipio(s) procesado(s)", len(resultados))
 
 
 if __name__ == "__main__":
