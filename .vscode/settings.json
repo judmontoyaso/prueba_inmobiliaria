@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python -c \"import requests; print\\('requests OK:', requests\\.__version__\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python modulo_clima/clima\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
