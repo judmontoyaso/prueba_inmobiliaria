@@ -66,7 +66,7 @@ export interface Reporte {
   propiedades_validas: number;
   propiedades_rechazadas: number;
   propiedades_nuevas: number;
-  propiedades_actualizadas: number;
+  propiedades_omitidas: number;
   anuncios_validos: number;
   anuncios_nuevos: number;
   anuncios_actualizados: number;

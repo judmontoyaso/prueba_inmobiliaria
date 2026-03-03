@@ -5,7 +5,7 @@ const STATS: { key: keyof Reporte; label: string; color?: string }[] = [
   { key: "duplicados",               label: "Duplicados" },
   { key: "propiedades_validas",      label: "Props válidas" },
   { key: "propiedades_nuevas",       label: "Props nuevas",        color: "text-green-400" },
-  { key: "propiedades_actualizadas", label: "Props actualizadas",  color: "text-yellow-400" },
+  { key: "propiedades_omitidas",     label: "Props omitidas",     color: "text-slate-400" },
   { key: "propiedades_rechazadas",   label: "Props rechazadas",    color: "text-red-400" },
   { key: "anuncios_validos",         label: "Anuncios procesados" },
   { key: "anuncios_nuevos",          label: "Anuncios nuevos",     color: "text-green-400" },

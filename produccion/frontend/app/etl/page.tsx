@@ -157,7 +157,7 @@ export default function ETLPage() {
                 <>
                   <ReporteStats reporte={u.reporte} />
                   <p className="text-xs text-green-400">
-                    Props: {u.reporte.propiedades_nuevas} nuevas • {u.reporte.propiedades_actualizadas} actualizadas • {u.reporte.propiedades_rechazadas} rechazadas
+                    Props: {u.reporte.propiedades_nuevas} nuevas • {u.reporte.propiedades_omitidas} omitidas • {u.reporte.propiedades_rechazadas} rechazadas
                     {" | "}
                     Anuncios: {u.reporte.anuncios_nuevos} nuevos • {u.reporte.anuncios_actualizados} actualizados • {u.reporte.anuncios_rechazados} idénticos
                   </p>

@@ -184,7 +184,17 @@ async def upload_csv(file: UploadFile = File(...)):
 
     contenido = await file.read()
     try:
-        df_raw = pd.read_csv(io.BytesIO(contenido), encoding="utf-8-sig")
+        # Algunos CSV envuelven filas enteras en comillas externas cuando el campo
+        # fecha contiene coma (ej. "Oct 19, 2023"). Normalizar antes de parsear.
+        texto = contenido.decode("utf-8-sig")
+        lineas = texto.splitlines()
+        normalizadas = [lineas[0]]  # encabezado
+        for linea in lineas[1:]:
+            linea = linea.strip()
+            if linea.startswith('"') and linea.endswith('"'):
+                linea = linea[1:-1].replace('""', '"')
+            normalizadas.append(linea)
+        df_raw = pd.read_csv(io.StringIO("\n".join(normalizadas)))
     except Exception as e:
         raise HTTPException(400, f"Error leyendo CSV: {e}")
 
@@ -207,10 +217,10 @@ async def upload_csv(file: UploadFile = File(...)):
         ids_en_db.update(r["id_propiedad"] for r in resp.data)
 
     ids_set = set(ids_validas)
-    n_nuevas       = len(ids_set - ids_en_db)
-    n_actualizadas = len(ids_set & ids_en_db)
+    n_nuevas   = len(ids_set - ids_en_db)
+    n_omitidas = len(ids_set & ids_en_db)  # ya existen, no se tocan
 
-    # Upsert propiedades en lotes
+    # INSERT propiedades nuevas — las existentes se omiten (ON CONFLICT DO NOTHING)
     prop_rows = [
         {
             "id_propiedad":     int(r["id_propiedad"]),
@@ -222,8 +232,12 @@ async def upload_csv(file: UploadFile = File(...)):
         for _, r in dp.iterrows()
     ]
     for i in range(0, len(prop_rows), CHUNK):
-        db.table("propiedad").upsert(prop_rows[i : i + CHUNK], on_conflict="id_propiedad").execute()
-    log.info("Propiedades upsert: %d", len(prop_rows))
+        db.table("propiedad").upsert(
+            prop_rows[i : i + CHUNK],
+            on_conflict="id_propiedad",
+            ignore_duplicates=True,
+        ).execute()
+    log.info("Propiedades nuevas: %d | omitidas (ya existen): %d", n_nuevas, n_omitidas)
 
     # Upsert anuncios via función SQL (lógica de negocio en la BD)
     anun_candidatos = [
@@ -264,7 +278,7 @@ async def upload_csv(file: UploadFile = File(...)):
         "reporte": {
             **resultado["reporte"],
             "propiedades_nuevas":       n_nuevas,
-            "propiedades_actualizadas": n_actualizadas,
+            "propiedades_omitidas":    n_omitidas,
             "anuncios_nuevos":          n_anun_nuevos,
             "anuncios_actualizados":    n_anun_actualizados,
             "anuncios_rechazados":      n_anun_rechazados,
