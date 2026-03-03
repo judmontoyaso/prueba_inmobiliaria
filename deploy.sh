@@ -24,12 +24,12 @@ if [ ! -f "$BACKEND_DIR/.env" ]; then
 fi
 
 echo "==> Deteniendo instancia anterior (si existe)..."
-pkill -f "uvicorn produccion.backend.app.main" || true
+pkill -f "uvicorn backend.app.main" || true
 
-echo "==> Iniciando servidor en puerto 8000..."
-nohup "$VENV/bin/uvicorn" produccion.backend.app.main:app \
+echo "==> Iniciando servidor en puerto 8001..."
+nohup "$VENV/bin/uvicorn" backend.app.main:app \
   --host 0.0.0.0 \
-  --port 8000 \
+  --port 8001 \
   --app-dir "$PROJECT_DIR/produccion" \
   --log-level info \
   > "$PROJECT_DIR/server.log" 2>&1 &

@@ -214,9 +214,22 @@ async def upload_csv(file: UploadFile = File(...)):
         ).execute()
         log.info("Anuncios cargados: %d", len(anun_rows))
 
-    # ── Preview para el frontend ──────────────────────────────────────────
-    preview_prop = dp.head(20).fillna("").to_dict(orient="records")
-    preview_anun = da.head(20).fillna("").to_dict(orient="records")
+    # ── Preview para el frontend (columnas con nombres del esquema DB) ───────
+    preview_prop = (
+        dp.rename(columns={
+            "tipo_clean":    "tipo_inmueble",
+            "metraje_clean": "metraje_m2",
+            "id_tipo":       "id_tipo_inmueble",
+        })
+        .head(20).fillna("").to_dict(orient="records")
+    )
+    preview_anun = (
+        da.rename(columns={
+            "precio_clean": "precio_venta",
+            "fecha_clean":  "fecha_publicacion",
+        })
+        .head(20).fillna("").to_dict(orient="records")
+    )
 
     return {
         "reporte": resultado["reporte"],
@@ -247,3 +260,14 @@ async def listar_anuncios(limit: int = 100, offset: int = 0):
               .range(offset, offset + limit - 1)
               .execute())
     return {"data": resp.data, "count": len(resp.data)}
+
+
+@router.delete("/reset")
+async def reset_tablas():
+    """Elimina todos los registros de anuncio y propiedad para empezar de cero."""
+    db = get_db()
+    # anuncio primero por FK
+    db.table("anuncio").delete().neq("id_propiedad", -1).execute()
+    db.table("propiedad").delete().neq("id_propiedad", -1).execute()
+    log.info("Tablas propiedad y anuncio vaciadas.")
+    return {"ok": True, "mensaje": "Tablas propiedad y anuncio vaciadas."}

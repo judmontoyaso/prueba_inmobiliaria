@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { uploadCSV, type Reporte } from "@/lib/api";
+import { uploadCSV, resetETL, type Reporte } from "@/lib/api";
 import ReporteStats from "@/components/etl/ReporteStats";
 import DataTable from "@/components/etl/DataTable";
 
@@ -14,6 +14,24 @@ export default function ETLPage() {
   const [propiedades, setPropiedades] = useState<Row[]>([]);
   const [anuncios, setAnuncios]       = useState<Row[]>([]);
   const [dragging, setDragging]       = useState(false);
+  const [resetting, setResetting]     = useState(false);
+
+  const handleReset = useCallback(async () => {
+    if (!confirm("¿Seguro? Esto borrará TODAS las propiedades y anuncios de la BD.")) return;
+    setResetting(true);
+    setError(null);
+    try {
+      await resetETL();
+      setReporte(null);
+      setPropiedades([]);
+      setAnuncios([]);
+      setError(null);
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "Error al reiniciar");
+    } finally {
+      setResetting(false);
+    }
+  }, []);
 
   const handleFile = useCallback(async (file: File) => {
     if (!file.name.endsWith(".csv")) {
@@ -47,7 +65,16 @@ export default function ETLPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-semibold">📊 ETL Propiedades</h1>
+      <div className="flex items-center justify-between gap-3 flex-wrap">
+        <h1 className="text-xl font-semibold">📊 ETL Propiedades</h1>
+        <button
+          onClick={handleReset}
+          disabled={resetting || loading}
+          className="px-4 py-2 rounded-lg text-sm font-medium bg-red-700 hover:bg-red-600 disabled:opacity-50 transition-colors"
+        >
+          {resetting ? "Reiniciando…" : "🗑️ Reiniciar BD"}
+        </button>
+      </div>
 
       {/* Upload */}
       <div

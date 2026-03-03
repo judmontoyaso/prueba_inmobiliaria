@@ -6,8 +6,13 @@ import WeatherCard from "@/components/clima/WeatherCard";
 
 export default function ClimaPage() {
   const [data, setData]       = useState<ClimaRow[]>([]);
+  const [filtro, setFiltro]   = useState("");
   const [loading, setLoading] = useState(false);
   const [status, setStatus]   = useState<{ msg: string; ok: boolean } | null>(null);
+
+  const datosFiltrados = filtro.trim()
+    ? data.filter((d) => d.municipio.toLowerCase().includes(filtro.toLowerCase()))
+    : data;
 
   const cargar = useCallback(async () => {
     setLoading(true);
@@ -49,7 +54,14 @@ export default function ClimaPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between flex-wrap gap-3">
         <h1 className="text-xl font-semibold">🌤️ Clima — Valle de Aburrá</h1>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap items-center">
+          <input
+            type="text"
+            placeholder="Filtrar municipio…"
+            value={filtro}
+            onChange={(e) => setFiltro(e.target.value)}
+            className="px-3 py-2 rounded-lg text-sm bg-slate-800 border border-slate-700 focus:outline-none focus:border-indigo-500 w-44"
+          />
           <button
             onClick={cargar}
             disabled={loading}
@@ -90,9 +102,11 @@ export default function ClimaPage() {
       {/* Grid */}
       {data.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {data.map((d) => (
+          {datosFiltrados.length > 0 ? datosFiltrados.map((d) => (
             <WeatherCard key={d.municipio} d={d} />
-          ))}
+          )) : (
+            <p className="text-slate-500 text-sm col-span-3">Sin resultados para &quot;{filtro}&quot;.</p>
+          )}
         </div>
       ) : (
         !loading && (
