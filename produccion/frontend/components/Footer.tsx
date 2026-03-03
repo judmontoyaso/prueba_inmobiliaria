@@ -7,7 +7,7 @@ export default function Footer() {
       style={{ borderColor: "var(--border)", background: "var(--surface)" }}
     >
       <div className="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between text-xs" style={{ color: "var(--muted)" }}>
-        <span>© {new Date().getFullYear()} Inmobiliaria Medellín — Prueba técnica</span>
+        <span>© {new Date().getFullYear()} Inmobiliaria — Prueba técnica</span>
         <a
           href="https://juanmontoya.me"
           target="_blank"
