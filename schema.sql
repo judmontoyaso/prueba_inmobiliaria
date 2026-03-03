@@ -52,3 +52,15 @@ CREATE INDEX IF NOT EXISTS idx_propiedad_zona    ON propiedad(id_zona);
 CREATE INDEX IF NOT EXISTS idx_propiedad_tipo    ON propiedad(id_tipo_inmueble);
 CREATE INDEX IF NOT EXISTS idx_anuncio_propiedad ON anuncio(id_propiedad);
 CREATE INDEX IF NOT EXISTS idx_anuncio_fecha     ON anuncio(fecha_publicacion);
+
+-- ── Clima (módulo 2) ────────────────────────────────────────────────────────
+
+CREATE TABLE IF NOT EXISTS clima_municipio (
+    municipio             VARCHAR(60) PRIMARY KEY,
+    latitud               NUMERIC(8,4)  NOT NULL,
+    longitud              NUMERIC(8,4)  NOT NULL,
+    temperatura_c         NUMERIC(5,1),
+    weather_code          SMALLINT,
+    descripcion_clima     VARCHAR(80),
+    ultima_actualizacion  TIMESTAMP
+);

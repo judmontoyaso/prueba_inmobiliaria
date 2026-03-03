@@ -9,16 +9,30 @@ Proyecto compuesto por dos módulos independientes para el tratamiento de datos 
 │   ├── etl_propiedades.py    # Script CLI del pipeline
 │   └── propiedades_medellin_raw.csv
 ├── modulo_clima/             # Parte 2: Módulo de clima (Open-Meteo)
-│   ├── clima/                # Paquete Python instalable
+│   ├── clima/                # Paquete Python importable
 │   │   ├── __main__.py       # CLI: python -m clima
 │   │   ├── api.py            # Consultas a la API
-│   │   ├── constantes.py     # Códigos WMO
+│   │   ├── constantes.py     # Códigos WMO + carga de municipios.csv
 │   │   └── storage.py        # Lectura/escritura CSV con upsert
 │   ├── municipios.csv        # Maestro de municipios (lat/lon)
 │   └── clima_municipios.csv  # Salida: clima actual
+├── backend/                  # Parte 3: API FastAPI
+│   ├── app/
+│   │   ├── main.py           # Punto de entrada FastAPI
+│   │   ├── config.py         # Variables de entorno
+│   │   ├── database.py       # Cliente Supabase + seed
+│   │   └── routers/
+│   │       ├── etl.py        # POST /etl/upload, GET /etl/propiedades
+│   │       └── clima.py      # GET /clima/, POST /clima/actualizar
+│   └── requirements.txt
+├── frontend/                 # Parte 3: SPA (HTML/CSS/JS)
+│   ├── index.html
+│   ├── css/style.css
+│   └── js/app.js
+├── deploy.sh                 # Script de despliegue en Droplet
 ├── notebooks/                # Análisis exploratorio
-│   ├── EDA.ipynb             # EDA del CSV crudo
-│   ├── ETL_propiedades.ipynb # Walkthrough interactivo del ETL
+│   ├── EDA.ipynb
+│   ├── ETL_propiedades.ipynb
 │   └── exploracion_openmeteo.ipynb
 └── schema.sql                # DDL del modelo relacional
 ```
@@ -75,3 +89,50 @@ from clima import obtener_clima
 obtener_clima()
 obtener_clima(["Medellín", "Bello"])
 ```
+
+Los municipios se cargan desde `municipios.csv` (editable sin tocar código).
+
+## Parte 3 — Aplicación Web (Backend + Frontend)
+
+Aplicación desplegable con Docker que expone ambos módulos como servicio web con almacenamiento en Supabase (PostgreSQL).
+
+### Arquitectura
+
+```
+Internet → :8000 (uvicorn / FastAPI)
+              ├── /etl/*     API ETL
+              ├── /clima/*   API Clima
+              ├── /docs      Swagger UI
+              └── /          frontend estático (HTML/JS/CSS)
+```
+
+Un solo proceso. FastAPI sirve la API y los archivos del frontend.
+
+### Setup local
+
+1. Crear proyecto en [Supabase](https://supabase.com) y ejecutar `schema.sql` en el SQL Editor
+2. Configurar variables:
+   ```bash
+   cp backend/.env.example backend/.env
+   # editar SUPABASE_URL y SUPABASE_KEY
+   ```
+3. Instalar y correr:
+   ```bash
+   pip install -r backend/requirements.txt
+   uvicorn backend.app.main:app --reload --port 8000
+   ```
+4. Abrir `http://localhost:8000` — Swagger en `http://localhost:8000/docs`
+
+### Despliegue en Droplet (sin Docker)
+
+```bash
+# En el Droplet, una sola vez:
+git clone <tu-repo> /opt/inmobiliaria
+cp /opt/inmobiliaria/backend/.env.example /opt/inmobiliaria/backend/.env
+nano /opt/inmobiliaria/backend/.env   # pegar SUPABASE_URL y SUPABASE_KEY
+
+# Desplegar / actualizar:
+bash /opt/inmobiliaria/deploy.sh
+```
+
+El script `deploy.sh` actualiza el código, reinstala dependencias y reinicia uvicorn en segundo plano.
