@@ -1,6 +1,4 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   // El backend corre en el Droplet; en Vercel se configura via env var.
   // En desarrollo local se puede hacer proxy para evitar CORS:
   async rewrites() {
@@ -13,4 +11,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
