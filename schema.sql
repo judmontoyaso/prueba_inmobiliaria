@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS propiedad (
 );
 
 CREATE TABLE IF NOT EXISTS anuncio (
+    id_anuncio         BIGSERIAL   PRIMARY KEY,
     id_propiedad       INT         NOT NULL REFERENCES propiedad(id_propiedad),
     precio_venta       BIGINT      NOT NULL,
     fecha_publicacion  DATE        NOT NULL,

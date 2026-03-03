@@ -43,6 +43,18 @@ ZONA_MAPPING = {
     "envigado": 8,
 }
 
+# Reverse maps para el preview (id → nombre legible)
+ZONA_ID_NOMBRE = {
+    1: "El Poblado", 2: "Laureles", 3: "Belén",
+    4: "Robledo",   5: "Centro",   6: "El Hueco",
+    7: "Sabaneta",  8: "Envigado",
+}
+ESTRATO_ID_DESC = {
+    1: "Estrato 1", 2: "Estrato 2", 3: "Estrato 3",
+    4: "Estrato 4", 5: "Estrato 5", 6: "Estrato 6",
+    7: "Sin estrato",
+}
+
 FORMATOS_FECHA = ["%b %d, %Y", "%d/%m/%Y", "%Y.%m.%d", "%Y-%m-%d"]
 
 # ── Funciones de limpieza ─────────────────────────────────────────────────────
@@ -182,67 +194,60 @@ async def upload_csv(file: UploadFile = File(...)):
     dp = resultado["propiedades"]
     da = resultado["anuncios"]
 
-    # ── Cargar a Supabase ─────────────────────────────────────────────────
+    # ── Cargar a Supabase en lotes de 500 (límite de Supabase) ──────────
     db = get_db()
-    # Detectar cuáles IDs ya existen en la BD para distinguir nuevas vs actualizadas
+    CHUNK = 500
+
+    # Detectar cuáles IDs ya existen — consultando en lotes
     ids_validas = [int(r["id_propiedad"]) for _, r in dp.iterrows()]
-    if ids_validas:
-        existing_resp = (db.table("propiedad")
-                          .select("id_propiedad")
-                          .in_("id_propiedad", ids_validas)
-                          .execute())
-        ids_en_db = {r["id_propiedad"] for r in existing_resp.data}
-    else:
-        ids_en_db = set()
+    ids_en_db: set = set()
+    for i in range(0, len(ids_validas), CHUNK):
+        chunk_ids = ids_validas[i : i + CHUNK]
+        resp = db.table("propiedad").select("id_propiedad").in_("id_propiedad", chunk_ids).execute()
+        ids_en_db.update(r["id_propiedad"] for r in resp.data)
 
     ids_set = set(ids_validas)
     n_nuevas       = len(ids_set - ids_en_db)
     n_actualizadas = len(ids_set & ids_en_db)
-    # Propiedades
-    prop_rows = []
-    for _, r in dp.iterrows():
-        prop_rows.append({
+
+    # Upsert propiedades en lotes
+    prop_rows = [
+        {
             "id_propiedad":     int(r["id_propiedad"]),
             "id_tipo_inmueble": int(r["id_tipo"]),
             "id_zona":          int(r["id_zona"]),
             "id_estrato":       int(r["id_estrato"]),
             "metraje_m2":       _safe(r["metraje_clean"]),
-        })
-    if prop_rows:
-        db.table("propiedad").upsert(prop_rows, on_conflict="id_propiedad").execute()
-        log.info("Propiedades cargadas: %d", len(prop_rows))
+        }
+        for _, r in dp.iterrows()
+    ]
+    for i in range(0, len(prop_rows), CHUNK):
+        db.table("propiedad").upsert(prop_rows[i : i + CHUNK], on_conflict="id_propiedad").execute()
+    log.info("Propiedades upsert: %d", len(prop_rows))
 
-    # Anuncios
-    anun_rows = []
-    for _, r in da.iterrows():
-        anun_rows.append({
+    # Upsert anuncios en lotes
+    anun_rows = [
+        {
             "id_propiedad":      int(r["id_propiedad"]),
             "precio_venta":      int(r["precio_clean"]),
             "fecha_publicacion": r["fecha_clean"],
-        })
-    if anun_rows:
-        db.table("anuncio").upsert(
-            anun_rows,
-            on_conflict="id_propiedad,fecha_publicacion"
-        ).execute()
-        log.info("Anuncios cargados: %d", len(anun_rows))
+        }
+        for _, r in da.iterrows()
+    ]
+    for i in range(0, len(anun_rows), CHUNK):
+        db.table("anuncio").upsert(anun_rows[i : i + CHUNK], on_conflict="id_propiedad,fecha_publicacion").execute()
+    log.info("Anuncios upsert: %d", len(anun_rows))
 
-    # ── Preview para el frontend (columnas con nombres del esquema DB) ───────
-    preview_prop = (
-        dp.rename(columns={
-            "tipo_clean":    "tipo_inmueble",
-            "metraje_clean": "metraje_m2",
-            "id_tipo":       "id_tipo_inmueble",
-        })
-        .head(20).fillna("").to_dict(orient="records")
-    )
-    preview_anun = (
-        da.rename(columns={
-            "precio_clean": "precio_venta",
-            "fecha_clean":  "fecha_publicacion",
-        })
-        .head(20).fillna("").to_dict(orient="records")
-    )
+    # ── Preview para el frontend (IDs raw) ───────────────────────────────
+    preview_prop = dp.head(20).rename(columns={
+        "tipo_clean":    "tipo_inmueble",
+        "metraje_clean": "metraje_m2",
+        "id_tipo":       "id_tipo_inmueble",
+    }).fillna("").to_dict(orient="records")
+    preview_anun = da.head(20).rename(columns={
+        "precio_clean":  "precio_venta",
+        "fecha_clean":   "fecha_publicacion",
+    }).fillna("").to_dict(orient="records")
 
     return {
         "reporte": {

@@ -1,5 +1,5 @@
 ﻿id_propiedad,nombre_anuncio,precio_venta,metraje_m2,estrato_socioeconomico,ubicacion,tipo_inmueble,fecha_publicacion
-681,Casa en Sabaneta,1989000000,249,2.0,SABANETA,Casa,"Oct 15, 2023"
+"681,Casa en Sabaneta,1989000000,249,2.0,SABANETA,Casa,""Oct 19, 2023"""
 377,Propiedad en Centro - Medellín,1514000000,359,6.0,Centro - Medellín,?,15/10/2023
 1084,Casa en El Poblado,822000000,227,4.0,El Poblado,Casa,2023.10.15
 948,Casa en El Poblado,828000000,44,2.0,El Poblado,Casa,15/10/2023
@@ -7,14 +7,14 @@
 84,None en Centro,2009000000,269,2.0,Centro,,2023-10-15
 356,Casa en Centro,2464000000,367,2.0,Centro,Casa,2023-10-15
 752,Apartestudio en Laureles - Estadio,1922000000,403,2.0,Laureles - Estadio,Apartestudio,15/10/2023
-1147,Propiedad en Robledo,$ 2.441.000.000,327,2.0,Robledo,?,"Oct 15, 2023"
+"1147,Propiedad en Robledo,$ 2.441.000.000,327,2.0,Robledo,?,""Oct 15, 2023"""
 780,Apartestudio en Envigado,$ 2.375.000.000,0,5.0,ENVIGADO,Apartestudio,2023.10.15
-672,Finca en Envigado,2036000000,95,6.0,Envigado,Finca,"Oct 15, 2023"
-40,Finca en Poblado,2026000000,193,3.0,poblado,Finca,"Oct 15, 2023"
+"672,Finca en Envigado,2036000000,95,6.0,Envigado,Finca,""Oct 15, 2023"""
+"40,Finca en Poblado,2026000000,193,3.0,poblado,Finca,""Oct 15, 2023"""
 817,Apartestudio en El Poblado,1987000000,296,3.0,El Poblado,Apartestudio,15/10/2023
 1090,Casa en Belen,1560000000,367,3.0,Belen,Casa,2023-10-15
 762,Propiedad en Poblado,1708000000,45,3.0,poblado,?,15/10/2023
-851,Finca en Belen,$ 1.129.000.000,217,6.0,BELEN,Finca,"Oct 15, 2023"
+"851,Finca en Belen,$ 1.129.000.000,217,6.0,BELEN,Finca,""Oct 15, 2023"""
 299,Casa en Laureles - Estadio,519000000,192,2.0,Laureles - Estadio,Casa,15/10/2023
 513,Apartamento en El Poblado,447000000,287,2.0,EL POBLADO,Apartamento,2023.10.15
 1038,Finca en Poblado,2261000000,111,6.0,POBLADO,Finca,2023-10-15
@@ -28,7 +28,7 @@
 340,Apartamento en El Poblado,399000000,291,,EL POBLADO,Apartamento,15/10/2023
 924,None en Laureles,1317000000,313,2.0,laureles,,2023.10.15
 117,Apartamento en Envigado,351000000,115,4.0,Envigado,Apartamento,2023-10-15
-132,Finca en El Poblado,$ 2.268.000.000,370,5.0,El Poblado,Finca,"Oct 15, 2023"
+"132,Finca en El Poblado,$ 2.268.000.000,370,5.0,El Poblado,Finca,""Oct 15, 2023"""
 435,Propiedad en El Poblado,$ 1.488.000.000,119,5.0,EL POBLADO,?,2023-10-15
 673,Propiedad en Laureles - Estadio,909000000,72,,Laureles - Estadio,?,2023-10-15
 637,Apartamento en Robledo,424000000,1,6.0,Robledo,Apartamento,2023.10.15
@@ -37,28 +37,28 @@
 1055,Casa en Envigado,2478000000,141,5.0,ENVIGADO,Casa,2023.10.15
 158,Apartamento en Poblado,$ 459.000.000,135,5.0,poblado,Apartamento,15/10/2023
 660,Propiedad en Belén,340000000,293,6.0,Belén,?,2023-10-15
-650,Finca en Envigado,$ 2.133.000.000,355,5.0,Envigado,Finca,"Oct 15, 2023"
+"650,Finca en Envigado,$ 2.133.000.000,355,5.0,Envigado,Finca,""Oct 15, 2023"""
 604,Casa en Centro,1771000000,296,4.0,Centro,Casa,15/10/2023
 1115,Apartestudio en Envigado,2001000000,366,6.0,ENVIGADO,Apartestudio,2023.10.15
 1058,Casa en Robledo,1876000000,-50,2.0,Robledo,Casa,15/10/2023
 1164,Apartamento en Centro - Medellín,2232000000,371,3.0,Centro - Medellín,Apartamento,15/10/2023
 901,Apartamento en Centro - Medellín,$ 223.000.000,-50,3.0,Centro - Medellín,Apartamento,2023-10-15
 961,Apartamento en Poblado,$ 714.000.000,397,3.0,poblado,Apartamento,2023.10.15
-578,Apartestudio en Laureles,1633000000,423,6.0,Laureles,Apartestudio,"Oct 15, 2023"
-1094,Propiedad en Belen,1220000000,98,2.0,BELEN,?,"Oct 15, 2023"
+"578,Apartestudio en Laureles,1633000000,423,6.0,Laureles,Apartestudio,""Oct 15, 2023"""
+"1094,Propiedad en Belen,1220000000,98,2.0,BELEN,?,""Oct 15, 2023"""
 263,Casa en Envigado,2023000000,264,6.0,Envigado,Casa,15/10/2023
-209,Casa en El Poblado,2319000000,189,6.0,El Poblado,Casa,"Oct 15, 2023"
+"209,Casa en El Poblado,2319000000,189,6.0,El Poblado,Casa,""Oct 15, 2023"""
 467,Apartestudio en El Hueco,$ 1.901.000.000,131,5.0,EL HUECO,Apartestudio,2023.10.15
 385,None en El Hueco,564000000,157,4.0,EL HUECO,,2023.10.15
 1051,Apartamento en Belén,2120000000,369,3.0,Belén,Apartamento,2023.10.15
 376,Apartestudio en El Poblado,2301000000,360,4.0,EL POBLADO,Apartestudio,2023-10-15
 287,Finca en Laureles,1785000000,258,5.0,Laureles,Finca,15/10/2023
 547,Apartestudio en Robledo,576000000,1,4.0,ROBLEDO,Apartestudio,15/10/2023
-497,Casa en El Hueco,$ 327.000.000,180,3.0,EL HUECO,Casa,"Oct 15, 2023"
+"497,Casa en El Hueco,$ 327.000.000,180,3.0,EL HUECO,Casa,""Oct 15, 2023"""
 1188,Apartestudio en Centro - Medellín,1545000000,192,3.0,Centro - Medellín,Apartestudio,15/10/2023
 704,Casa en Envigado,2358000000,194,,ENVIGADO,Casa,2023-10-15
 661,Apartamento en Envigado,2069000000,61,4.0,Envigado,Apartamento,2023.10.15
-1074,Apartestudio en Belen,574000000,245,5.0,Belen,Apartestudio,"Oct 15, 2023"
+"1074,Apartestudio en Belen,574000000,245,5.0,Belen,Apartestudio,""Oct 15, 2023"""
 727,Propiedad en Belen,$ 896.000.000,393,6.0,BELEN,?,2023.10.15
 910,Apartamento en Centro - Medellín,2043000000,338,4.0,Centro - Medellín,Apartamento,2023-10-15
 161,Finca en Laureles,334000000,399,,laureles,Finca,2023-10-15
@@ -74,16 +74,16 @@
 47,Casa en Laureles,1831000000,74,2.0,Laureles,Casa,15/10/2023
 1026,Casa en El Hueco,$ 1.093.000.000,356,2.0,EL HUECO,Casa,2023.10.15
 729,Apartamento en Laureles,1295000000,113,4.0,Laureles,Apartamento,15/10/2023
-427,None en Envigado,1129000000,344,,ENVIGADO,,"Oct 15, 2023"
+"427,None en Envigado,1129000000,344,,ENVIGADO,,""Oct 15, 2023"""
 536,Propiedad en Envigado,$ 1.235.000.000,209,2.0,ENVIGADO,?,2023.10.15
 352,Apartestudio en Envigado,$ 812.000.000,105,5.0,Envigado,Apartestudio,15/10/2023
 1161,Apartamento en El Hueco,$ 965.000.000,338,5.0,EL HUECO,Apartamento,15/10/2023
 65,Apartestudio en Sabaneta,416000000,268,5.0,SABANETA,Apartestudio,2023-10-15
-276,Apartamento en Centro,1623000000,270,6.0,Centro,Apartamento,"Oct 15, 2023"
+"276,Apartamento en Centro,1623000000,270,6.0,Centro,Apartamento,""Oct 15, 2023"""
 677,Propiedad en Sabaneta,$ 1.419.000.000,233,5.0,Sabaneta,?,2023-10-15
 241,Apartestudio en Laureles - Estadio,2110000000,339,3.0,Laureles - Estadio,Apartestudio,2023.10.15
-523,Apartamento en Robledo,280000000,361,6.0,ROBLEDO,Apartamento,"Oct 15, 2023"
-87,Casa en Centro,1043000000,388,5.0,Centro,Casa,"Oct 15, 2023"
+"523,Apartamento en Robledo,280000000,361,6.0,ROBLEDO,Apartamento,""Oct 15, 2023"""
+"87,Casa en Centro,1043000000,388,5.0,Centro,Casa,""Oct 15, 2023"""
 1059,Casa en Robledo,870000000,140,6.0,ROBLEDO,Casa,15/10/2023
 945,Apartestudio en Laureles,1463000000,53,,laureles,Apartestudio,15/10/2023
 306,Apartestudio en Envigado,2420000000,406,,Envigado,Apartestudio,2023-10-15
@@ -92,13 +92,13 @@
 956,Finca en Laureles,2360000000,164,2.0,laureles,Finca,2023.10.15
 260,Finca en Centro,1415000000,1,2.0,Centro,Finca,2023-10-15
 485,Apartestudio en Belen,$ 1.867.000.000,72,,Belen,Apartestudio,2023-10-15
-285,Apartestudio en Belén,$ 237.000.000,398,2.0,Belén,Apartestudio,"Oct 15, 2023"
-861,Finca en Poblado,2386000000,135,,POBLADO,Finca,"Oct 15, 2023"
-1175,Casa en Laureles,877000000,310,4.0,laureles,Casa,"Oct 15, 2023"
-80,Finca en Envigado,2134000000,94,6.0,ENVIGADO,Finca,"Oct 15, 2023"
+"285,Apartestudio en Belén,$ 237.000.000,398,2.0,Belén,Apartestudio,""Oct 15, 2023"""
+"861,Finca en Poblado,2386000000,135,,POBLADO,Finca,""Oct 15, 2023"""
+"1175,Casa en Laureles,877000000,310,4.0,laureles,Casa,""Oct 15, 2023"""
+"80,Finca en Envigado,2134000000,94,6.0,ENVIGADO,Finca,""Oct 15, 2023"""
 44,Finca en Sabaneta,$ 621.000.000,343,3.0,Sabaneta,Finca,15/10/2023
 506,Apartestudio en Sabaneta,1582000000,48,5.0,Sabaneta,Apartestudio,15/10/2023
-523,Apartamento en Robledo,280000000,361,6.0,ROBLEDO,Apartamento,"Oct 15, 2023"
+"523,Apartamento en Robledo,280000000,361,6.0,ROBLEDO,Apartamento,""Oct 15, 2023"""
 561,Finca en Belen,1959000000,275,4.0,BELEN,Finca,15/10/2023
 952,Apartamento en Envigado,1461000000,58,5.0,ENVIGADO,Apartamento,15/10/2023
 33,None en El Hueco,2461000000,427,5.0,EL HUECO,,2023-10-15
@@ -106,8 +106,8 @@
 103,Apartestudio en Laureles,$ 1.128.000.000,394,2.0,laureles,Apartestudio,2023-10-15
 1054,Apartestudio en Sabaneta,2129000000,44,3.0,SABANETA,Apartestudio,15/10/2023
 215,None en Belen,2271000000,290,3.0,BELEN,,15/10/2023
-545,Finca en Robledo,$ 220.000.000,269,2.0,Robledo,Finca,"Oct 15, 2023"
-1032,Finca en Sabaneta,$ 483.000.000,58,4.0,Sabaneta,Finca,"Oct 15, 2023"
+"545,Finca en Robledo,$ 220.000.000,269,2.0,Robledo,Finca,""Oct 15, 2023"""
+"1032,Finca en Sabaneta,$ 483.000.000,58,4.0,Sabaneta,Finca,""Oct 15, 2023"""
 453,Apartamento en Envigado,$ 1.691.000.000,385,3.0,ENVIGADO,Apartamento,2023.10.15
 820,Casa en Poblado,$ 1.427.000.000,47,6.0,poblado,Casa,2023-10-15
 667,Casa en El Hueco,669000000,425,6.0,EL HUECO,Casa,2023.10.15
@@ -117,31 +117,31 @@
 1023,Finca en Envigado,397000000,422,4.0,Envigado,Finca,2023.10.15
 997,Finca en Poblado,877000000,265,6.0,POBLADO,Finca,2023.10.15
 346,Apartestudio en Robledo,1962000000,177,3.0,Robledo,Apartestudio,2023-10-15
-66,None en Laureles,2092000000,437,6.0,Laureles,,"Oct 15, 2023"
+"66,None en Laureles,2092000000,437,6.0,Laureles,,""Oct 15, 2023"""
 980,Casa en Belen,2129000000,423,3.0,BELEN,Casa,2023.10.15
 1171,Apartamento en Belen,$ 963.000.000,0,5.0,BELEN,Apartamento,15/10/2023
 216,Finca en El Poblado,$ 267.000.000,426,4.0,EL POBLADO,Finca,2023.10.15
-1176,Casa en Envigado,2047000000,226,,ENVIGADO,Casa,"Oct 15, 2023"
-1022,Apartestudio en Belen,1357000000,175,,Belen,Apartestudio,"Oct 15, 2023"
+"1176,Casa en Envigado,2047000000,226,,ENVIGADO,Casa,""Oct 15, 2023"""
+"1022,Apartestudio en Belen,1357000000,175,,Belen,Apartestudio,""Oct 15, 2023"""
 1042,Propiedad en Belen,2318000000,399,6.0,Belen,?,2023.10.15
 104,Casa en Laureles - Estadio,2495000000,364,5.0,Laureles - Estadio,Casa,2023-10-15
 624,Apartestudio en Belen,357000000,419,,BELEN,Apartestudio,15/10/2023
-717,Apartestudio en Poblado,2376000000,76,3.0,poblado,Apartestudio,"Oct 15, 2023"
+"717,Apartestudio en Poblado,2376000000,76,3.0,poblado,Apartestudio,""Oct 15, 2023"""
 659,None en Belén,2370000000,371,4.0,Belén,,2023-10-15
 785,Apartamento en Sabaneta,1281000000,132,5.0,SABANETA,Apartamento,15/10/2023
-747,Finca en Sabaneta,2027000000,358,6.0,Sabaneta,Finca,"Oct 15, 2023"
+"747,Finca en Sabaneta,2027000000,358,6.0,Sabaneta,Finca,""Oct 15, 2023"""
 806,None en El Poblado,$ 2.234.000.000,286,3.0,EL POBLADO,,15/10/2023
 457,Apartamento en Robledo,$ 2.295.000.000,407,6.0,ROBLEDO,Apartamento,15/10/2023
-88,Finca en Poblado,2065000000,65,4.0,POBLADO,Finca,"Oct 15, 2023"
+"88,Finca en Poblado,2065000000,65,4.0,POBLADO,Finca,""Oct 15, 2023"""
 1101,None en Poblado,1725000000,77,2.0,POBLADO,,15/10/2023
 856,Propiedad en Laureles - Estadio,$ 2.032.000.000,350,,Laureles - Estadio,?,2023.10.15
-743,Finca en Envigado,1147000000,363,2.0,ENVIGADO,Finca,"Oct 15, 2023"
+"743,Finca en Envigado,1147000000,363,2.0,ENVIGADO,Finca,""Oct 15, 2023"""
 944,Apartamento en Belen,2486000000,255,2.0,Belen,Apartamento,2023.10.15
 294,Apartestudio en El Poblado,1711000000,413,4.0,El Poblado,Apartestudio,2023-10-15
-333,Apartestudio en Robledo,$ 1.270.000.000,203,5.0,Robledo,Apartestudio,"Oct 15, 2023"
+"333,Apartestudio en Robledo,$ 1.270.000.000,203,5.0,Robledo,Apartestudio,""Oct 15, 2023"""
 947,Finca en Sabaneta,1753000000,228,2.0,SABANETA,Finca,2023.10.15
-1151,Apartamento en Belen,$ 561.000.000,76,6.0,Belen,Apartamento,"Oct 15, 2023"
-482,Finca en Envigado,672000000,114,,Envigado,Finca,"Oct 15, 2023"
+"1151,Apartamento en Belen,$ 561.000.000,76,6.0,Belen,Apartamento,""Oct 15, 2023"""
+"482,Finca en Envigado,672000000,114,,Envigado,Finca,""Oct 15, 2023"""
 312,Propiedad en Belen,$ 1.971.000.000,280,,BELEN,?,15/10/2023
 539,Apartestudio en Laureles - Estadio,1629000000,227,2.0,Laureles - Estadio,Apartestudio,2023-10-15
 499,Casa en Envigado,$ 2.048.000.000,272,6.0,ENVIGADO,Casa,2023.10.15
@@ -158,22 +158,22 @@
 820,Casa en Poblado,$ 1.427.000.000,47,6.0,poblado,Casa,2023-10-15
 1033,Apartestudio en Belén,761000000,61,3.0,Belén,Apartestudio,2023.10.15
 382,Propiedad en Envigado,$ 2.329.000.000,374,5.0,ENVIGADO,?,2023.10.15
-509,Apartamento en Centro - Medellín,402000000,384,2.0,Centro - Medellín,Apartamento,"Oct 15, 2023"
+"509,Apartamento en Centro - Medellín,402000000,384,2.0,Centro - Medellín,Apartamento,""Oct 15, 2023"""
 1104,Casa en Laureles,2096000000,383,3.0,laureles,Casa,2023.10.15
 566,Finca en El Hueco,1369000000,335,6.0,EL HUECO,Finca,2023-10-15
 615,Casa en Envigado,258000000,109,2.0,Envigado,Casa,2023.10.15
 896,Finca en Envigado,$ 1.541.000.000,206,2.0,ENVIGADO,Finca,2023.10.15
 191,None en Envigado,2256000000,166,3.0,Envigado,,2023-10-15
 290,Apartamento en Robledo,1747000000,272,,ROBLEDO,Apartamento,15/10/2023
-730,Finca en Sabaneta,1689000000,271,3.0,SABANETA,Finca,"Oct 15, 2023"
-711,Propiedad en Belen,1961000000,62,,BELEN,?,"Oct 15, 2023"
-894,Apartamento en Poblado,$ 1.300.000.000,296,2.0,POBLADO,Apartamento,"Oct 15, 2023"
+"730,Finca en Sabaneta,1689000000,271,3.0,SABANETA,Finca,""Oct 15, 2023"""
+"711,Propiedad en Belen,1961000000,62,,BELEN,?,""Oct 15, 2023"""
+"894,Apartamento en Poblado,$ 1.300.000.000,296,2.0,POBLADO,Apartamento,""Oct 15, 2023"""
 664,Apartestudio en Envigado,$ 860.000.000,1,4.0,ENVIGADO,Apartestudio,2023.10.15
 247,Finca en Robledo,1034000000,417,2.0,ROBLEDO,Finca,2023-10-15
 914,Casa en Poblado,1103000000,312,3.0,POBLADO,Casa,15/10/2023
 13,None en Laureles - Estadio,$ 811.000.000,181,4.0,Laureles - Estadio,,2023.10.15
 1174,Casa en Laureles,2306000000,336,2.0,Laureles,Casa,2023.10.15
-61,Apartestudio en Robledo,810000000,398,6.0,ROBLEDO,Apartestudio,"Oct 15, 2023"
+"61,Apartestudio en Robledo,810000000,398,6.0,ROBLEDO,Apartestudio,""Oct 15, 2023"""
 393,Apartestudio en Centro,598000000,172,4.0,Centro,Apartestudio,2023.10.15
 634,None en Laureles,1084000000,335,4.0,laureles,,15/10/2023
 246,Apartamento en Laureles,2192000000,445,5.0,Laureles,Apartamento,2023-10-15
@@ -197,16 +197,16 @@
 442,Finca en Laureles,865000000,104,4.0,Laureles,Finca,2023.10.15
 784,Casa en Belen,$ 498.000.000,273,2.0,Belen,Casa,2023.10.15
 270,None en Centro - Medellín,756000000,257,5.0,Centro - Medellín,,15/10/2023
-454,Casa en Centro,1005000000,1,5.0,Centro,Casa,"Oct 15, 2023"
+"454,Casa en Centro,1005000000,1,5.0,Centro,Casa,""Oct 15, 2023"""
 368,Apartamento en Robledo,1669000000,122,5.0,Robledo,Apartamento,15/10/2023
-175,Propiedad en Poblado,$ 2.302.000.000,216,4.0,poblado,?,"Oct 15, 2023"
+"175,Propiedad en Poblado,$ 2.302.000.000,216,4.0,poblado,?,""Oct 15, 2023"""
 468,Finca en Belén,1471000000,268,4.0,Belén,Finca,15/10/2023
 371,Apartamento en Laureles,$ 1.171.000.000,1,5.0,laureles,Apartamento,2023.10.15
 221,Finca en Belén,$ 2.012.000.000,352,2.0,Belén,Finca,15/10/2023
 731,Casa en Sabaneta,$ 1.399.000.000,95,2.0,Sabaneta,Casa,15/10/2023
 1009,Apartamento en Envigado,413000000,267,3.0,ENVIGADO,Apartamento,15/10/2023
 134,Apartamento en El Poblado,1722000000,76,3.0,EL POBLADO,Apartamento,15/10/2023
-1029,Propiedad en Centro - Medellín,217000000,103,3.0,Centro - Medellín,?,"Oct 15, 2023"
+"1029,Propiedad en Centro - Medellín,217000000,103,3.0,Centro - Medellín,?,""Oct 15, 2023"""
 803,Casa en Poblado,2291000000,260,3.0,poblado,Casa,15/10/2023
 235,Apartestudio en Laureles,2168000000,136,6.0,Laureles,Apartestudio,15/10/2023
 804,Apartestudio en Laureles - Estadio,2140000000,405,3.0,Laureles - Estadio,Apartestudio,2023-10-15
@@ -215,14 +215,14 @@
 477,Propiedad en El Poblado,$ 521.000.000,387,5.0,EL POBLADO,?,2023-10-15
 1160,Casa en Poblado,1133000000,83,6.0,POBLADO,Casa,15/10/2023
 553,Propiedad en Envigado,$ 402.000.000,403,6.0,ENVIGADO,?,2023-10-15
-687,Finca en Belen,1226000000,410,3.0,BELEN,Finca,"Oct 15, 2023"
+"687,Finca en Belen,1226000000,410,3.0,BELEN,Finca,""Oct 15, 2023"""
 1062,Propiedad en El Hueco,347000000,443,3.0,EL HUECO,?,2023-10-15
 694,Finca en El Poblado,1051000000,435,2.0,El Poblado,Finca,2023.10.15
 1087,Apartamento en Laureles,1160000000,126,2.0,Laureles,Apartamento,15/10/2023
 907,Apartamento en Sabaneta,802000000,418,,Sabaneta,Apartamento,2023-10-15
-178,Apartestudio en Laureles - Estadio,1097000000,301,6.0,Laureles - Estadio,Apartestudio,"Oct 15, 2023"
-926,Casa en El Poblado,1737000000,394,4.0,EL POBLADO,Casa,"Oct 15, 2023"
-1139,Casa en Belén,$ 1.226.000.000,251,2.0,Belén,Casa,"Oct 15, 2023"
+"178,Apartestudio en Laureles - Estadio,1097000000,301,6.0,Laureles - Estadio,Apartestudio,""Oct 15, 2023"""
+"926,Casa en El Poblado,1737000000,394,4.0,EL POBLADO,Casa,""Oct 15, 2023"""
+"1139,Casa en Belén,$ 1.226.000.000,251,2.0,Belén,Casa,""Oct 15, 2023"""
 205,Finca en Centro,1093000000,236,6.0,Centro,Finca,15/10/2023
 227,Finca en Poblado,297000000,435,4.0,POBLADO,Finca,15/10/2023
 708,Apartestudio en Robledo,$ 1.309.000.000,58,4.0,Robledo,Apartestudio,2023.10.15
@@ -233,20 +233,20 @@
 575,None en El Poblado,2066000000,45,4.0,El Poblado,,2023-10-15
 53,Apartestudio en Robledo,516000000,334,5.0,Robledo,Apartestudio,15/10/2023
 610,Propiedad en Centro,1056000000,97,2.0,Centro,?,2023-10-15
-443,Apartestudio en Envigado,787000000,125,2.0,ENVIGADO,Apartestudio,"Oct 15, 2023"
-555,Casa en El Poblado,2100000000,182,2.0,EL POBLADO,Casa,"Oct 15, 2023"
+"443,Apartestudio en Envigado,787000000,125,2.0,ENVIGADO,Apartestudio,""Oct 15, 2023"""
+"555,Casa en El Poblado,2100000000,182,2.0,EL POBLADO,Casa,""Oct 15, 2023"""
 24,Apartestudio en Belén,$ 1.660.000.000,300,2.0,Belén,Apartestudio,2023.10.15
 592,None en Laureles - Estadio,1821000000,241,,Laureles - Estadio,,2023-10-15
 789,Finca en El Hueco,$ 856.000.000,271,2.0,EL HUECO,Finca,2023.10.15
 8,Apartestudio en Belen,1827000000,309,2.0,Belen,Apartestudio,15/10/2023
 448,Apartamento en Laureles,$ 1.262.000.000,215,5.0,laureles,Apartamento,2023-10-15
 843,Apartamento en Envigado,424000000,349,6.0,Envigado,Apartamento,2023.10.15
-895,Casa en Poblado,1259000000,128,6.0,poblado,Casa,"Oct 15, 2023"
+"895,Casa en Poblado,1259000000,128,6.0,poblado,Casa,""Oct 15, 2023"""
 653,Propiedad en Centro,$ 1.589.000.000,249,2.0,Centro,?,2023-10-15
 1027,None en Centro,433000000,227,6.0,Centro,,15/10/2023
 428,Casa en Belen,1892000000,150,2.0,BELEN,Casa,2023-10-15
 571,Propiedad en Poblado,2002000000,56,2.0,poblado,?,2023-10-15
-1109,Casa en Robledo,1553000000,-50,2.0,ROBLEDO,Casa,"Oct 15, 2023"
+"1109,Casa en Robledo,1553000000,-50,2.0,ROBLEDO,Casa,""Oct 15, 2023"""
 818,Apartestudio en Belen,$ 1.652.000.000,214,4.0,BELEN,Apartestudio,15/10/2023
 971,Finca en Envigado,1329000000,313,5.0,Envigado,Finca,2023-10-15
 957,Casa en Belen,467000000,395,3.0,BELEN,Casa,2023-10-15
@@ -255,38 +255,38 @@
 269,Apartamento en Robledo,366000000,387,6.0,ROBLEDO,Apartamento,2023.10.15
 862,Apartestudio en Laureles,$ 622.000.000,1,6.0,laureles,Apartestudio,2023-10-15
 112,None en Robledo,1863000000,445,4.0,Robledo,,2023-10-15
-303,None en Sabaneta,208000000,42,5.0,SABANETA,,"Oct 15, 2023"
+"303,None en Sabaneta,208000000,42,5.0,SABANETA,,""Oct 15, 2023"""
 353,Apartamento en Laureles,257000000,427,4.0,laureles,Apartamento,2023-10-15
 28,None en El Hueco,2293000000,311,4.0,EL HUECO,,15/10/2023
 10,Propiedad en Sabaneta,1763000000,145,3.0,Sabaneta,?,2023.10.15
 796,Finca en El Hueco,665000000,382,6.0,EL HUECO,Finca,2023.10.15
-976,Finca en Laureles,1482000000,446,6.0,Laureles,Finca,"Oct 15, 2023"
+"976,Finca en Laureles,1482000000,446,6.0,Laureles,Finca,""Oct 15, 2023"""
 71,Apartestudio en Envigado,917000000,138,5.0,Envigado,Apartestudio,15/10/2023
 963,Apartestudio en Laureles,2047000000,413,5.0,Laureles,Apartestudio,2023.10.15
 429,Propiedad en Laureles,$ 1.324.000.000,45,3.0,Laureles,?,2023.10.15
 372,Apartamento en Envigado,$ 1.845.000.000,397,4.0,ENVIGADO,Apartamento,15/10/2023
-788,Finca en El Hueco,$ 2.262.000.000,133,3.0,EL HUECO,Finca,"Oct 15, 2023"
+"788,Finca en El Hueco,$ 2.262.000.000,133,3.0,EL HUECO,Finca,""Oct 15, 2023"""
 724,Casa en Robledo,2159000000,1,5.0,Robledo,Casa,2023-10-15
 973,Finca en Belen,$ 667.000.000,381,6.0,BELEN,Finca,15/10/2023
 73,Apartestudio en Belén,$ 777.000.000,320,6.0,Belén,Apartestudio,15/10/2023
 159,Apartamento en Laureles,1445000000,65,3.0,laureles,Apartamento,2023-10-15
-383,Finca en Envigado,$ 822.000.000,0,4.0,Envigado,Finca,"Oct 15, 2023"
+"383,Finca en Envigado,$ 822.000.000,0,4.0,Envigado,Finca,""Oct 15, 2023"""
 720,Finca en Belen,$ 1.906.000.000,38,3.0,Belen,Finca,2023.10.15
 819,Casa en Belen,2024000000,280,4.0,Belen,Casa,15/10/2023
 618,Apartestudio en El Poblado,1007000000,55,4.0,EL POBLADO,Apartestudio,2023-10-15
 750,Apartamento en El Poblado,$ 2.235.000.000,332,4.0,EL POBLADO,Apartamento,2023-10-15
 981,Propiedad en El Poblado,872000000,61,3.0,EL POBLADO,?,2023-10-15
 410,Casa en Robledo,711000000,224,2.0,Robledo,Casa,2023-10-15
-700,Finca en Sabaneta,1442000000,178,,SABANETA,Finca,"Oct 15, 2023"
+"700,Finca en Sabaneta,1442000000,178,,SABANETA,Finca,""Oct 15, 2023"""
 931,Finca en El Poblado,$ 1.065.000.000,50,4.0,EL POBLADO,Finca,2023.10.15
-1078,Apartestudio en Laureles,1966000000,401,4.0,Laureles,Apartestudio,"Oct 15, 2023"
+"1078,Apartestudio en Laureles,1966000000,401,4.0,Laureles,Apartestudio,""Oct 15, 2023"""
 933,Finca en Laureles,$ 2.029.000.000,189,,Laureles,Finca,15/10/2023
-348,Apartestudio en Envigado,$ 1.649.000.000,189,3.0,Envigado,Apartestudio,"Oct 15, 2023"
+"348,Apartestudio en Envigado,$ 1.649.000.000,189,3.0,Envigado,Apartestudio,""Oct 15, 2023"""
 329,Propiedad en Sabaneta,604000000,238,4.0,SABANETA,?,2023-10-15
 793,Finca en Laureles - Estadio,2017000000,75,3.0,Laureles - Estadio,Finca,2023-10-15
 19,Finca en Robledo,$ 1.446.000.000,221,4.0,ROBLEDO,Finca,2023.10.15
-1168,Apartestudio en Centro,1100000000,339,6.0,Centro,Apartestudio,"Oct 15, 2023"
-697,Apartamento en Belén,$ 2.233.000.000,304,3.0,Belén,Apartamento,"Oct 15, 2023"
+"1168,Apartestudio en Centro,1100000000,339,6.0,Centro,Apartestudio,""Oct 15, 2023"""
+"697,Apartamento en Belén,$ 2.233.000.000,304,3.0,Belén,Apartamento,""Oct 15, 2023"""
 98,Casa en Poblado,$ 2.223.000.000,256,3.0,POBLADO,Casa,2023.10.15
 816,Apartamento en Belen,$ 2.371.000.000,48,5.0,BELEN,Apartamento,15/10/2023
 412,Apartestudio en Laureles,1664000000,283,4.0,laureles,Apartestudio,2023-10-15
@@ -295,17 +295,17 @@
 1067,Apartamento en Sabaneta,2055000000,162,,SABANETA,Apartamento,2023.10.15
 392,Casa en Envigado,1443000000,137,,ENVIGADO,Casa,2023-10-15
 1119,Apartamento en El Hueco,1346000000,242,6.0,EL HUECO,Apartamento,2023.10.15
-7,Apartestudio en El Poblado,1020000000,404,2.0,EL POBLADO,Apartestudio,"Oct 15, 2023"
+"7,Apartestudio en El Poblado,1020000000,404,2.0,EL POBLADO,Apartestudio,""Oct 15, 2023"""
 1048,Casa en Belen,1936000000,228,,Belen,Casa,2023.10.15
-472,Propiedad en Centro - Medellín,1175000000,0,2.0,Centro - Medellín,?,"Oct 15, 2023"
+"472,Propiedad en Centro - Medellín,1175000000,0,2.0,Centro - Medellín,?,""Oct 15, 2023"""
 1020,Apartestudio en Centro - Medellín,1096000000,181,2.0,Centro - Medellín,Apartestudio,15/10/2023
-928,Apartamento en El Poblado,1603000000,110,5.0,El Poblado,Apartamento,"Oct 15, 2023"
+"928,Apartamento en El Poblado,1603000000,110,5.0,El Poblado,Apartamento,""Oct 15, 2023"""
 192,Apartamento en Envigado,$ 1.139.000.000,356,6.0,Envigado,Apartamento,2023.10.15
 982,Finca en Poblado,$ 277.000.000,46,6.0,poblado,Finca,15/10/2023
 452,Finca en Robledo,$ 1.189.000.000,123,6.0,ROBLEDO,Finca,15/10/2023
-527,Apartamento en Laureles - Estadio,$ 2.161.000.000,229,4.0,Laureles - Estadio,Apartamento,"Oct 15, 2023"
+"527,Apartamento en Laureles - Estadio,$ 2.161.000.000,229,4.0,Laureles - Estadio,Apartamento,""Oct 15, 2023"""
 722,Finca en Poblado,$ 2.467.000.000,348,6.0,POBLADO,Finca,15/10/2023
-1168,Apartestudio en Centro,1100000000,339,6.0,Centro,Apartestudio,"Oct 15, 2023"
+"1168,Apartestudio en Centro,1100000000,339,6.0,Centro,Apartestudio,""Oct 15, 2023"""
 986,None en Belen,$ 1.787.000.000,127,,BELEN,,2023-10-15
 1039,Apartamento en Envigado,$ 947.000.000,413,3.0,ENVIGADO,Apartamento,15/10/2023
 1144,Finca en El Hueco,1514000000,-50,4.0,EL HUECO,Finca,15/10/2023
@@ -319,14 +319,14 @@
 935,None en Centro,1449000000,307,3.0,Centro,,2023-10-15
 249,Finca en Belen,$ 2.011.000.000,301,5.0,BELEN,Finca,15/10/2023
 985,Apartamento en Robledo,860000000,266,2.0,Robledo,Apartamento,2023-10-15
-670,Finca en Belén,$ 1.443.000.000,158,4.0,Belén,Finca,"Oct 15, 2023"
+"670,Finca en Belén,$ 1.443.000.000,158,4.0,Belén,Finca,""Oct 15, 2023"""
 1193,Casa en El Poblado,1583000000,68,4.0,El Poblado,Casa,2023.10.15
 362,Propiedad en Robledo,558000000,222,6.0,ROBLEDO,?,2023.10.15
 693,Apartamento en Robledo,823000000,57,3.0,Robledo,Apartamento,2023-10-15
 1103,Casa en El Hueco,$ 1.276.000.000,91,5.0,EL HUECO,Casa,2023.10.15
 463,Apartamento en Sabaneta,$ 2.060.000.000,118,6.0,SABANETA,Apartamento,15/10/2023
 503,Casa en Sabaneta,$ 2.074.000.000,1,6.0,SABANETA,Casa,2023.10.15
-484,Apartamento en Robledo,1193000000,324,3.0,Robledo,Apartamento,"Oct 15, 2023"
+"484,Apartamento en Robledo,1193000000,324,3.0,Robledo,Apartamento,""Oct 15, 2023"""
 21,Apartestudio en Envigado,1541000000,164,2.0,ENVIGADO,Apartestudio,2023-10-15
 184,Propiedad en Centro - Medellín,2480000000,155,,Centro - Medellín,?,15/10/2023
 763,Casa en Envigado,1630000000,225,2.0,Envigado,Casa,2023-10-15
@@ -334,7 +334,7 @@
 1043,Casa en Robledo,$ 2.334.000.000,425,3.0,ROBLEDO,Casa,15/10/2023
 1195,Apartamento en El Hueco,1955000000,191,4.0,EL HUECO,Apartamento,2023.10.15
 1102,Apartestudio en El Hueco,2237000000,345,2.0,EL HUECO,Apartestudio,2023.10.15
-209,Casa en El Poblado,2319000000,189,6.0,El Poblado,Casa,"Oct 15, 2023"
+"209,Casa en El Poblado,2319000000,189,6.0,El Poblado,Casa,""Oct 15, 2023"""
 733,Apartestudio en Belen,$ 1.116.000.000,164,6.0,BELEN,Apartestudio,2023.10.15
 690,Apartamento en Laureles - Estadio,233000000,48,2.0,Laureles - Estadio,Apartamento,15/10/2023
 110,Propiedad en Belen,1055000000,270,,Belen,?,2023.10.15
@@ -342,7 +342,7 @@
 939,Casa en Robledo,$ 805.000.000,301,5.0,ROBLEDO,Casa,15/10/2023
 203,Finca en Robledo,1854000000,87,2.0,Robledo,Finca,2023.10.15
 588,Propiedad en Belen,283000000,409,,Belen,?,15/10/2023
-283,Apartestudio en Poblado,$ 1.063.000.000,142,4.0,poblado,Apartestudio,"Oct 15, 2023"
+"283,Apartestudio en Poblado,$ 1.063.000.000,142,4.0,poblado,Apartestudio,""Oct 15, 2023"""
 402,Casa en Robledo,2000000000,188,3.0,ROBLEDO,Casa,2023-10-15
 558,Apartestudio en Poblado,831000000,178,5.0,poblado,Apartestudio,2023.10.15
 304,Propiedad en El Hueco,$ 893.000.000,409,2.0,EL HUECO,?,15/10/2023
@@ -355,74 +355,74 @@
 904,Propiedad en Sabaneta,$ 356.000.000,90,5.0,SABANETA,?,2023-10-15
 59,Finca en Poblado,593000000,213,5.0,poblado,Finca,15/10/2023
 768,Apartamento en Sabaneta,1818000000,164,2.0,SABANETA,Apartamento,15/10/2023
-62,Apartamento en Envigado,611000000,92,6.0,Envigado,Apartamento,"Oct 15, 2023"
+"62,Apartamento en Envigado,611000000,92,6.0,Envigado,Apartamento,""Oct 15, 2023"""
 344,Apartestudio en Centro - Medellín,1717000000,47,3.0,Centro - Medellín,Apartestudio,15/10/2023
 20,Casa en El Poblado,$ 420.000.000,376,5.0,El Poblado,Casa,2023.10.15
 576,Apartamento en Sabaneta,1748000000,128,4.0,Sabaneta,Apartamento,2023.10.15
 266,Apartamento en El Hueco,2431000000,332,,EL HUECO,Apartamento,2023.10.15
 656,None en Centro,1750000000,310,4.0,Centro,,2023.10.15
-563,Casa en Laureles - Estadio,1122000000,407,2.0,Laureles - Estadio,Casa,"Oct 15, 2023"
-462,Finca en Robledo,965000000,191,2.0,ROBLEDO,Finca,"Oct 15, 2023"
+"563,Casa en Laureles - Estadio,1122000000,407,2.0,Laureles - Estadio,Casa,""Oct 15, 2023"""
+"462,Finca en Robledo,965000000,191,2.0,ROBLEDO,Finca,""Oct 15, 2023"""
 802,Finca en Laureles,1093000000,321,4.0,laureles,Finca,2023.10.15
 891,Apartestudio en Poblado,$ 1.447.000.000,272,2.0,poblado,Apartestudio,15/10/2023
 888,Finca en El Poblado,1931000000,165,4.0,El Poblado,Finca,2023.10.15
-89,Finca en Belén,226000000,263,,Belén,Finca,"Oct 15, 2023"
+"89,Finca en Belén,226000000,263,,Belén,Finca,""Oct 15, 2023"""
 176,None en Centro,2158000000,274,5.0,Centro,,2023.10.15
 396,Apartamento en Centro - Medellín,2347000000,102,3.0,Centro - Medellín,Apartamento,2023-10-15
 495,Finca en El Hueco,$ 1.113.000.000,312,5.0,EL HUECO,Finca,2023.10.15
 773,Propiedad en Centro - Medellín,2293000000,0,5.0,Centro - Medellín,?,2023.10.15
 151,Finca en El Hueco,$ 788.000.000,214,6.0,EL HUECO,Finca,2023-10-15
-627,Finca en Laureles,$ 1.049.000.000,200,6.0,laureles,Finca,"Oct 15, 2023"
+"627,Finca en Laureles,$ 1.049.000.000,200,6.0,laureles,Finca,""Oct 15, 2023"""
 229,Propiedad en Belen,$ 413.000.000,188,5.0,BELEN,?,15/10/2023
 680,Casa en Envigado,$ 1.978.000.000,408,4.0,Envigado,Casa,15/10/2023
 346,Apartestudio en Robledo,1962000000,177,3.0,Robledo,Apartestudio,2023-10-15
-143,Casa en Envigado,1059000000,407,,ENVIGADO,Casa,"Oct 15, 2023"
-865,Apartamento en Laureles,$ 409.000.000,152,2.0,laureles,Apartamento,"Oct 15, 2023"
+"143,Casa en Envigado,1059000000,407,,ENVIGADO,Casa,""Oct 15, 2023"""
+"865,Apartamento en Laureles,$ 409.000.000,152,2.0,laureles,Apartamento,""Oct 15, 2023"""
 636,None en Envigado,1512000000,253,,ENVIGADO,,15/10/2023
-153,Finca en El Poblado,983000000,316,2.0,El Poblado,Finca,"Oct 15, 2023"
+"153,Finca en El Poblado,983000000,316,2.0,El Poblado,Finca,""Oct 15, 2023"""
 707,Finca en Belen,1003000000,269,6.0,BELEN,Finca,2023-10-15
-1110,Apartamento en Poblado,1736000000,367,5.0,poblado,Apartamento,"Oct 15, 2023"
+"1110,Apartamento en Poblado,1736000000,367,5.0,poblado,Apartamento,""Oct 15, 2023"""
 535,Casa en Belen,$ 484.000.000,263,2.0,Belen,Casa,15/10/2023
-5,Casa en Robledo,970000000,191,6.0,Robledo,Casa,"Oct 15, 2023"
+"5,Casa en Robledo,970000000,191,6.0,Robledo,Casa,""Oct 15, 2023"""
 1050,Casa en Poblado,597000000,438,3.0,POBLADO,Casa,15/10/2023
 421,Propiedad en Belen,$ 1.775.000.000,-50,,Belen,?,2023.10.15
 645,Apartamento en Envigado,$ 1.852.000.000,38,2.0,Envigado,Apartamento,15/10/2023
 1071,None en Sabaneta,2247000000,274,4.0,Sabaneta,,2023-10-15
 27,Casa en Envigado,1593000000,149,2.0,ENVIGADO,Casa,2023.10.15
-642,Finca en Sabaneta,1055000000,186,6.0,SABANETA,Finca,"Oct 15, 2023"
+"642,Finca en Sabaneta,1055000000,186,6.0,SABANETA,Finca,""Oct 15, 2023"""
 358,Finca en Belén,$ 433.000.000,171,3.0,Belén,Finca,2023.10.15
 853,Propiedad en Belen,1577000000,353,,Belen,?,2023-10-15
 813,Casa en Belen,$ 1.429.000.000,280,4.0,Belen,Casa,2023-10-15
-1123,Apartestudio en Laureles - Estadio,2256000000,234,6.0,Laureles - Estadio,Apartestudio,"Oct 15, 2023"
+"1123,Apartestudio en Laureles - Estadio,2256000000,234,6.0,Laureles - Estadio,Apartestudio,""Oct 15, 2023"""
 557,Apartestudio en Poblado,387000000,345,5.0,POBLADO,Apartestudio,15/10/2023
 205,Finca en Centro,1093000000,236,6.0,Centro,Finca,15/10/2023
 808,Apartestudio en Belen,384000000,120,5.0,BELEN,Apartestudio,2023-10-15
-1008,Finca en El Poblado,$ 592.000.000,174,3.0,El Poblado,Finca,"Oct 15, 2023"
+"1008,Finca en El Poblado,$ 592.000.000,174,3.0,El Poblado,Finca,""Oct 15, 2023"""
 336,Finca en Belen,1016000000,414,3.0,BELEN,Finca,2023-10-15
 1076,Casa en Centro - Medellín,1803000000,285,2.0,Centro - Medellín,Casa,2023-10-15
 903,Apartestudio en Belen,731000000,217,5.0,BELEN,Apartestudio,15/10/2023
-1163,Finca en Centro - Medellín,825000000,423,4.0,Centro - Medellín,Finca,"Oct 15, 2023"
+"1163,Finca en Centro - Medellín,825000000,423,4.0,Centro - Medellín,Finca,""Oct 15, 2023"""
 351,Apartamento en Robledo,1503000000,135,6.0,Robledo,Apartamento,15/10/2023
 838,Apartestudio en Centro - Medellín,899000000,265,2.0,Centro - Medellín,Apartestudio,15/10/2023
-49,Casa en Centro,$ 1.912.000.000,116,6.0,Centro,Casa,"Oct 15, 2023"
-875,Apartestudio en Sabaneta,1564000000,389,6.0,Sabaneta,Apartestudio,"Oct 15, 2023"
+"49,Casa en Centro,$ 1.912.000.000,116,6.0,Centro,Casa,""Oct 15, 2023"""
+"875,Apartestudio en Sabaneta,1564000000,389,6.0,Sabaneta,Apartestudio,""Oct 15, 2023"""
 507,Finca en Laureles,963000000,312,3.0,laureles,Finca,2023.10.15
 777,Propiedad en Envigado,$ 1.447.000.000,399,5.0,ENVIGADO,?,15/10/2023
 710,Casa en Laureles,1040000000,398,4.0,laureles,Casa,15/10/2023
-219,Casa en Belen,2483000000,187,6.0,BELEN,Casa,"Oct 15, 2023"
+"219,Casa en Belen,2483000000,187,6.0,BELEN,Casa,""Oct 15, 2023"""
 528,Casa en Centro,1436000000,174,3.0,Centro,Casa,15/10/2023
 111,Apartamento en Robledo,2283000000,400,3.0,ROBLEDO,Apartamento,2023-10-15
 1070,Casa en Envigado,1065000000,280,6.0,Envigado,Casa,15/10/2023
-425,Apartestudio en El Hueco,$ 1.105.000.000,0,3.0,EL HUECO,Apartestudio,"Oct 15, 2023"
-498,Apartamento en Laureles - Estadio,$ 2.413.000.000,187,4.0,Laureles - Estadio,Apartamento,"Oct 15, 2023"
-686,Finca en El Poblado,751000000,263,4.0,EL POBLADO,Finca,"Oct 15, 2023"
-1143,Apartestudio en Robledo,2188000000,222,2.0,ROBLEDO,Apartestudio,"Oct 15, 2023"
+"425,Apartestudio en El Hueco,$ 1.105.000.000,0,3.0,EL HUECO,Apartestudio,""Oct 15, 2023"""
+"498,Apartamento en Laureles - Estadio,$ 2.413.000.000,187,4.0,Laureles - Estadio,Apartamento,""Oct 15, 2023"""
+"686,Finca en El Poblado,751000000,263,4.0,EL POBLADO,Finca,""Oct 15, 2023"""
+"1143,Apartestudio en Robledo,2188000000,222,2.0,ROBLEDO,Apartestudio,""Oct 15, 2023"""
 499,Casa en Envigado,$ 2.048.000.000,272,6.0,ENVIGADO,Casa,2023.10.15
 325,Finca en El Poblado,682000000,195,4.0,EL POBLADO,Finca,2023.10.15
 1077,Apartestudio en Sabaneta,$ 1.916.000.000,118,3.0,Sabaneta,Apartestudio,2023-10-15
 58,Casa en Belen,$ 960.000.000,193,4.0,BELEN,Casa,2023.10.15
 663,Apartestudio en Poblado,709000000,109,2.0,POBLADO,Apartestudio,2023-10-15
-927,Casa en Centro - Medellín,1970000000,211,3.0,Centro - Medellín,Casa,"Oct 15, 2023"
+"927,Casa en Centro - Medellín,1970000000,211,3.0,Centro - Medellín,Casa,""Oct 15, 2023"""
 154,Apartamento en Envigado,1869000000,161,6.0,Envigado,Apartamento,2023.10.15
 961,Apartamento en Poblado,$ 714.000.000,397,3.0,poblado,Apartamento,2023.10.15
 388,Casa en Sabaneta,1501000000,400,3.0,Sabaneta,Casa,2023-10-15
@@ -434,10 +434,10 @@
 679,Apartamento en Belén,739000000,217,6.0,Belén,Apartamento,2023.10.15
 1089,Apartamento en Envigado,284000000,402,4.0,Envigado,Apartamento,2023-10-15
 930,Finca en Envigado,1549000000,372,2.0,Envigado,Finca,2023.10.15
-171,Finca en El Hueco,435000000,219,4.0,EL HUECO,Finca,"Oct 15, 2023"
-532,Propiedad en Laureles,338000000,424,3.0,Laureles,?,"Oct 15, 2023"
+"171,Finca en El Hueco,435000000,219,4.0,EL HUECO,Finca,""Oct 15, 2023"""
+"532,Propiedad en Laureles,338000000,424,3.0,Laureles,?,""Oct 15, 2023"""
 827,Apartamento en Robledo,1213000000,-50,6.0,Robledo,Apartamento,2023.10.15
-1035,Casa en El Hueco,1076000000,274,5.0,EL HUECO,Casa,"Oct 15, 2023"
+"1035,Casa en El Hueco,1076000000,274,5.0,EL HUECO,Casa,""Oct 15, 2023"""
 94,Finca en Poblado,362000000,130,6.0,poblado,Finca,2023-10-15
 911,Casa en Envigado,$ 1.144.000.000,156,4.0,ENVIGADO,Casa,2023.10.15
 347,Apartamento en Envigado,420000000,308,,Envigado,Apartamento,2023.10.15
@@ -447,64 +447,64 @@
 654,Casa en Robledo,1443000000,292,4.0,ROBLEDO,Casa,2023.10.15
 404,Casa en Belen,880000000,218,,BELEN,Casa,2023-10-15
 18,Apartestudio en Centro,752000000,132,,Centro,Apartestudio,2023.10.15
-873,Propiedad en El Poblado,1946000000,192,3.0,El Poblado,?,"Oct 15, 2023"
+"873,Propiedad en El Poblado,1946000000,192,3.0,El Poblado,?,""Oct 15, 2023"""
 1179,Apartestudio en Belén,1874000000,320,,Belén,Apartestudio,2023-10-15
-929,Apartamento en Poblado,$ 928.000.000,395,2.0,POBLADO,Apartamento,"Oct 15, 2023"
+"929,Apartamento en Poblado,$ 928.000.000,395,2.0,POBLADO,Apartamento,""Oct 15, 2023"""
 1178,None en El Poblado,2192000000,449,,El Poblado,,2023.10.15
-188,Apartestudio en Envigado,$ 2.161.000.000,327,5.0,ENVIGADO,Apartestudio,"Oct 15, 2023"
+"188,Apartestudio en Envigado,$ 2.161.000.000,327,5.0,ENVIGADO,Apartestudio,""Oct 15, 2023"""
 522,None en Robledo,$ 1.685.000.000,391,,Robledo,,2023-10-15
-1159,Finca en El Hueco,$ 1.463.000.000,298,5.0,EL HUECO,Finca,"Oct 15, 2023"
+"1159,Finca en El Hueco,$ 1.463.000.000,298,5.0,EL HUECO,Finca,""Oct 15, 2023"""
 516,Propiedad en Centro - Medellín,875000000,322,2.0,Centro - Medellín,?,2023-10-15
 925,Finca en El Poblado,2132000000,141,5.0,El Poblado,Finca,2023.10.15
 583,Casa en El Poblado,831000000,311,3.0,El Poblado,Casa,2023-10-15
 860,Apartamento en Envigado,$ 210.000.000,438,5.0,ENVIGADO,Apartamento,2023.10.15
-1024,Finca en Laureles,1194000000,119,2.0,Laureles,Finca,"Oct 15, 2023"
+"1024,Finca en Laureles,1194000000,119,2.0,Laureles,Finca,""Oct 15, 2023"""
 162,Propiedad en Belen,1887000000,422,3.0,BELEN,?,2023-10-15
 314,Casa en Poblado,1223000000,231,2.0,poblado,Casa,2023.10.15
 1108,Apartestudio en Sabaneta,1669000000,237,4.0,SABANETA,Apartestudio,2023-10-15
-918,Casa en Robledo,$ 475.000.000,292,2.0,ROBLEDO,Casa,"Oct 15, 2023"
+"918,Casa en Robledo,$ 475.000.000,292,2.0,ROBLEDO,Casa,""Oct 15, 2023"""
 138,Casa en Laureles - Estadio,2035000000,378,5.0,Laureles - Estadio,Casa,2023-10-15
 63,Apartamento en Laureles - Estadio,939000000,303,3.0,Laureles - Estadio,Apartamento,15/10/2023
 815,Propiedad en Laureles,1397000000,442,,laureles,?,15/10/2023
 185,Propiedad en Centro,1228000000,96,3.0,Centro,?,2023.10.15
 51,Finca en Poblado,2181000000,87,5.0,poblado,Finca,2023-10-15
 1114,Apartestudio en Belen,2437000000,253,3.0,Belen,Apartestudio,15/10/2023
-723,Finca en Envigado,$ 1.781.000.000,1,3.0,ENVIGADO,Finca,"Oct 15, 2023"
+"723,Finca en Envigado,$ 1.781.000.000,1,3.0,ENVIGADO,Finca,""Oct 15, 2023"""
 471,Apartamento en Laureles,1238000000,1,,Laureles,Apartamento,2023.10.15
 38,Propiedad en Poblado,2162000000,333,6.0,poblado,?,15/10/2023
 1068,Apartestudio en Belen,$ 889.000.000,395,5.0,Belen,Apartestudio,2023.10.15
-67,None en Robledo,1873000000,188,6.0,Robledo,,"Oct 15, 2023"
-552,Apartamento en El Poblado,592000000,115,4.0,El Poblado,Apartamento,"Oct 15, 2023"
-81,Finca en Robledo,1460000000,400,4.0,Robledo,Finca,"Oct 15, 2023"
-614,None en Envigado,837000000,57,4.0,ENVIGADO,,"Oct 15, 2023"
+"67,None en Robledo,1873000000,188,6.0,Robledo,,""Oct 15, 2023"""
+"552,Apartamento en El Poblado,592000000,115,4.0,El Poblado,Apartamento,""Oct 15, 2023"""
+"81,Finca en Robledo,1460000000,400,4.0,Robledo,Finca,""Oct 15, 2023"""
+"614,None en Envigado,837000000,57,4.0,ENVIGADO,,""Oct 15, 2023"""
 1106,Apartamento en Centro - Medellín,728000000,375,5.0,Centro - Medellín,Apartamento,2023.10.15
 1122,Apartestudio en Robledo,354000000,307,2.0,Robledo,Apartestudio,15/10/2023
 567,Finca en Envigado,1243000000,220,6.0,ENVIGADO,Finca,2023-10-15
 878,Apartamento en Centro - Medellín,1967000000,257,5.0,Centro - Medellín,Apartamento,2023-10-15
 526,Finca en Laureles,$ 1.697.000.000,1,2.0,laureles,Finca,2023.10.15
 984,Finca en Centro - Medellín,2407000000,206,2.0,Centro - Medellín,Finca,2023-10-15
-113,Propiedad en Robledo,$ 1.595.000.000,321,4.0,Robledo,?,"Oct 15, 2023"
-1,Casa en Poblado,1790000000,121,,POBLADO,Casa,"Oct 15, 2023"
+"113,Propiedad en Robledo,$ 1.595.000.000,321,4.0,Robledo,?,""Oct 15, 2023"""
+"1,Casa en Poblado,1790000000,121,,POBLADO,Casa,""Oct 15, 2023"""
 252,Casa en Envigado,1631000000,382,5.0,ENVIGADO,Casa,2023-10-15
 821,None en Centro,1086000000,193,5.0,Centro,,15/10/2023
-214,Apartamento en Belen,$ 1.785.000.000,1,5.0,Belen,Apartamento,"Oct 15, 2023"
+"214,Apartamento en Belen,$ 1.785.000.000,1,5.0,Belen,Apartamento,""Oct 15, 2023"""
 1180,Finca en El Poblado,1766000000,181,,El Poblado,Finca,2023-10-15
 450,Propiedad en El Poblado,419000000,129,5.0,EL POBLADO,?,15/10/2023
-482,Finca en Envigado,672000000,114,,Envigado,Finca,"Oct 15, 2023"
+"482,Finca en Envigado,672000000,114,,Envigado,Finca,""Oct 15, 2023"""
 213,Apartamento en El Hueco,$ 1.144.000.000,-50,,EL HUECO,Apartamento,15/10/2023
-534,Apartestudio en Poblado,1850000000,62,4.0,poblado,Apartestudio,"Oct 15, 2023"
+"534,Apartestudio en Poblado,1850000000,62,4.0,poblado,Apartestudio,""Oct 15, 2023"""
 265,Propiedad en El Hueco,1395000000,414,,EL HUECO,?,2023.10.15
-174,Apartestudio en El Poblado,426000000,50,6.0,El Poblado,Apartestudio,"Oct 15, 2023"
+"174,Apartestudio en El Poblado,426000000,50,6.0,El Poblado,Apartestudio,""Oct 15, 2023"""
 722,Finca en Poblado,$ 2.467.000.000,348,6.0,POBLADO,Finca,15/10/2023
 828,Finca en El Poblado,413000000,316,4.0,El Poblado,Finca,2023-10-15
-395,None en Belén,$ 505.000.000,381,5.0,Belén,,"Oct 15, 2023"
+"395,None en Belén,$ 505.000.000,381,5.0,Belén,,""Oct 15, 2023"""
 812,Apartestudio en Robledo,2466000000,258,2.0,ROBLEDO,Apartestudio,2023-10-15
-719,None en El Hueco,1423000000,281,6.0,EL HUECO,,"Oct 15, 2023"
+"719,None en El Hueco,1423000000,281,6.0,EL HUECO,,""Oct 15, 2023"""
 201,Casa en El Poblado,$ 1.352.000.000,400,5.0,EL POBLADO,Casa,2023.10.15
-466,Apartestudio en Belén,$ 560.000.000,428,,Belén,Apartestudio,"Oct 15, 2023"
+"466,Apartestudio en Belén,$ 560.000.000,428,,Belén,Apartestudio,""Oct 15, 2023"""
 980,Casa en Belen,2129000000,423,3.0,BELEN,Casa,2023.10.15
 97,Casa en Laureles,1136000000,228,3.0,laureles,Casa,2023-10-15
-886,Apartestudio en El Poblado,452000000,114,2.0,El Poblado,Apartestudio,"Oct 15, 2023"
+"886,Apartestudio en El Poblado,452000000,114,2.0,El Poblado,Apartestudio,""Oct 15, 2023"""
 890,Apartestudio en Centro,321000000,342,,Centro,Apartestudio,15/10/2023
 1002,Apartestudio en Laureles,$ 1.260.000.000,219,5.0,Laureles,Apartestudio,2023-10-15
 854,Apartamento en Sabaneta,$ 978.000.000,331,6.0,Sabaneta,Apartamento,2023-10-15
@@ -514,33 +514,33 @@
 530,Apartestudio en Belen,2170000000,106,4.0,BELEN,Apartestudio,15/10/2023
 977,Apartamento en Belén,2498000000,341,6.0,Belén,Apartamento,2023.10.15
 233,Apartestudio en Sabaneta,$ 489.000.000,319,3.0,Sabaneta,Apartestudio,15/10/2023
-124,Finca en El Hueco,972000000,163,6.0,EL HUECO,Finca,"Oct 15, 2023"
+"124,Finca en El Hueco,972000000,163,6.0,EL HUECO,Finca,""Oct 15, 2023"""
 546,None en Sabaneta,1873000000,244,4.0,Sabaneta,,2023.10.15
 1021,Apartestudio en Sabaneta,1272000000,349,5.0,Sabaneta,Apartestudio,2023-10-15
 243,Apartestudio en Poblado,2159000000,115,2.0,poblado,Apartestudio,15/10/2023
-307,None en Laureles,1546000000,193,2.0,Laureles,,"Oct 15, 2023"
-855,Apartamento en Belen,852000000,348,2.0,Belen,Apartamento,"Oct 15, 2023"
+"307,None en Laureles,1546000000,193,2.0,Laureles,,""Oct 15, 2023"""
+"855,Apartamento en Belen,852000000,348,2.0,Belen,Apartamento,""Oct 15, 2023"""
 746,Finca en Poblado,315000000,259,3.0,poblado,Finca,2023.10.15
 585,Casa en Belen,2021000000,243,3.0,BELEN,Casa,15/10/2023
 568,Apartamento en Laureles - Estadio,980000000,304,4.0,Laureles - Estadio,Apartamento,2023-10-15
 1047,Finca en Laureles,2435000000,433,6.0,laureles,Finca,15/10/2023
 1096,None en El Poblado,2234000000,228,4.0,El Poblado,,15/10/2023
-1186,Apartestudio en Envigado,1636000000,375,5.0,Envigado,Apartestudio,"Oct 15, 2023"
+"1186,Apartestudio en Envigado,1636000000,375,5.0,Envigado,Apartestudio,""Oct 15, 2023"""
 893,Finca en Poblado,784000000,174,5.0,poblado,Finca,2023.10.15
-607,Finca en El Poblado,1104000000,275,4.0,El Poblado,Finca,"Oct 15, 2023"
+"607,Finca en El Poblado,1104000000,275,4.0,El Poblado,Finca,""Oct 15, 2023"""
 372,Apartamento en Envigado,$ 1.845.000.000,397,4.0,ENVIGADO,Apartamento,15/10/2023
-432,Finca en Centro,$ 1.264.000.000,-50,3.0,Centro,Finca,"Oct 15, 2023"
-761,Propiedad en Laureles,323000000,1,4.0,Laureles,?,"Oct 15, 2023"
+"432,Finca en Centro,$ 1.264.000.000,-50,3.0,Centro,Finca,""Oct 15, 2023"""
+"761,Propiedad en Laureles,323000000,1,4.0,Laureles,?,""Oct 15, 2023"""
 456,None en Poblado,1942000000,284,5.0,POBLADO,,2023-10-15
 657,Finca en Robledo,908000000,373,4.0,Robledo,Finca,2023-10-15
-381,Casa en El Hueco,1670000000,185,5.0,EL HUECO,Casa,"Oct 15, 2023"
+"381,Casa en El Hueco,1670000000,185,5.0,EL HUECO,Casa,""Oct 15, 2023"""
 674,Finca en Laureles - Estadio,229000000,234,4.0,Laureles - Estadio,Finca,2023.10.15
-397,Casa en Robledo,$ 606.000.000,254,4.0,ROBLEDO,Casa,"Oct 15, 2023"
+"397,Casa en Robledo,$ 606.000.000,254,4.0,ROBLEDO,Casa,""Oct 15, 2023"""
 919,Finca en Robledo,2081000000,168,6.0,Robledo,Finca,15/10/2023
 517,Apartestudio en Sabaneta,$ 1.052.000.000,393,3.0,SABANETA,Apartestudio,2023.10.15
 612,Finca en El Poblado,2182000000,271,2.0,EL POBLADO,Finca,2023-10-15
-913,None en Laureles,948000000,398,,laureles,,"Oct 15, 2023"
-128,Apartamento en Laureles,2016000000,211,4.0,laureles,Apartamento,"Oct 15, 2023"
+"913,None en Laureles,948000000,398,,laureles,,""Oct 15, 2023"""
+"128,Apartamento en Laureles,2016000000,211,4.0,laureles,Apartamento,""Oct 15, 2023"""
 486,Apartestudio en Envigado,2318000000,233,2.0,ENVIGADO,Apartestudio,2023.10.15
 163,Finca en Envigado,1420000000,85,3.0,ENVIGADO,Finca,2023-10-15
 288,Casa en Poblado,1974000000,141,2.0,poblado,Casa,2023-10-15
@@ -549,16 +549,16 @@
 324,Apartamento en Belén,2308000000,435,5.0,Belén,Apartamento,15/10/2023
 513,Apartamento en El Poblado,447000000,287,2.0,EL POBLADO,Apartamento,2023.10.15
 692,Casa en El Poblado,444000000,80,5.0,EL POBLADO,Casa,15/10/2023
-83,Propiedad en Laureles,843000000,315,2.0,laureles,?,"Oct 15, 2023"
-1016,Apartestudio en Poblado,346000000,89,2.0,POBLADO,Apartestudio,"Oct 15, 2023"
-848,Apartestudio en Poblado,1518000000,331,5.0,POBLADO,Apartestudio,"Oct 15, 2023"
+"83,Propiedad en Laureles,843000000,315,2.0,laureles,?,""Oct 15, 2023"""
+"1016,Apartestudio en Poblado,346000000,89,2.0,POBLADO,Apartestudio,""Oct 15, 2023"""
+"848,Apartestudio en Poblado,1518000000,331,5.0,POBLADO,Apartestudio,""Oct 15, 2023"""
 525,Finca en Robledo,$ 469.000.000,342,,ROBLEDO,Finca,2023-10-15
-1111,Apartamento en Belén,$ 219.000.000,175,6.0,Belén,Apartamento,"Oct 15, 2023"
-31,Casa en Robledo,$ 1.558.000.000,306,6.0,ROBLEDO,Casa,"Oct 15, 2023"
+"1111,Apartamento en Belén,$ 219.000.000,175,6.0,Belén,Apartamento,""Oct 15, 2023"""
+"31,Casa en Robledo,$ 1.558.000.000,306,6.0,ROBLEDO,Casa,""Oct 15, 2023"""
 2,Apartamento en Poblado,1885000000,157,6.0,poblado,Apartamento,2023-10-15
-1086,Casa en Envigado,2054000000,208,4.0,ENVIGADO,Casa,"Oct 15, 2023"
-120,None en Belén,$ 841.000.000,76,5.0,Belén,,"Oct 15, 2023"
-256,Apartestudio en Belen,589000000,158,,BELEN,Apartestudio,"Oct 15, 2023"
+"1086,Casa en Envigado,2054000000,208,4.0,ENVIGADO,Casa,""Oct 15, 2023"""
+"120,None en Belén,$ 841.000.000,76,5.0,Belén,,""Oct 15, 2023"""
+"256,Apartestudio en Belen,589000000,158,,BELEN,Apartestudio,""Oct 15, 2023"""
 831,Apartestudio en El Poblado,1079000000,102,4.0,El Poblado,Apartestudio,15/10/2023
 313,Propiedad en El Poblado,756000000,302,6.0,EL POBLADO,?,2023.10.15
 792,Apartamento en Envigado,881000000,130,4.0,ENVIGADO,Apartamento,2023-10-15
@@ -567,18 +567,18 @@
 1097,None en Sabaneta,1164000000,258,3.0,Sabaneta,,2023.10.15
 834,Casa en Centro,$ 259.000.000,348,3.0,Centro,Casa,2023.10.15
 537,Finca en Laureles,$ 290.000.000,44,5.0,Laureles,Finca,2023.10.15
-1157,Finca en El Poblado,$ 1.079.000.000,433,3.0,EL POBLADO,Finca,"Oct 15, 2023"
+"1157,Finca en El Poblado,$ 1.079.000.000,433,3.0,EL POBLADO,Finca,""Oct 15, 2023"""
 281,Finca en Laureles - Estadio,2369000000,175,6.0,Laureles - Estadio,Finca,2023.10.15
 847,Casa en Sabaneta,1822000000,322,4.0,SABANETA,Casa,2023-10-15
 379,Apartamento en Sabaneta,$ 2.152.000.000,203,5.0,Sabaneta,Apartamento,2023-10-15
 273,Apartestudio en Robledo,$ 1.966.000.000,378,2.0,Robledo,Apartestudio,2023.10.15
 480,Finca en Sabaneta,464000000,165,4.0,Sabaneta,Finca,15/10/2023
-255,Apartestudio en Envigado,$ 2.287.000.000,289,6.0,Envigado,Apartestudio,"Oct 15, 2023"
+"255,Apartestudio en Envigado,$ 2.287.000.000,289,6.0,Envigado,Apartestudio,""Oct 15, 2023"""
 102,Apartestudio en Sabaneta,2324000000,236,2.0,SABANETA,Apartestudio,2023.10.15
 825,Apartamento en Envigado,815000000,151,2.0,ENVIGADO,Apartamento,2023.10.15
 267,Apartamento en Poblado,1143000000,186,3.0,POBLADO,Apartamento,2023.10.15
 778,Apartestudio en El Poblado,629000000,102,,EL POBLADO,Apartestudio,15/10/2023
-298,Apartestudio en El Poblado,$ 2.348.000.000,150,6.0,EL POBLADO,Apartestudio,"Oct 15, 2023"
+"298,Apartestudio en El Poblado,$ 2.348.000.000,150,6.0,EL POBLADO,Apartestudio,""Oct 15, 2023"""
 655,None en Sabaneta,312000000,299,6.0,Sabaneta,,2023.10.15
 647,Casa en El Poblado,1411000000,402,3.0,El Poblado,Casa,2023.10.15
 424,Apartamento en Centro,$ 697.000.000,260,5.0,Centro,Apartamento,2023-10-15
@@ -587,9 +587,9 @@
 275,Apartamento en Poblado,2457000000,134,3.0,poblado,Apartamento,2023-10-15
 146,None en Centro,1332000000,54,4.0,Centro,,2023-10-15
 826,Apartestudio en Laureles,1933000000,435,5.0,Laureles,Apartestudio,2023.10.15
-195,Finca en Laureles - Estadio,$ 2.482.000.000,293,6.0,Laureles - Estadio,Finca,"Oct 15, 2023"
+"195,Finca en Laureles - Estadio,$ 2.482.000.000,293,6.0,Laureles - Estadio,Finca,""Oct 15, 2023"""
 735,Apartamento en Poblado,431000000,442,5.0,poblado,Apartamento,15/10/2023
-859,Casa en Laureles,877000000,359,6.0,laureles,Casa,"Oct 15, 2023"
+"859,Casa en Laureles,877000000,359,6.0,laureles,Casa,""Oct 15, 2023"""
 504,Casa en El Poblado,507000000,52,5.0,EL POBLADO,Casa,2023-10-15
 787,None en Belen,1743000000,242,2.0,Belen,,2023.10.15
 1196,Casa en El Hueco,$ 782.000.000,197,4.0,EL HUECO,Casa,15/10/2023
@@ -597,8 +597,8 @@
 874,Apartestudio en Laureles,2250000000,123,2.0,Laureles,Apartestudio,2023.10.15
 416,Apartamento en El Hueco,1218000000,129,3.0,EL HUECO,Apartamento,2023.10.15
 751,Casa en Sabaneta,681000000,275,2.0,Sabaneta,Casa,15/10/2023
-169,Apartestudio en Laureles,$ 617.000.000,380,6.0,Laureles,Apartestudio,"Oct 15, 2023"
-1045,Finca en Robledo,1857000000,86,5.0,Robledo,Finca,"Oct 15, 2023"
+"169,Apartestudio en Laureles,$ 617.000.000,380,6.0,Laureles,Apartestudio,""Oct 15, 2023"""
+"1045,Finca en Robledo,1857000000,86,5.0,Robledo,Finca,""Oct 15, 2023"""
 259,Finca en El Poblado,1017000000,424,,El Poblado,Finca,2023.10.15
 1117,Finca en Laureles,1557000000,36,6.0,Laureles,Finca,2023.10.15
 95,Casa en Laureles - Estadio,$ 698.000.000,319,,Laureles - Estadio,Casa,2023.10.15
@@ -610,9 +610,9 @@
 199,Apartamento en Belen,473000000,67,5.0,Belen,Apartamento,2023.10.15
 902,Finca en Laureles - Estadio,$ 1.402.000.000,173,,Laureles - Estadio,Finca,2023-10-15
 237,Apartamento en Poblado,1104000000,-50,3.0,poblado,Apartamento,2023.10.15
-282,Apartestudio en Centro,$ 1.656.000.000,166,3.0,Centro,Apartestudio,"Oct 15, 2023"
+"282,Apartestudio en Centro,$ 1.656.000.000,166,3.0,Centro,Apartestudio,""Oct 15, 2023"""
 970,Finca en Belen,$ 985.000.000,427,5.0,BELEN,Finca,2023.10.15
-1172,Casa en Laureles,$ 1.492.000.000,331,3.0,Laureles,Casa,"Oct 15, 2023"
+"1172,Casa en Laureles,$ 1.492.000.000,331,3.0,Laureles,Casa,""Oct 15, 2023"""
 669,Finca en Sabaneta,1547000000,0,3.0,Sabaneta,Finca,2023-10-15
 691,Apartestudio en Belen,1121000000,208,,BELEN,Apartestudio,2023.10.15
 302,Apartestudio en Centro - Medellín,228000000,242,5.0,Centro - Medellín,Apartestudio,15/10/2023
@@ -621,7 +621,7 @@
 492,Finca en Robledo,1750000000,406,4.0,ROBLEDO,Finca,15/10/2023
 1098,Casa en Centro,$ 2.442.000.000,295,5.0,Centro,Casa,2023-10-15
 494,Finca en Laureles,756000000,106,3.0,Laureles,Finca,15/10/2023
-363,Finca en Laureles,$ 1.976.000.000,448,,Laureles,Finca,"Oct 15, 2023"
+"363,Finca en Laureles,$ 1.976.000.000,448,,Laureles,Finca,""Oct 15, 2023"""
 899,Apartamento en Robledo,2446000000,288,6.0,Robledo,Apartamento,2023-10-15
 1091,Apartamento en Robledo,$ 2.439.000.000,137,6.0,Robledo,Apartamento,15/10/2023
 774,Finca en Laureles,$ 591.000.000,198,4.0,laureles,Finca,15/10/2023
@@ -631,7 +631,7 @@
 995,None en Sabaneta,1444000000,51,6.0,SABANETA,,2023-10-15
 1181,Apartamento en Laureles,1221000000,196,5.0,Laureles,Apartamento,2023.10.15
 190,Casa en Poblado,329000000,38,4.0,poblado,Casa,2023.10.15
-334,Apartamento en Centro - Medellín,2105000000,450,5.0,Centro - Medellín,Apartamento,"Oct 15, 2023"
+"334,Apartamento en Centro - Medellín,2105000000,450,5.0,Centro - Medellín,Apartamento,""Oct 15, 2023"""
 1169,Casa en Centro - Medellín,467000000,226,6.0,Centro - Medellín,Casa,2023-10-15
 272,None en Sabaneta,$ 2.158.000.000,213,4.0,SABANETA,,2023-10-15
 400,Casa en Laureles,1266000000,169,,Laureles,Casa,15/10/2023
@@ -639,18 +639,18 @@
 42,Apartestudio en Robledo,930000000,405,,ROBLEDO,Apartestudio,2023.10.15
 82,Apartamento en Poblado,2293000000,332,3.0,POBLADO,Apartamento,2023-10-15
 197,Finca en Belen,$ 2.208.000.000,1,2.0,BELEN,Finca,15/10/2023
-863,Apartamento en Sabaneta,2277000000,127,2.0,Sabaneta,Apartamento,"Oct 15, 2023"
+"863,Apartamento en Sabaneta,2277000000,127,2.0,Sabaneta,Apartamento,""Oct 15, 2023"""
 659,None en Belén,2370000000,371,4.0,Belén,,2023-10-15
 1093,Finca en Envigado,909000000,361,2.0,Envigado,Finca,2023-10-15
 218,Casa en Laureles - Estadio,2438000000,177,,Laureles - Estadio,Casa,2023.10.15
 206,Casa en Laureles - Estadio,$ 874.000.000,270,2.0,Laureles - Estadio,Casa,2023.10.15
-1046,Apartestudio en Laureles,2263000000,115,3.0,Laureles,Apartestudio,"Oct 15, 2023"
+"1046,Apartestudio en Laureles,2263000000,115,3.0,Laureles,Apartestudio,""Oct 15, 2023"""
 317,Casa en Robledo,861000000,167,6.0,ROBLEDO,Casa,2023.10.15
 262,None en Poblado,339000000,266,2.0,poblado,,2023-10-15
 284,Propiedad en Belen,1720000000,294,5.0,Belen,?,15/10/2023
-574,Finca en Poblado,$ 2.454.000.000,325,4.0,poblado,Finca,"Oct 15, 2023"
+"574,Finca en Poblado,$ 2.454.000.000,325,4.0,poblado,Finca,""Oct 15, 2023"""
 78,Apartamento en Laureles,776000000,385,5.0,laureles,Apartamento,15/10/2023
-749,Apartamento en Laureles,1130000000,184,5.0,laureles,Apartamento,"Oct 15, 2023"
+"749,Apartamento en Laureles,1130000000,184,5.0,laureles,Apartamento,""Oct 15, 2023"""
 767,Casa en El Poblado,901000000,282,4.0,EL POBLADO,Casa,2023-10-15
 1006,Propiedad en Poblado,241000000,252,,poblado,?,2023.10.15
 17,Apartestudio en Envigado,421000000,206,6.0,Envigado,Apartestudio,15/10/2023
@@ -669,10 +669,10 @@
 430,None en Centro,$ 1.227.000.000,50,3.0,Centro,,2023.10.15
 1162,Casa en Envigado,$ 1.377.000.000,320,4.0,ENVIGADO,Casa,15/10/2023
 769,Finca en Belén,$ 1.100.000.000,294,6.0,Belén,Finca,2023.10.15
-1063,Apartestudio en Poblado,454000000,0,,poblado,Apartestudio,"Oct 15, 2023"
-469,Apartamento en El Poblado,1399000000,75,2.0,El Poblado,Apartamento,"Oct 15, 2023"
-966,Apartestudio en Laureles,2142000000,148,5.0,Laureles,Apartestudio,"Oct 15, 2023"
-564,Apartamento en Poblado,$ 866.000.000,387,,poblado,Apartamento,"Oct 15, 2023"
+"1063,Apartestudio en Poblado,454000000,0,,poblado,Apartestudio,""Oct 15, 2023"""
+"469,Apartamento en El Poblado,1399000000,75,2.0,El Poblado,Apartamento,""Oct 15, 2023"""
+"966,Apartestudio en Laureles,2142000000,148,5.0,Laureles,Apartestudio,""Oct 15, 2023"""
+"564,Apartamento en Poblado,$ 866.000.000,387,,poblado,Apartamento,""Oct 15, 2023"""
 248,Apartamento en Envigado,348000000,62,4.0,ENVIGADO,Apartamento,2023.10.15
 223,Apartamento en Robledo,258000000,405,6.0,Robledo,Apartamento,15/10/2023
 732,Apartamento en Laureles,$ 2.105.000.000,190,3.0,laureles,Apartamento,15/10/2023
@@ -683,25 +683,25 @@
 1014,Apartamento en Envigado,2449000000,415,6.0,Envigado,Apartamento,15/10/2023
 1052,None en Sabaneta,$ 856.000.000,319,6.0,Sabaneta,,15/10/2023
 529,Apartestudio en Centro - Medellín,1007000000,84,5.0,Centro - Medellín,Apartestudio,2023.10.15
-550,Apartestudio en Laureles,$ 1.509.000.000,308,,laureles,Apartestudio,"Oct 15, 2023"
-684,Apartestudio en El Hueco,$ 2.371.000.000,436,4.0,EL HUECO,Apartestudio,"Oct 15, 2023"
+"550,Apartestudio en Laureles,$ 1.509.000.000,308,,laureles,Apartestudio,""Oct 15, 2023"""
+"684,Apartestudio en El Hueco,$ 2.371.000.000,436,4.0,EL HUECO,Apartestudio,""Oct 15, 2023"""
 1001,None en Robledo,2304000000,440,4.0,ROBLEDO,,2023-10-15
 145,Casa en Robledo,1259000000,82,3.0,ROBLEDO,Casa,2023.10.15
-702,Apartamento en Sabaneta,1550000000,60,,SABANETA,Apartamento,"Oct 15, 2023"
-99,Apartamento en Robledo,2160000000,45,2.0,Robledo,Apartamento,"Oct 15, 2023"
+"702,Apartamento en Sabaneta,1550000000,60,,SABANETA,Apartamento,""Oct 15, 2023"""
+"99,Apartamento en Robledo,2160000000,45,2.0,Robledo,Apartamento,""Oct 15, 2023"""
 9,None en Belen,276000000,144,6.0,Belen,,2023.10.15
 230,Casa en Laureles,1610000000,358,4.0,laureles,Casa,2023.10.15
 867,Casa en Envigado,853000000,117,4.0,Envigado,Casa,2023.10.15
 689,Finca en Envigado,1904000000,44,2.0,ENVIGADO,Finca,2023.10.15
 538,Casa en Envigado,278000000,237,5.0,ENVIGADO,Casa,2023-10-15
-524,Propiedad en Robledo,1069000000,360,2.0,ROBLEDO,?,"Oct 15, 2023"
+"524,Propiedad en Robledo,1069000000,360,2.0,ROBLEDO,?,""Oct 15, 2023"""
 755,Finca en Sabaneta,$ 1.193.000.000,378,2.0,SABANETA,Finca,2023-10-15
-889,Apartestudio en Belen,877000000,448,2.0,Belen,Apartestudio,"Oct 15, 2023"
+"889,Apartestudio en Belen,877000000,448,2.0,Belen,Apartestudio,""Oct 15, 2023"""
 635,None en Envigado,215000000,329,3.0,Envigado,,15/10/2023
 932,None en Belén,$ 488.000.000,160,2.0,Belén,,15/10/2023
 1041,Apartestudio en Robledo,516000000,200,3.0,ROBLEDO,Apartestudio,2023-10-15
 799,Casa en Poblado,2251000000,450,6.0,poblado,Casa,2023.10.15
-327,Casa en Envigado,759000000,272,2.0,Envigado,Casa,"Oct 15, 2023"
+"327,Casa en Envigado,759000000,272,2.0,Envigado,Casa,""Oct 15, 2023"""
 1140,Propiedad en Belén,765000000,158,3.0,Belén,?,2023.10.15
 1153,Apartestudio en Sabaneta,2377000000,429,3.0,Sabaneta,Apartestudio,15/10/2023
 620,Finca en Centro - Medellín,395000000,295,2.0,Centro - Medellín,Finca,15/10/2023
@@ -711,7 +711,7 @@
 965,Apartestudio en Envigado,1158000000,404,6.0,ENVIGADO,Apartestudio,15/10/2023
 141,Apartestudio en Envigado,1359000000,362,6.0,ENVIGADO,Apartestudio,15/10/2023
 726,Casa en Laureles,696000000,76,5.0,Laureles,Casa,2023-10-15
-1040,Apartestudio en Centro - Medellín,1007000000,212,5.0,Centro - Medellín,Apartestudio,"Oct 15, 2023"
+"1040,Apartestudio en Centro - Medellín,1007000000,212,5.0,Centro - Medellín,Apartestudio,""Oct 15, 2023"""
 11,Apartestudio en El Poblado,2303000000,172,5.0,El Poblado,Apartestudio,15/10/2023
 1007,Apartamento en Laureles,$ 1.671.000.000,84,2.0,Laureles,Apartamento,15/10/2023
 378,Casa en Sabaneta,396000000,0,5.0,SABANETA,Casa,15/10/2023
@@ -720,13 +720,13 @@
 183,Propiedad en Poblado,2060000000,124,2.0,POBLADO,?,2023-10-15
 409,Casa en Belen,2062000000,92,4.0,BELEN,Casa,15/10/2023
 953,None en Robledo,1340000000,309,5.0,Robledo,,2023-10-15
-869,Apartamento en Centro - Medellín,670000000,256,5.0,Centro - Medellín,Apartamento,"Oct 15, 2023"
+"869,Apartamento en Centro - Medellín,670000000,256,5.0,Centro - Medellín,Apartamento,""Oct 15, 2023"""
 662,Apartamento en Centro,$ 905.000.000,402,6.0,Centro,Apartamento,2023.10.15
 277,None en Belen,$ 2.024.000.000,231,6.0,BELEN,,15/10/2023
 136,Propiedad en El Poblado,397000000,291,3.0,EL POBLADO,?,2023-10-15
 549,Apartestudio en Robledo,1194000000,265,5.0,Robledo,Apartestudio,2023-10-15
 752,Apartestudio en Laureles - Estadio,1922000000,403,2.0,Laureles - Estadio,Apartestudio,15/10/2023
-189,Apartamento en Robledo,1229000000,123,3.0,ROBLEDO,Apartamento,"Oct 15, 2023"
+"189,Apartamento en Robledo,1229000000,123,3.0,ROBLEDO,Apartamento,""Oct 15, 2023"""
 239,Apartestudio en Sabaneta,1877000000,96,3.0,Sabaneta,Apartestudio,15/10/2023
 391,Casa en Belén,918000000,82,4.0,Belén,Casa,2023-10-15
 129,Apartamento en El Poblado,1525000000,179,6.0,EL POBLADO,Apartamento,15/10/2023
@@ -738,18 +738,18 @@
 318,Apartamento en Belen,$ 2.176.000.000,58,6.0,Belen,Apartamento,2023-10-15
 866,Casa en El Poblado,828000000,251,2.0,EL POBLADO,Casa,2023.10.15
 633,Apartestudio en El Poblado,2127000000,195,6.0,El Poblado,Apartestudio,2023-10-15
-841,Apartestudio en Poblado,1023000000,211,2.0,poblado,Apartestudio,"Oct 15, 2023"
+"841,Apartestudio en Poblado,1023000000,211,2.0,poblado,Apartestudio,""Oct 15, 2023"""
 488,Apartamento en Belén,1278000000,389,4.0,Belén,Apartamento,15/10/2023
 548,Casa en Poblado,433000000,295,4.0,poblado,Casa,15/10/2023
 64,None en El Hueco,$ 1.074.000.000,174,2.0,EL HUECO,,2023-10-15
-366,Casa en El Hueco,$ 2.171.000.000,182,6.0,EL HUECO,Casa,"Oct 15, 2023"
+"366,Casa en El Hueco,$ 2.171.000.000,182,6.0,EL HUECO,Casa,""Oct 15, 2023"""
 611,Finca en El Hueco,1537000000,166,6.0,EL HUECO,Finca,15/10/2023
 541,None en Robledo,2115000000,73,3.0,Robledo,,15/10/2023
 908,Finca en Sabaneta,$ 2.424.000.000,43,4.0,SABANETA,Finca,2023.10.15
 91,Apartamento en Belen,2323000000,-50,2.0,BELEN,Apartamento,2023.10.15
 531,Apartestudio en El Hueco,$ 1.079.000.000,65,6.0,EL HUECO,Apartestudio,2023.10.15
 79,Finca en El Hueco,1495000000,121,3.0,EL HUECO,Finca,2023.10.15
-85,Casa en Belen,$ 912.000.000,295,4.0,BELEN,Casa,"Oct 15, 2023"
+"85,Casa en Belen,$ 912.000.000,295,4.0,BELEN,Casa,""Oct 15, 2023"""
 244,Casa en Sabaneta,726000000,46,2.0,Sabaneta,Casa,15/10/2023
 155,Apartamento en Sabaneta,1983000000,372,5.0,SABANETA,Apartamento,2023.10.15
 1145,Apartestudio en Centro - Medellín,2112000000,433,6.0,Centro - Medellín,Apartestudio,15/10/2023
@@ -764,35 +764,35 @@
 842,Casa en Poblado,1225000000,97,3.0,POBLADO,Casa,15/10/2023
 518,Propiedad en Envigado,$ 557.000.000,293,3.0,ENVIGADO,?,2023-10-15
 1182,Casa en El Poblado,461000000,379,3.0,El Poblado,Casa,2023.10.15
-898,Apartamento en Belen,504000000,60,3.0,BELEN,Apartamento,"Oct 15, 2023"
-56,None en Envigado,2397000000,365,5.0,Envigado,,"Oct 15, 2023"
+"898,Apartamento en Belen,504000000,60,3.0,BELEN,Apartamento,""Oct 15, 2023"""
+"56,None en Envigado,2397000000,365,5.0,Envigado,,""Oct 15, 2023"""
 242,Apartamento en Laureles,1759000000,241,,laureles,Apartamento,15/10/2023
-1113,Apartestudio en Sabaneta,2362000000,418,5.0,Sabaneta,Apartestudio,"Oct 15, 2023"
-473,Apartestudio en Belen,$ 2.310.000.000,269,6.0,BELEN,Apartestudio,"Oct 15, 2023"
+"1113,Apartestudio en Sabaneta,2362000000,418,5.0,Sabaneta,Apartestudio,""Oct 15, 2023"""
+"473,Apartestudio en Belen,$ 2.310.000.000,269,6.0,BELEN,Apartestudio,""Oct 15, 2023"""
 423,Apartestudio en El Poblado,$ 535.000.000,400,3.0,El Poblado,Apartestudio,2023-10-15
 181,Propiedad en Envigado,519000000,248,2.0,Envigado,?,2023-10-15
 12,Apartamento en Belen,$ 2.441.000.000,251,6.0,BELEN,Apartamento,15/10/2023
 308,Apartamento en Belen,1735000000,427,3.0,BELEN,Apartamento,15/10/2023
 800,Casa en Laureles,1847000000,152,,Laureles,Casa,2023.10.15
 1119,Apartamento en El Hueco,1346000000,242,6.0,EL HUECO,Apartamento,2023.10.15
-401,Apartamento en Centro,1730000000,318,6.0,Centro,Apartamento,"Oct 15, 2023"
+"401,Apartamento en Centro,1730000000,318,6.0,Centro,Apartamento,""Oct 15, 2023"""
 48,Casa en Sabaneta,2333000000,288,6.0,SABANETA,Casa,2023-10-15
-554,None en Laureles,2261000000,38,6.0,laureles,,"Oct 15, 2023"
-444,Apartamento en Robledo,1745000000,417,,Robledo,Apartamento,"Oct 15, 2023"
-316,Casa en Laureles,$ 1.750.000.000,295,5.0,Laureles,Casa,"Oct 15, 2023"
-431,Finca en El Poblado,813000000,212,5.0,EL POBLADO,Finca,"Oct 15, 2023"
-712,Apartamento en Laureles,2367000000,298,2.0,laureles,Apartamento,"Oct 15, 2023"
-954,Casa en Centro,1719000000,351,5.0,Centro,Casa,"Oct 15, 2023"
+"554,None en Laureles,2261000000,38,6.0,laureles,,""Oct 15, 2023"""
+"444,Apartamento en Robledo,1745000000,417,,Robledo,Apartamento,""Oct 15, 2023"""
+"316,Casa en Laureles,$ 1.750.000.000,295,5.0,Laureles,Casa,""Oct 15, 2023"""
+"431,Finca en El Poblado,813000000,212,5.0,EL POBLADO,Finca,""Oct 15, 2023"""
+"712,Apartamento en Laureles,2367000000,298,2.0,laureles,Apartamento,""Oct 15, 2023"""
+"954,Casa en Centro,1719000000,351,5.0,Centro,Casa,""Oct 15, 2023"""
 220,Apartestudio en Laureles,$ 480.000.000,78,4.0,Laureles,Apartestudio,15/10/2023
 514,Finca en Laureles - Estadio,2289000000,369,5.0,Laureles - Estadio,Finca,15/10/2023
-1012,Casa en Poblado,$ 951.000.000,144,2.0,poblado,Casa,"Oct 15, 2023"
+"1012,Casa en Poblado,$ 951.000.000,144,2.0,poblado,Casa,""Oct 15, 2023"""
 57,Finca en Sabaneta,$ 2.066.000.000,369,3.0,SABANETA,Finca,15/10/2023
-419,Apartamento en Envigado,$ 1.049.000.000,189,3.0,Envigado,Apartamento,"Oct 15, 2023"
+"419,Apartamento en Envigado,$ 1.049.000.000,189,3.0,Envigado,Apartamento,""Oct 15, 2023"""
 652,Apartamento en Belen,2016000000,369,2.0,BELEN,Apartamento,15/10/2023
 96,Apartamento en Belén,$ 1.677.000.000,130,2.0,Belén,Apartamento,2023.10.15
-289,Apartestudio en Belen,$ 1.338.000.000,123,4.0,BELEN,Apartestudio,"Oct 15, 2023"
+"289,Apartestudio en Belen,$ 1.338.000.000,123,4.0,BELEN,Apartestudio,""Oct 15, 2023"""
 1030,Casa en Belen,739000000,72,5.0,Belen,Casa,2023-10-15
-177,None en Sabaneta,1539000000,317,4.0,SABANETA,,"Oct 15, 2023"
+"177,None en Sabaneta,1539000000,317,4.0,SABANETA,,""Oct 15, 2023"""
 870,None en El Poblado,461000000,40,5.0,EL POBLADO,,15/10/2023
 365,None en Belén,338000000,79,2.0,Belén,,2023-10-15
 671,Casa en El Poblado,1992000000,326,6.0,EL POBLADO,Casa,2023-10-15
@@ -801,16 +801,16 @@
 949,Finca en Laureles - Estadio,682000000,433,,Laureles - Estadio,Finca,2023-10-15
 900,Apartestudio en Poblado,798000000,99,,poblado,Apartestudio,15/10/2023
 584,Apartamento en Sabaneta,2301000000,120,4.0,Sabaneta,Apartamento,2023.10.15
-481,Apartestudio en Poblado,2392000000,255,5.0,poblado,Apartestudio,"Oct 15, 2023"
-297,Apartamento en Centro,2218000000,221,6.0,Centro,Apartamento,"Oct 15, 2023"
+"481,Apartestudio en Poblado,2392000000,255,5.0,poblado,Apartestudio,""Oct 15, 2023"""
+"297,Apartamento en Centro,2218000000,221,6.0,Centro,Apartamento,""Oct 15, 2023"""
 533,Propiedad en Poblado,$ 2.372.000.000,295,3.0,poblado,?,2023.10.15
-122,Apartamento en Belén,2378000000,336,,Belén,Apartamento,"Oct 15, 2023"
+"122,Apartamento en Belén,2378000000,336,,Belén,Apartamento,""Oct 15, 2023"""
 1166,Casa en Belen,$ 1.194.000.000,246,6.0,Belen,Casa,15/10/2023
-330,Finca en Robledo,2179000000,242,2.0,Robledo,Finca,"Oct 15, 2023"
+"330,Finca en Robledo,2179000000,242,2.0,Robledo,Finca,""Oct 15, 2023"""
 160,None en Centro - Medellín,$ 1.773.000.000,52,2.0,Centro - Medellín,,15/10/2023
-445,Finca en Poblado,588000000,208,6.0,poblado,Finca,"Oct 15, 2023"
-745,Finca en Sabaneta,771000000,222,4.0,SABANETA,Finca,"Oct 15, 2023"
-1013,Finca en Poblado,498000000,87,2.0,POBLADO,Finca,"Oct 15, 2023"
+"445,Finca en Poblado,588000000,208,6.0,poblado,Finca,""Oct 15, 2023"""
+"745,Finca en Sabaneta,771000000,222,4.0,SABANETA,Finca,""Oct 15, 2023"""
+"1013,Finca en Poblado,498000000,87,2.0,POBLADO,Finca,""Oct 15, 2023"""
 975,Propiedad en Belen,1612000000,233,,Belen,?,2023.10.15
 1075,None en Sabaneta,$ 482.000.000,225,3.0,SABANETA,,2023-10-15
 1156,Finca en Envigado,1039000000,354,2.0,ENVIGADO,Finca,2023-10-15
@@ -820,7 +820,7 @@
 775,Apartamento en Robledo,1670000000,95,6.0,ROBLEDO,Apartamento,2023.10.15
 885,Finca en Laureles - Estadio,1481000000,316,2.0,Laureles - Estadio,Finca,2023.10.15
 695,Apartamento en Sabaneta,515000000,119,3.0,Sabaneta,Apartamento,2023.10.15
-322,Apartamento en Laureles,823000000,116,6.0,laureles,Apartamento,"Oct 15, 2023"
+"322,Apartamento en Laureles,823000000,116,6.0,laureles,Apartamento,""Oct 15, 2023"""
 142,Casa en Laureles,$ 883.000.000,169,4.0,laureles,Casa,2023.10.15
 149,Apartamento en Robledo,1253000000,1,3.0,Robledo,Apartamento,2023.10.15
 630,Finca en Laureles - Estadio,$ 1.616.000.000,420,4.0,Laureles - Estadio,Finca,2023-10-15
@@ -828,51 +828,51 @@
 187,Propiedad en El Hueco,$ 1.286.000.000,195,3.0,EL HUECO,?,15/10/2023
 489,Apartestudio en Envigado,2071000000,205,5.0,Envigado,Apartestudio,15/10/2023
 321,Finca en Centro - Medellín,909000000,233,6.0,Centro - Medellín,Finca,2023-10-15
-632,Casa en Robledo,612000000,396,3.0,ROBLEDO,Casa,"Oct 15, 2023"
+"632,Casa en Robledo,612000000,396,3.0,ROBLEDO,Casa,""Oct 15, 2023"""
 598,Apartamento en Laureles,$ 881.000.000,187,4.0,laureles,Apartamento,2023.10.15
-1121,Casa en Laureles,$ 2.221.000.000,350,3.0,laureles,Casa,"Oct 15, 2023"
+"1121,Casa en Laureles,$ 2.221.000.000,350,3.0,laureles,Casa,""Oct 15, 2023"""
 261,Apartestudio en Laureles,2262000000,263,6.0,laureles,Apartestudio,2023.10.15
 22,Finca en El Poblado,$ 1.885.000.000,85,4.0,El Poblado,Finca,15/10/2023
 922,Apartestudio en Laureles - Estadio,$ 567.000.000,155,2.0,Laureles - Estadio,Apartestudio,15/10/2023
-832,Apartamento en Belen,1070000000,321,4.0,BELEN,Apartamento,"Oct 15, 2023"
+"832,Apartamento en Belen,1070000000,321,4.0,BELEN,Apartamento,""Oct 15, 2023"""
 1192,Apartamento en Belen,$ 496.000.000,384,3.0,BELEN,Apartamento,15/10/2023
 996,Casa en Centro,1160000000,209,3.0,Centro,Casa,15/10/2023
-597,Apartestudio en Centro - Medellín,708000000,-50,6.0,Centro - Medellín,Apartestudio,"Oct 15, 2023"
+"597,Apartestudio en Centro - Medellín,708000000,-50,6.0,Centro - Medellín,Apartestudio,""Oct 15, 2023"""
 877,Casa en Belén,$ 2.079.000.000,306,5.0,Belén,Casa,2023.10.15
 967,Finca en Poblado,294000000,118,5.0,POBLADO,Finca,15/10/2023
 377,Propiedad en Centro - Medellín,1514000000,359,6.0,Centro - Medellín,?,15/10/2023
 992,Apartamento en Poblado,552000000,436,2.0,poblado,Apartamento,15/10/2023
 845,Finca en El Poblado,$ 1.046.000.000,319,4.0,EL POBLADO,Finca,2023-10-15
-437,Apartestudio en Robledo,498000000,156,2.0,Robledo,Apartestudio,"Oct 15, 2023"
+"437,Apartestudio en Robledo,498000000,156,2.0,Robledo,Apartestudio,""Oct 15, 2023"""
 234,Finca en Belen,2238000000,243,2.0,Belen,Finca,2023-10-15
-858,Finca en Laureles,1423000000,51,2.0,Laureles,Finca,"Oct 15, 2023"
-883,Finca en Centro,867000000,137,6.0,Centro,Finca,"Oct 15, 2023"
+"858,Finca en Laureles,1423000000,51,2.0,Laureles,Finca,""Oct 15, 2023"""
+"883,Finca en Centro,867000000,137,6.0,Centro,Finca,""Oct 15, 2023"""
 459,Apartestudio en Envigado,1290000000,399,2.0,Envigado,Apartestudio,2023-10-15
 510,Propiedad en Robledo,$ 925.000.000,165,2.0,ROBLEDO,?,15/10/2023
 599,Apartestudio en Robledo,632000000,37,2.0,Robledo,Apartestudio,2023.10.15
 268,Finca en El Poblado,1033000000,273,5.0,El Poblado,Finca,2023.10.15
 589,Casa en Belen,1137000000,236,,Belen,Casa,2023.10.15
 1081,Apartamento en Centro,$ 1.052.000.000,60,3.0,Centro,Apartamento,2023-10-15
-596,Apartamento en Sabaneta,$ 2.308.000.000,223,6.0,SABANETA,Apartamento,"Oct 15, 2023"
-403,Apartestudio en El Poblado,1996000000,257,4.0,El Poblado,Apartestudio,"Oct 15, 2023"
-608,Finca en Envigado,2391000000,356,3.0,ENVIGADO,Finca,"Oct 15, 2023"
+"596,Apartamento en Sabaneta,$ 2.308.000.000,223,6.0,SABANETA,Apartamento,""Oct 15, 2023"""
+"403,Apartestudio en El Poblado,1996000000,257,4.0,El Poblado,Apartestudio,""Oct 15, 2023"""
+"608,Finca en Envigado,2391000000,356,3.0,ENVIGADO,Finca,""Oct 15, 2023"""
 993,Apartestudio en Laureles,822000000,114,4.0,laureles,Apartestudio,15/10/2023
 1165,None en Laureles,1496000000,75,3.0,Laureles,,2023.10.15
-782,Apartamento en Envigado,1600000000,38,3.0,Envigado,Apartamento,"Oct 15, 2023"
+"782,Apartamento en Envigado,1600000000,38,3.0,Envigado,Apartamento,""Oct 15, 2023"""
 1011,Casa en Centro - Medellín,1254000000,74,5.0,Centro - Medellín,Casa,2023-10-15
-960,Casa en Centro - Medellín,979000000,449,6.0,Centro - Medellín,Casa,"Oct 15, 2023"
+"960,Casa en Centro - Medellín,979000000,449,6.0,Centro - Medellín,Casa,""Oct 15, 2023"""
 830,Apartestudio en Laureles,2445000000,409,,Laureles,Apartestudio,2023-10-15
 157,Casa en Centro - Medellín,2024000000,323,5.0,Centro - Medellín,Casa,2023-10-15
-291,Apartamento en Belén,$ 2.320.000.000,398,4.0,Belén,Apartamento,"Oct 15, 2023"
-833,Propiedad en Robledo,$ 1.616.000.000,287,3.0,ROBLEDO,?,"Oct 15, 2023"
+"291,Apartamento en Belén,$ 2.320.000.000,398,4.0,Belén,Apartamento,""Oct 15, 2023"""
+"833,Propiedad en Robledo,$ 1.616.000.000,287,3.0,ROBLEDO,?,""Oct 15, 2023"""
 491,Casa en El Hueco,1239000000,130,6.0,EL HUECO,Casa,15/10/2023
 781,Apartamento en El Poblado,$ 1.758.000.000,218,4.0,EL POBLADO,Apartamento,2023-10-15
 208,Casa en Belen,757000000,66,,BELEN,Casa,2023-10-15
-342,Propiedad en El Poblado,1318000000,306,4.0,El Poblado,?,"Oct 15, 2023"
+"342,Propiedad en El Poblado,1318000000,306,4.0,El Poblado,?,""Oct 15, 2023"""
 37,Propiedad en Laureles - Estadio,1398000000,36,3.0,Laureles - Estadio,?,2023.10.15
-182,Finca en Envigado,$ 2.378.000.000,430,6.0,Envigado,Finca,"Oct 15, 2023"
+"182,Finca en Envigado,$ 2.378.000.000,430,6.0,Envigado,Finca,""Oct 15, 2023"""
 798,None en Robledo,1598000000,413,5.0,ROBLEDO,,2023-10-15
-25,None en Envigado,$ 1.254.000.000,377,2.0,Envigado,,"Oct 15, 2023"
+"25,None en Envigado,$ 1.254.000.000,377,2.0,Envigado,,""Oct 15, 2023"""
 118,Apartamento en Poblado,735000000,0,5.0,POBLADO,Apartamento,2023-10-15
 222,Finca en Laureles,2259000000,101,3.0,Laureles,Finca,15/10/2023
 1170,Apartamento en Laureles,255000000,102,2.0,laureles,Apartamento,2023.10.15
@@ -886,8 +886,8 @@
 359,Apartamento en Laureles,1990000000,136,5.0,Laureles,Apartamento,2023.10.15
 577,Finca en Laureles - Estadio,$ 2.109.000.000,380,5.0,Laureles - Estadio,Finca,2023.10.15
 602,Casa en Centro,813000000,-50,6.0,Centro,Casa,2023.10.15
-880,Finca en Envigado,1883000000,167,5.0,Envigado,Finca,"Oct 15, 2023"
-593,Apartestudio en Belen,$ 2.471.000.000,57,3.0,Belen,Apartestudio,"Oct 15, 2023"
+"880,Finca en Envigado,1883000000,167,5.0,Envigado,Finca,""Oct 15, 2023"""
+"593,Apartestudio en Belen,$ 2.471.000.000,57,3.0,Belen,Apartestudio,""Oct 15, 2023"""
 570,None en Laureles,$ 1.419.000.000,409,5.0,Laureles,,2023.10.15
 119,Propiedad en Laureles,596000000,346,2.0,Laureles,?,15/10/2023
 1073,Apartamento en Belén,$ 1.007.000.000,277,4.0,Belén,Apartamento,2023-10-15
@@ -896,12 +896,12 @@
 760,None en Centro - Medellín,1169000000,123,,Centro - Medellín,,15/10/2023
 54,Apartestudio en Sabaneta,$ 679.000.000,363,3.0,SABANETA,Apartestudio,15/10/2023
 125,Casa en Laureles,1017000000,348,6.0,laureles,Casa,15/10/2023
-835,None en Sabaneta,561000000,37,6.0,SABANETA,,"Oct 15, 2023"
-1083,Apartestudio en Robledo,1133000000,132,2.0,ROBLEDO,Apartestudio,"Oct 15, 2023"
+"835,None en Sabaneta,561000000,37,6.0,SABANETA,,""Oct 15, 2023"""
+"1083,Apartestudio en Robledo,1133000000,132,2.0,ROBLEDO,Apartestudio,""Oct 15, 2023"""
 512,Finca en Belen,$ 1.542.000.000,278,5.0,Belen,Finca,2023.10.15
-202,Apartestudio en Belén,$ 1.584.000.000,110,3.0,Belén,Apartestudio,"Oct 15, 2023"
-713,Finca en Laureles,481000000,377,2.0,Laureles,Finca,"Oct 15, 2023"
-1149,Propiedad en Belen,$ 2.428.000.000,84,3.0,Belen,?,"Oct 15, 2023"
+"202,Apartestudio en Belén,$ 1.584.000.000,110,3.0,Belén,Apartestudio,""Oct 15, 2023"""
+"713,Finca en Laureles,481000000,377,2.0,Laureles,Finca,""Oct 15, 2023"""
+"1149,Propiedad en Belen,$ 2.428.000.000,84,3.0,Belen,?,""Oct 15, 2023"""
 946,Apartamento en Laureles,1274000000,372,6.0,laureles,Apartamento,2023.10.15
 147,Apartestudio en Robledo,2259000000,266,6.0,ROBLEDO,Apartestudio,2023.10.15
 511,Casa en Envigado,1816000000,214,3.0,ENVIGADO,Casa,2023-10-15
@@ -911,7 +911,7 @@
 108,Casa en Laureles,1238000000,1,3.0,Laureles,Casa,2023-10-15
 1112,Finca en Robledo,2292000000,218,2.0,Robledo,Finca,2023.10.15
 989,None en Centro,$ 1.829.000.000,130,6.0,Centro,,15/10/2023
-86,Apartestudio en Laureles,209000000,292,4.0,laureles,Apartestudio,"Oct 15, 2023"
+"86,Apartestudio en Laureles,209000000,292,4.0,laureles,Apartestudio,""Oct 15, 2023"""
 1082,Apartestudio en Sabaneta,$ 1.464.000.000,234,3.0,Sabaneta,Apartestudio,2023.10.15
 592,None en Laureles - Estadio,1821000000,241,,Laureles - Estadio,,2023-10-15
 613,Finca en Sabaneta,$ 1.493.000.000,39,2.0,Sabaneta,Finca,15/10/2023
@@ -925,70 +925,70 @@
 133,Casa en El Poblado,1925000000,376,3.0,EL POBLADO,Casa,2023-10-15
 594,Apartestudio en El Poblado,1049000000,290,2.0,El Poblado,Apartestudio,15/10/2023
 626,None en Belén,$ 1.074.000.000,365,6.0,Belén,,15/10/2023
-55,Casa en Laureles,687000000,202,6.0,Laureles,Casa,"Oct 15, 2023"
+"55,Casa en Laureles,687000000,202,6.0,Laureles,Casa,""Oct 15, 2023"""
 374,Casa en Centro - Medellín,$ 1.494.000.000,388,6.0,Centro - Medellín,Casa,2023.10.15
-737,Casa en Laureles - Estadio,2189000000,326,4.0,Laureles - Estadio,Casa,"Oct 15, 2023"
+"737,Casa en Laureles - Estadio,2189000000,326,4.0,Laureles - Estadio,Casa,""Oct 15, 2023"""
 580,Casa en Sabaneta,1635000000,1,3.0,Sabaneta,Casa,15/10/2023
 196,Casa en Poblado,$ 2.407.000.000,175,,POBLADO,Casa,2023.10.15
 1187,Apartamento en El Poblado,2290000000,94,5.0,El Poblado,Apartamento,2023-10-15
-274,Finca en Robledo,2240000000,162,2.0,Robledo,Finca,"Oct 15, 2023"
+"274,Finca en Robledo,2240000000,162,2.0,Robledo,Finca,""Oct 15, 2023"""
 716,None en Belén,1029000000,209,3.0,Belén,,2023.10.15
-617,Apartestudio en El Poblado,1169000000,433,2.0,El Poblado,Apartestudio,"Oct 15, 2023"
-271,Casa en Belen,931000000,333,5.0,BELEN,Casa,"Oct 15, 2023"
+"617,Apartestudio en El Poblado,1169000000,433,2.0,El Poblado,Apartestudio,""Oct 15, 2023"""
+"271,Casa en Belen,931000000,333,5.0,BELEN,Casa,""Oct 15, 2023"""
 335,Casa en Robledo,$ 540.000.000,433,5.0,ROBLEDO,Casa,2023-10-15
 343,Propiedad en Belen,1662000000,86,,Belen,?,2023-10-15
 1167,Finca en Sabaneta,$ 2.274.000.000,382,4.0,SABANETA,Finca,15/10/2023
 323,Casa en Robledo,2179000000,322,5.0,ROBLEDO,Casa,2023.10.15
-988,Casa en Robledo,833000000,223,2.0,ROBLEDO,Casa,"Oct 15, 2023"
+"988,Casa en Robledo,833000000,223,2.0,ROBLEDO,Casa,""Oct 15, 2023"""
 93,Apartestudio en Robledo,2083000000,113,3.0,Robledo,Apartestudio,2023.10.15
 173,Finca en Envigado,$ 2.187.000.000,282,,ENVIGADO,Finca,15/10/2023
 43,Finca en El Poblado,2420000000,329,4.0,EL POBLADO,Finca,15/10/2023
 705,Propiedad en Belén,1625000000,282,4.0,Belén,?,2023-10-15
-1061,Apartestudio en Sabaneta,937000000,350,,SABANETA,Apartestudio,"Oct 15, 2023"
+"1061,Apartestudio en Sabaneta,937000000,350,,SABANETA,Apartestudio,""Oct 15, 2023"""
 253,Apartamento en Centro - Medellín,2063000000,369,3.0,Centro - Medellín,Apartamento,15/10/2023
 240,Finca en El Poblado,$ 390.000.000,256,2.0,El Poblado,Finca,2023-10-15
 676,Finca en Centro - Medellín,1281000000,449,2.0,Centro - Medellín,Finca,2023-10-15
 355,Apartamento en El Poblado,$ 1.922.000.000,254,,El Poblado,Apartamento,2023-10-15
 658,Propiedad en El Poblado,310000000,130,5.0,EL POBLADO,?,2023.10.15
-1128,Apartestudio en Laureles,$ 1.313.000.000,392,6.0,Laureles,Apartestudio,"Oct 15, 2023"
+"1128,Apartestudio en Laureles,$ 1.313.000.000,392,6.0,Laureles,Apartestudio,""Oct 15, 2023"""
 983,Casa en Laureles,1561000000,219,2.0,Laureles,Casa,2023.10.15
-685,Apartestudio en Poblado,$ 1.395.000.000,234,3.0,poblado,Apartestudio,"Oct 15, 2023"
+"685,Apartestudio en Poblado,$ 1.395.000.000,234,3.0,poblado,Apartestudio,""Oct 15, 2023"""
 622,None en Sabaneta,592000000,335,3.0,SABANETA,,2023-10-15
 474,Apartestudio en Poblado,1664000000,297,3.0,POBLADO,Apartestudio,2023-10-15
 801,Apartestudio en Laureles,1808000000,160,2.0,Laureles,Apartestudio,2023.10.15
-3,Apartestudio en Centro - Medellín,$ 364.000.000,406,,Centro - Medellín,Apartestudio,"Oct 15, 2023"
-1099,Apartestudio en Belen,$ 1.556.000.000,392,5.0,Belen,Apartestudio,"Oct 15, 2023"
-770,Apartamento en Envigado,1930000000,422,6.0,ENVIGADO,Apartamento,"Oct 15, 2023"
-434,Propiedad en Robledo,719000000,202,2.0,ROBLEDO,?,"Oct 15, 2023"
+"3,Apartestudio en Centro - Medellín,$ 364.000.000,406,,Centro - Medellín,Apartestudio,""Oct 15, 2023"""
+"1099,Apartestudio en Belen,$ 1.556.000.000,392,5.0,Belen,Apartestudio,""Oct 15, 2023"""
+"770,Apartamento en Envigado,1930000000,422,6.0,ENVIGADO,Apartamento,""Oct 15, 2023"""
+"434,Propiedad en Robledo,719000000,202,2.0,ROBLEDO,?,""Oct 15, 2023"""
 370,None en Centro - Medellín,2469000000,376,3.0,Centro - Medellín,,2023.10.15
-462,Finca en Robledo,965000000,191,2.0,ROBLEDO,Finca,"Oct 15, 2023"
+"462,Finca en Robledo,965000000,191,2.0,ROBLEDO,Finca,""Oct 15, 2023"""
 822,Finca en Robledo,2118000000,154,4.0,Robledo,Finca,15/10/2023
 500,Propiedad en Centro - Medellín,$ 1.115.000.000,181,6.0,Centro - Medellín,?,2023.10.15
-211,Apartestudio en Belen,728000000,384,3.0,BELEN,Apartestudio,"Oct 15, 2023"
-603,Apartestudio en Centro,2218000000,248,2.0,Centro,Apartestudio,"Oct 15, 2023"
-23,Apartamento en Robledo,502000000,121,2.0,Robledo,Apartamento,"Oct 15, 2023"
+"211,Apartestudio en Belen,728000000,384,3.0,BELEN,Apartestudio,""Oct 15, 2023"""
+"603,Apartestudio en Centro,2218000000,248,2.0,Centro,Apartestudio,""Oct 15, 2023"""
+"23,Apartamento en Robledo,502000000,121,2.0,Robledo,Apartamento,""Oct 15, 2023"""
 758,Propiedad en El Hueco,$ 797.000.000,443,6.0,EL HUECO,?,2023-10-15
-586,Casa en Belén,1394000000,315,6.0,Belén,Casa,"Oct 15, 2023"
+"586,Casa en Belén,1394000000,315,6.0,Belén,Casa,""Oct 15, 2023"""
 644,Finca en Centro - Medellín,2482000000,256,2.0,Centro - Medellín,Finca,15/10/2023
 35,Finca en Laureles - Estadio,1098000000,106,4.0,Laureles - Estadio,Finca,2023.10.15
-682,Apartestudio en Laureles,$ 1.120.000.000,155,6.0,Laureles,Apartestudio,"Oct 15, 2023"
+"682,Apartestudio en Laureles,$ 1.120.000.000,155,6.0,Laureles,Apartestudio,""Oct 15, 2023"""
 559,Propiedad en Laureles,1401000000,303,2.0,laureles,?,2023.10.15
 959,Casa en Laureles,$ 2.179.000.000,263,2.0,laureles,Casa,2023-10-15
-139,Casa en Laureles,1957000000,-50,6.0,Laureles,Casa,"Oct 15, 2023"
+"139,Casa en Laureles,1957000000,-50,6.0,Laureles,Casa,""Oct 15, 2023"""
 286,Apartestudio en Envigado,1108000000,394,3.0,ENVIGADO,Apartestudio,2023.10.15
 551,Casa en El Hueco,$ 1.227.000.000,231,2.0,EL HUECO,Casa,2023.10.15
 232,Casa en Sabaneta,2131000000,166,5.0,Sabaneta,Casa,15/10/2023
-950,Finca en Laureles,2421000000,-50,2.0,laureles,Finca,"Oct 15, 2023"
-219,Casa en Belen,2483000000,187,6.0,BELEN,Casa,"Oct 15, 2023"
+"950,Finca en Laureles,2421000000,-50,2.0,laureles,Finca,""Oct 15, 2023"""
+"219,Casa en Belen,2483000000,187,6.0,BELEN,Casa,""Oct 15, 2023"""
 1095,Finca en Laureles,$ 1.281.000.000,103,5.0,laureles,Finca,2023-10-15
 501,Casa en Laureles,1947000000,92,4.0,laureles,Casa,15/10/2023
 369,Apartestudio en Belen,2032000000,237,,Belen,Apartestudio,2023-10-15
-979,None en El Hueco,$ 1.345.000.000,-50,6.0,EL HUECO,,"Oct 15, 2023"
-69,Propiedad en Belén,$ 1.452.000.000,-50,,Belén,?,"Oct 15, 2023"
-807,Finca en El Poblado,1630000000,0,,EL POBLADO,Finca,"Oct 15, 2023"
+"979,None en El Hueco,$ 1.345.000.000,-50,6.0,EL HUECO,,""Oct 15, 2023"""
+"69,Propiedad en Belén,$ 1.452.000.000,-50,,Belén,?,""Oct 15, 2023"""
+"807,Finca en El Poblado,1630000000,0,,EL POBLADO,Finca,""Oct 15, 2023"""
 52,Apartamento en Sabaneta,$ 503.000.000,447,5.0,SABANETA,Apartamento,2023.10.15
 1131,Casa en El Poblado,$ 1.673.000.000,185,6.0,El Poblado,Casa,2023.10.15
-994,Apartamento en Laureles,1510000000,55,5.0,laureles,Apartamento,"Oct 15, 2023"
+"994,Apartamento en Laureles,1510000000,55,5.0,laureles,Apartamento,""Oct 15, 2023"""
 422,Apartestudio en Poblado,487000000,215,4.0,POBLADO,Apartestudio,2023.10.15
 521,Apartestudio en Robledo,1690000000,175,4.0,ROBLEDO,Apartestudio,15/10/2023
 771,Apartestudio en Centro,1210000000,240,2.0,Centro,Apartestudio,15/10/2023
@@ -997,17 +997,17 @@
 850,Finca en Belen,2495000000,211,4.0,BELEN,Finca,15/10/2023
 465,Apartamento en Laureles,1985000000,421,2.0,Laureles,Apartamento,2023.10.15
 180,Finca en El Poblado,1248000000,66,4.0,El Poblado,Finca,2023-10-15
-1074,Apartestudio en Belen,574000000,245,5.0,Belen,Apartestudio,"Oct 15, 2023"
+"1074,Apartestudio en Belen,574000000,245,5.0,Belen,Apartestudio,""Oct 15, 2023"""
 754,Apartestudio en Laureles,$ 213.000.000,216,2.0,Laureles,Apartestudio,2023.10.15
 114,Apartestudio en Belén,$ 2.195.000.000,308,2.0,Belén,Apartestudio,15/10/2023
-974,Propiedad en Belén,512000000,318,2.0,Belén,?,"Oct 15, 2023"
+"974,Propiedad en Belén,512000000,318,2.0,Belén,?,""Oct 15, 2023"""
 292,Apartamento en Laureles - Estadio,2379000000,216,5.0,Laureles - Estadio,Apartamento,2023-10-15
-390,Casa en El Poblado,1004000000,85,5.0,El Poblado,Casa,"Oct 15, 2023"
+"390,Casa en El Poblado,1004000000,85,5.0,El Poblado,Casa,""Oct 15, 2023"""
 361,Casa en Belen,206000000,113,6.0,BELEN,Casa,15/10/2023
 844,Apartestudio en El Poblado,479000000,81,3.0,El Poblado,Apartestudio,15/10/2023
 130,Casa en Laureles,200000000,38,3.0,laureles,Casa,15/10/2023
 144,Casa en Poblado,1564000000,363,6.0,poblado,Casa,15/10/2023
-1025,None en Poblado,1341000000,234,4.0,POBLADO,,"Oct 15, 2023"
+"1025,None en Poblado,1341000000,234,4.0,POBLADO,,""Oct 15, 2023"""
 1092,Apartamento en El Hueco,300000000,64,3.0,EL HUECO,Apartamento,15/10/2023
 987,Finca en Robledo,$ 208.000.000,350,3.0,ROBLEDO,Finca,2023-10-15
 1132,Propiedad en Envigado,676000000,-50,4.0,ENVIGADO,?,2023-10-15
@@ -1016,8 +1016,8 @@
 1154,Apartestudio en Belén,1421000000,61,3.0,Belén,Apartestudio,2023-10-15
 254,Finca en Belén,1816000000,174,5.0,Belén,Finca,15/10/2023
 194,Propiedad en Robledo,$ 1.950.000.000,183,6.0,Robledo,?,15/10/2023
-809,Finca en Poblado,899000000,427,5.0,POBLADO,Finca,"Oct 15, 2023"
-569,None en Laureles,1271000000,178,3.0,laureles,,"Oct 15, 2023"
+"809,Finca en Poblado,899000000,427,5.0,POBLADO,Finca,""Oct 15, 2023"""
+"569,None en Laureles,1271000000,178,3.0,laureles,,""Oct 15, 2023"""
 1103,Casa en El Hueco,$ 1.276.000.000,91,5.0,EL HUECO,Casa,2023.10.15
 1056,Casa en Sabaneta,992000000,162,5.0,SABANETA,Casa,2023-10-15
 897,Casa en Laureles,218000000,202,3.0,laureles,Casa,2023.10.15
@@ -1027,13 +1027,13 @@
 623,Casa en Poblado,579000000,364,4.0,poblado,Casa,2023-10-15
 753,None en Belen,1020000000,175,3.0,BELEN,,2023-10-15
 1158,Finca en Centro - Medellín,1189000000,52,4.0,Centro - Medellín,Finca,2023.10.15
-581,Apartamento en Laureles,$ 253.000.000,339,6.0,Laureles,Apartamento,"Oct 15, 2023"
+"581,Apartamento en Laureles,$ 253.000.000,339,6.0,Laureles,Apartamento,""Oct 15, 2023"""
 740,Apartestudio en Envigado,1923000000,335,2.0,Envigado,Apartestudio,15/10/2023
-990,Apartestudio en Belén,738000000,283,6.0,Belén,Apartestudio,"Oct 15, 2023"
+"990,Apartestudio en Belén,738000000,283,6.0,Belén,Apartestudio,""Oct 15, 2023"""
 1031,Finca en Laureles,1716000000,240,5.0,laureles,Finca,2023.10.15
 921,Apartestudio en Robledo,1319000000,90,6.0,ROBLEDO,Apartestudio,2023.10.15
 794,None en Laureles - Estadio,2035000000,310,4.0,Laureles - Estadio,,15/10/2023
-748,Apartamento en El Hueco,$ 857.000.000,74,4.0,EL HUECO,Apartamento,"Oct 15, 2023"
+"748,Apartamento en El Hueco,$ 857.000.000,74,4.0,EL HUECO,Apartamento,""Oct 15, 2023"""
 814,Propiedad en Poblado,973000000,108,,POBLADO,?,15/10/2023
 1183,Propiedad en Robledo,483000000,439,4.0,ROBLEDO,?,2023-10-15
 360,Propiedad en El Poblado,1452000000,236,2.0,El Poblado,?,2023.10.15
@@ -1042,26 +1042,26 @@
 1036,Apartestudio en Belen,$ 316.000.000,131,4.0,BELEN,Apartestudio,15/10/2023
 783,Propiedad en Envigado,$ 1.902.000.000,126,2.0,Envigado,?,2023-10-15
 1137,Finca en Belén,685000000,86,5.0,Belén,Finca,2023.10.15
-172,Propiedad en Centro - Medellín,1618000000,297,6.0,Centro - Medellín,?,"Oct 15, 2023"
+"172,Propiedad en Centro - Medellín,1618000000,297,6.0,Centro - Medellín,?,""Oct 15, 2023"""
 1152,Propiedad en Belen,$ 2.370.000.000,125,,BELEN,?,2023.10.15
 991,Propiedad en Laureles,1431000000,380,5.0,Laureles,?,2023-10-15
 881,None en Poblado,923000000,-50,3.0,POBLADO,,2023.10.15
 1184,Apartamento en Centro - Medellín,1352000000,189,3.0,Centro - Medellín,Apartamento,15/10/2023
-795,Casa en Belen,$ 1.220.000.000,94,6.0,Belen,Casa,"Oct 15, 2023"
+"795,Casa en Belen,$ 1.220.000.000,94,6.0,Belen,Casa,""Oct 15, 2023"""
 1199,Apartestudio en El Poblado,$ 2.070.000.000,434,6.0,EL POBLADO,Apartestudio,2023.10.15
 6,Apartestudio en Laureles,$ 1.940.000.000,416,5.0,Laureles,Apartestudio,2023-10-15
 721,Finca en Poblado,1625000000,427,,poblado,Finca,15/10/2023
-681,Casa en Sabaneta,1989000000,249,2.0,SABANETA,Casa,"Oct 15, 2023"
+"681,Casa en Sabaneta,1989000000,249,2.0,SABANETA,Casa,""Oct 15, 2023"""
 824,Apartamento en Centro - Medellín,1822000000,69,5.0,Centro - Medellín,Apartamento,15/10/2023
 331,Casa en Laureles,2260000000,319,5.0,Laureles,Casa,2023-10-15
 436,Casa en Laureles,734000000,386,3.0,laureles,Casa,2023-10-15
 187,Propiedad en El Hueco,$ 1.286.000.000,195,3.0,EL HUECO,?,15/10/2023
 1177,Casa en Belen,2022000000,374,6.0,BELEN,Casa,2023.10.15
-165,Apartamento en Envigado,2366000000,274,3.0,Envigado,Apartamento,"Oct 15, 2023"
+"165,Apartamento en Envigado,2366000000,274,3.0,Envigado,Apartamento,""Oct 15, 2023"""
 675,None en El Poblado,$ 1.067.000.000,379,5.0,EL POBLADO,,2023-10-15
-137,Finca en Sabaneta,382000000,142,4.0,Sabaneta,Finca,"Oct 15, 2023"
+"137,Finca en Sabaneta,382000000,142,4.0,Sabaneta,Finca,""Oct 15, 2023"""
 639,Finca en Centro,473000000,227,,Centro,Finca,2023.10.15
-375,Casa en El Poblado,1482000000,181,3.0,El Poblado,Casa,"Oct 15, 2023"
+"375,Casa en El Poblado,1482000000,181,3.0,El Poblado,Casa,""Oct 15, 2023"""
 668,Casa en El Poblado,2052000000,383,6.0,EL POBLADO,Casa,2023-10-15
 310,Apartestudio en Belen,2397000000,79,3.0,BELEN,Apartestudio,2023-10-15
 135,Casa en Robledo,2023000000,434,,ROBLEDO,Casa,2023-10-15
@@ -1069,12 +1069,12 @@
 1200,Propiedad en Robledo,$ 1.318.000.000,0,5.0,ROBLEDO,?,2023.10.15
 1194,Casa en Robledo,375000000,334,,Robledo,Casa,15/10/2023
 315,Apartamento en Centro - Medellín,293000000,86,5.0,Centro - Medellín,Apartamento,2023-10-15
-332,Propiedad en Belén,1975000000,287,3.0,Belén,?,"Oct 15, 2023"
+"332,Propiedad en Belén,1975000000,287,3.0,Belén,?,""Oct 15, 2023"""
 350,Finca en Belen,$ 2.271.000.000,274,2.0,Belen,Finca,2023-10-15
 1080,Apartamento en Laureles,$ 808.000.000,61,2.0,laureles,Apartamento,15/10/2023
 882,Apartestudio en Sabaneta,1477000000,428,3.0,SABANETA,Apartestudio,2023-10-15
 72,Apartestudio en Envigado,1088000000,313,5.0,Envigado,Apartestudio,15/10/2023
-461,Apartestudio en Belen,281000000,366,4.0,BELEN,Apartestudio,"Oct 15, 2023"
+"461,Apartestudio en Belen,281000000,366,4.0,BELEN,Apartestudio,""Oct 15, 2023"""
 934,Finca en Belen,2297000000,348,4.0,Belen,Finca,15/10/2023
 1028,Apartestudio en Sabaneta,2397000000,74,3.0,Sabaneta,Apartestudio,2023.10.15
 394,Casa en Laureles - Estadio,1040000000,285,3.0,Laureles - Estadio,Casa,2023-10-15
@@ -1083,31 +1083,31 @@
 872,Apartamento en Poblado,$ 481.000.000,100,6.0,poblado,Apartamento,2023.10.15
 560,Casa en Laureles,1117000000,280,2.0,laureles,Casa,2023-10-15
 765,Apartestudio en Centro,1105000000,204,5.0,Centro,Apartestudio,15/10/2023
-790,Apartestudio en Sabaneta,1573000000,257,2.0,SABANETA,Apartestudio,"Oct 15, 2023"
+"790,Apartestudio en Sabaneta,1573000000,257,2.0,SABANETA,Apartestudio,""Oct 15, 2023"""
 648,Apartestudio en Belen,2242000000,320,2.0,BELEN,Apartestudio,15/10/2023
 1034,None en Centro - Medellín,1620000000,128,6.0,Centro - Medellín,,2023-10-15
-1118,Finca en El Poblado,$ 269.000.000,93,6.0,EL POBLADO,Finca,"Oct 15, 2023"
+"1118,Finca en El Poblado,$ 269.000.000,93,6.0,EL POBLADO,Finca,""Oct 15, 2023"""
 186,Apartestudio en Sabaneta,935000000,158,5.0,SABANETA,Apartestudio,15/10/2023
 565,Propiedad en Sabaneta,1995000000,273,2.0,Sabaneta,?,15/10/2023
 786,Apartestudio en Robledo,2370000000,408,6.0,Robledo,Apartestudio,15/10/2023
 649,Apartamento en Laureles,$ 1.987.000.000,295,2.0,laureles,Apartamento,2023.10.15
 923,Finca en El Poblado,1656000000,109,3.0,El Poblado,Finca,2023-10-15
-1057,Casa en Laureles - Estadio,1655000000,253,4.0,Laureles - Estadio,Casa,"Oct 15, 2023"
+"1057,Casa en Laureles - Estadio,1655000000,253,4.0,Laureles - Estadio,Casa,""Oct 15, 2023"""
 433,Apartestudio en Centro - Medellín,1141000000,216,4.0,Centro - Medellín,Apartestudio,2023-10-15
 857,Casa en Centro - Medellín,1954000000,427,,Centro - Medellín,Casa,2023-10-15
-106,Finca en Sabaneta,1502000000,250,6.0,Sabaneta,Finca,"Oct 15, 2023"
+"106,Finca en Sabaneta,1502000000,250,6.0,Sabaneta,Finca,""Oct 15, 2023"""
 905,Finca en Sabaneta,1773000000,184,5.0,SABANETA,Finca,2023.10.15
 616,Finca en Belén,$ 2.035.000.000,337,4.0,Belén,Finca,2023-10-15
 591,Apartamento en Belen,1948000000,89,2.0,Belen,Apartamento,15/10/2023
 742,Apartamento en Sabaneta,2151000000,252,6.0,SABANETA,Apartamento,2023-10-15
-140,Finca en Robledo,952000000,94,2.0,ROBLEDO,Finca,"Oct 15, 2023"
+"140,Finca en Robledo,952000000,94,2.0,ROBLEDO,Finca,""Oct 15, 2023"""
 148,Apartamento en El Hueco,$ 1.655.000.000,-50,4.0,EL HUECO,Apartamento,15/10/2023
 956,Finca en Laureles,2360000000,164,2.0,laureles,Finca,2023.10.15
 718,Finca en El Poblado,1654000000,114,4.0,El Poblado,Finca,15/10/2023
 811,Propiedad en Laureles - Estadio,2276000000,238,3.0,Laureles - Estadio,?,15/10/2023
 438,Apartestudio en El Poblado,844000000,435,,EL POBLADO,Apartestudio,2023-10-15
 508,Casa en Robledo,$ 1.257.000.000,237,6.0,ROBLEDO,Casa,2023.10.15
-978,Casa en Laureles - Estadio,2012000000,382,4.0,Laureles - Estadio,Casa,"Oct 15, 2023"
+"978,Casa en Laureles - Estadio,2012000000,382,4.0,Laureles - Estadio,Casa,""Oct 15, 2023"""
 386,Apartamento en Laureles - Estadio,338000000,330,5.0,Laureles - Estadio,Apartamento,2023-10-15
 1120,Apartamento en Robledo,1820000000,63,4.0,ROBLEDO,Apartamento,2023.10.15
 1015,Apartestudio en Poblado,2187000000,254,4.0,POBLADO,Apartestudio,2023.10.15
@@ -1118,8 +1118,8 @@
 846,Apartamento en Laureles - Estadio,653000000,255,,Laureles - Estadio,Apartamento,2023-10-15
 305,Finca en Centro,$ 1.466.000.000,433,5.0,Centro,Finca,2023.10.15
 595,Finca en Centro - Medellín,627000000,292,6.0,Centro - Medellín,Finca,2023-10-15
-744,Apartamento en Belen,$ 780.000.000,67,,BELEN,Apartamento,"Oct 15, 2023"
-1136,Finca en El Poblado,1379000000,37,5.0,EL POBLADO,Finca,"Oct 15, 2023"
+"744,Apartamento en Belen,$ 780.000.000,67,,BELEN,Apartamento,""Oct 15, 2023"""
+"1136,Finca en El Poblado,1379000000,37,5.0,EL POBLADO,Finca,""Oct 15, 2023"""
 36,Finca en Belen,1521000000,442,3.0,Belen,Finca,2023-10-15
 1198,Apartamento en Sabaneta,1232000000,61,5.0,Sabaneta,Apartamento,2023.10.15
 582,Apartamento en Envigado,1547000000,437,5.0,Envigado,Apartamento,2023-10-15
@@ -1127,7 +1127,7 @@
 407,Casa en Belén,$ 2.497.000.000,178,,Belén,Casa,2023-10-15
 1005,Casa en Poblado,1805000000,182,2.0,poblado,Casa,15/10/2023
 293,Apartamento en Laureles,291000000,287,4.0,laureles,Apartamento,2023.10.15
-697,Apartamento en Belén,$ 2.233.000.000,304,3.0,Belén,Apartamento,"Oct 15, 2023"
+"697,Apartamento en Belén,$ 2.233.000.000,304,3.0,Belén,Apartamento,""Oct 15, 2023"""
 258,Apartamento en Envigado,1560000000,216,5.0,Envigado,Apartamento,2023-10-15
 29,Propiedad en Centro,$ 1.688.000.000,48,6.0,Centro,?,15/10/2023
 917,Casa en Laureles,$ 1.619.000.000,163,4.0,Laureles,Casa,15/10/2023
@@ -1138,12 +1138,12 @@
 226,Finca en Centro,645000000,0,2.0,Centro,Finca,2023.10.15
 573,Finca en El Poblado,$ 288.000.000,120,2.0,EL POBLADO,Finca,2023-10-15
 1072,Apartamento en Centro,497000000,133,5.0,Centro,Apartamento,15/10/2023
-245,Apartestudio en Centro,2197000000,255,6.0,Centro,Apartestudio,"Oct 15, 2023"
+"245,Apartestudio en Centro,2197000000,255,6.0,Centro,Apartestudio,""Oct 15, 2023"""
 257,Apartestudio en El Hueco,$ 472.000.000,388,4.0,EL HUECO,Apartestudio,2023.10.15
 1019,Apartestudio en Laureles - Estadio,$ 911.000.000,428,6.0,Laureles - Estadio,Apartestudio,2023-10-15
 150,Apartestudio en Belén,1985000000,303,2.0,Belén,Apartestudio,2023-10-15
 601,Finca en Poblado,1086000000,282,,POBLADO,Finca,2023-10-15
-307,None en Laureles,1546000000,193,2.0,Laureles,,"Oct 15, 2023"
+"307,None en Laureles,1546000000,193,2.0,Laureles,,""Oct 15, 2023"""
 887,Apartamento en Sabaneta,$ 1.271.000.000,157,,SABANETA,Apartamento,2023-10-15
 1130,Apartamento en Robledo,$ 2.381.000.000,89,4.0,ROBLEDO,Apartamento,2023.10.15
 1185,Casa en Poblado,$ 1.475.000.000,118,5.0,POBLADO,Casa,2023-10-15
@@ -1157,13 +1157,13 @@
 779,Finca en El Poblado,1032000000,123,6.0,El Poblado,Finca,2023-10-15
 1060,Finca en Sabaneta,1871000000,45,2.0,SABANETA,Finca,2023.10.15
 715,None en Laureles,769000000,111,2.0,Laureles,,15/10/2023
-1191,Finca en Poblado,842000000,198,,poblado,Finca,"Oct 15, 2023"
+"1191,Finca en Poblado,842000000,198,,poblado,Finca,""Oct 15, 2023"""
 338,None en Envigado,440000000,360,3.0,Envigado,,15/10/2023
-478,Apartamento en Poblado,461000000,246,3.0,POBLADO,Apartamento,"Oct 15, 2023"
+"478,Apartamento en Poblado,461000000,246,3.0,POBLADO,Apartamento,""Oct 15, 2023"""
 916,Casa en Laureles - Estadio,1433000000,269,6.0,Laureles - Estadio,Casa,15/10/2023
-1064,Finca en Poblado,1729000000,82,6.0,POBLADO,Finca,"Oct 15, 2023"
-415,Propiedad en Envigado,$ 1.918.000.000,418,3.0,Envigado,?,"Oct 15, 2023"
-1126,None en Laureles - Estadio,1831000000,348,5.0,Laureles - Estadio,,"Oct 15, 2023"
+"1064,Finca en Poblado,1729000000,82,6.0,POBLADO,Finca,""Oct 15, 2023"""
+"415,Propiedad en Envigado,$ 1.918.000.000,418,3.0,Envigado,?,""Oct 15, 2023"""
+"1126,None en Laureles - Estadio,1831000000,348,5.0,Laureles - Estadio,,""Oct 15, 2023"""
 829,Finca en El Poblado,560000000,122,4.0,EL POBLADO,Finca,15/10/2023
 1134,None en Sabaneta,1583000000,295,6.0,SABANETA,,2023-10-15
 972,Apartamento en Laureles - Estadio,$ 568.000.000,229,5.0,Laureles - Estadio,Apartamento,15/10/2023
@@ -1172,10 +1172,10 @@
 1049,Casa en Poblado,$ 837.000.000,80,4.0,POBLADO,Casa,2023-10-15
 439,Finca en Laureles,2348000000,49,2.0,Laureles,Finca,15/10/2023
 739,Propiedad en Laureles - Estadio,$ 885.000.000,378,4.0,Laureles - Estadio,?,2023.10.15
-357,Finca en Belen,1910000000,326,,BELEN,Finca,"Oct 15, 2023"
+"357,Finca en Belen,1910000000,326,,BELEN,Finca,""Oct 15, 2023"""
 955,Apartamento en Sabaneta,1870000000,48,2.0,Sabaneta,Apartamento,15/10/2023
 309,Apartestudio en Robledo,544000000,388,6.0,ROBLEDO,Apartestudio,2023-10-15
-759,Apartamento en Centro,674000000,344,5.0,Centro,Apartamento,"Oct 15, 2023"
+"759,Apartamento en Centro,674000000,344,5.0,Centro,Apartamento,""Oct 15, 2023"""
 26,None en Laureles,2376000000,200,2.0,laureles,,15/10/2023
 420,Apartestudio en Centro - Medellín,340000000,323,,Centro - Medellín,Apartestudio,15/10/2023
 311,Casa en El Hueco,2210000000,45,3.0,EL HUECO,Casa,2023.10.15
@@ -1189,28 +1189,28 @@
 389,Apartestudio en Centro - Medellín,2239000000,312,3.0,Centro - Medellín,Apartestudio,2023.10.15
 296,Finca en El Poblado,1714000000,221,4.0,EL POBLADO,Finca,2023-10-15
 862,Apartestudio en Laureles,$ 622.000.000,1,6.0,laureles,Apartestudio,2023-10-15
-1190,Casa en El Hueco,$ 1.952.000.000,423,6.0,EL HUECO,Casa,"Oct 15, 2023"
-339,Apartamento en Belén,517000000,257,6.0,Belén,Apartamento,"Oct 15, 2023"
+"1190,Casa en El Hueco,$ 1.952.000.000,423,6.0,EL HUECO,Casa,""Oct 15, 2023"""
+"339,Apartamento en Belén,517000000,257,6.0,Belén,Apartamento,""Oct 15, 2023"""
 764,None en Robledo,2238000000,52,3.0,Robledo,,15/10/2023
 1148,Apartamento en Centro - Medellín,$ 1.288.000.000,58,3.0,Centro - Medellín,Apartamento,15/10/2023
 4,Apartamento en Sabaneta,233000000,244,2.0,Sabaneta,Apartamento,2023.10.15
-1003,Apartamento en Laureles,574000000,143,2.0,Laureles,Apartamento,"Oct 15, 2023"
+"1003,Apartamento en Laureles,574000000,143,2.0,Laureles,Apartamento,""Oct 15, 2023"""
 969,Casa en Robledo,1347000000,341,5.0,ROBLEDO,Casa,15/10/2023
-328,Finca en El Hueco,$ 1.999.000.000,208,5.0,EL HUECO,Finca,"Oct 15, 2023"
-384,Apartamento en Robledo,1808000000,442,5.0,ROBLEDO,Apartamento,"Oct 15, 2023"
+"328,Finca en El Hueco,$ 1.999.000.000,208,5.0,EL HUECO,Finca,""Oct 15, 2023"""
+"384,Apartamento en Robledo,1808000000,442,5.0,ROBLEDO,Apartamento,""Oct 15, 2023"""
 868,Casa en Robledo,454000000,316,4.0,Robledo,Casa,15/10/2023
 168,Casa en Sabaneta,1526000000,217,,SABANETA,Casa,2023.10.15
 170,Finca en Centro,$ 848.000.000,450,5.0,Centro,Finca,2023-10-15
 909,Apartestudio en Robledo,$ 2.088.000.000,154,6.0,ROBLEDO,Apartestudio,2023.10.15
-1173,Casa en El Hueco,1128000000,218,4.0,EL HUECO,Casa,"Oct 15, 2023"
-367,None en Belén,$ 1.681.000.000,334,4.0,Belén,,"Oct 15, 2023"
-920,Apartestudio en El Poblado,534000000,363,6.0,EL POBLADO,Apartestudio,"Oct 15, 2023"
+"1173,Casa en El Hueco,1128000000,218,4.0,EL HUECO,Casa,""Oct 15, 2023"""
+"367,None en Belén,$ 1.681.000.000,334,4.0,Belén,,""Oct 15, 2023"""
+"920,Apartestudio en El Poblado,534000000,363,6.0,EL POBLADO,Apartestudio,""Oct 15, 2023"""
 399,Casa en Laureles,2253000000,265,2.0,laureles,Casa,15/10/2023
 876,Propiedad en Robledo,2072000000,212,2.0,ROBLEDO,?,2023-10-15
 941,Apartestudio en Robledo,2242000000,321,6.0,Robledo,Apartestudio,2023.10.15
 849,Propiedad en Belen,2087000000,222,4.0,Belen,?,2023.10.15
 938,Finca en Poblado,$ 204.000.000,94,5.0,POBLADO,Finca,2023-10-15
-179,Finca en El Hueco,1573000000,307,3.0,EL HUECO,Finca,"Oct 15, 2023"
+"179,Finca en El Hueco,1573000000,307,3.0,EL HUECO,Finca,""Oct 15, 2023"""
 123,Apartamento en Centro,1024000000,382,4.0,Centro,Apartamento,2023.10.15
 68,Casa en Poblado,$ 2.073.000.000,436,3.0,poblado,Casa,15/10/2023
 756,Apartestudio en Laureles,$ 1.458.000.000,170,4.0,laureles,Apartestudio,2023-10-15
@@ -1225,17 +1225,17 @@
 683,Casa en El Poblado,$ 647.000.000,154,2.0,El Poblado,Casa,2023-10-15
 426,Apartestudio en Belen,1035000000,117,6.0,BELEN,Apartestudio,15/10/2023
 75,Casa en Sabaneta,1376000000,204,4.0,SABANETA,Casa,15/10/2023
-964,Apartamento en Envigado,1480000000,115,4.0,Envigado,Apartamento,"Oct 15, 2023"
+"964,Apartamento en Envigado,1480000000,115,4.0,Envigado,Apartamento,""Oct 15, 2023"""
 90,Finca en Centro - Medellín,859000000,154,4.0,Centro - Medellín,Finca,15/10/2023
 706,Casa en Centro - Medellín,1884000000,191,3.0,Centro - Medellín,Casa,2023.10.15
 34,None en Laureles - Estadio,623000000,360,4.0,Laureles - Estadio,,15/10/2023
 823,None en Laureles,2161000000,270,,laureles,,2023.10.15
-942,Casa en Centro,$ 2.098.000.000,402,4.0,Centro,Casa,"Oct 15, 2023"
+"942,Casa en Centro,$ 2.098.000.000,402,4.0,Centro,Casa,""Oct 15, 2023"""
 1138,Apartamento en Envigado,$ 1.923.000.000,197,,ENVIGADO,Apartamento,2023.10.15
 100,Apartamento en El Poblado,1957000000,105,5.0,EL POBLADO,Apartamento,2023.10.15
 544,None en Laureles,1801000000,0,,laureles,,15/10/2023
-912,Apartestudio en Robledo,$ 1.041.000.000,282,6.0,Robledo,Apartestudio,"Oct 15, 2023"
-476,Finca en Belen,1895000000,433,2.0,BELEN,Finca,"Oct 15, 2023"
-852,Finca en El Poblado,1351000000,423,2.0,EL POBLADO,Finca,"Oct 15, 2023"
-14,Apartestudio en Centro,1209000000,415,6.0,Centro,Apartestudio,"Oct 15, 2023"
+"912,Apartestudio en Robledo,$ 1.041.000.000,282,6.0,Robledo,Apartestudio,""Oct 15, 2023"""
+"476,Finca en Belen,1895000000,433,2.0,BELEN,Finca,""Oct 15, 2023"""
+"852,Finca en El Poblado,1351000000,423,2.0,EL POBLADO,Finca,""Oct 15, 2023"""
+"14,Apartestudio en Centro,1209000000,415,6.0,Centro,Apartestudio,""Oct 15, 2023"""
 1129,Apartamento en Sabaneta,1236000000,168,2.0,Sabaneta,Apartamento,2023-10-15
