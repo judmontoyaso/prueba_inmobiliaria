@@ -3,16 +3,21 @@
 import { useState } from "react";
 import type { ClimaRow } from "@/lib/api";
 import { actualizarClima } from "@/lib/api";
+import {
+  MdWbSunny, MdCloud, MdOutlineWaterDrop, MdSnowing,
+  MdThunderstorm, MdOutlineRefresh, MdAccessTime,
+  MdFilterDrama, MdGrain,
+} from "react-icons/md";
 
-function weatherInfo(code: number): { icon: string; glow: string } {
-  if (code === 0)  return { icon: "☀️",  glow: "rgba(251,191,36,0.22)" };
-  if (code <= 2)   return { icon: "🌤️", glow: "rgba(251,191,36,0.14)" };
-  if (code === 3)  return { icon: "☁️",  glow: "rgba(148,163,184,0.12)" };
-  if (code <= 48)  return { icon: "🌫️", glow: "rgba(148,163,184,0.1)" };
-  if (code <= 57)  return { icon: "🌦️", glow: "rgba(96,165,250,0.14)" };
-  if (code <= 67)  return { icon: "🌧️", glow: "rgba(96,165,250,0.22)" };
-  if (code <= 77)  return { icon: "❄️",  glow: "rgba(186,230,253,0.18)" };
-  return             { icon: "⛈️",  glow: "rgba(251,191,36,0.18)" };
+function weatherInfo(code: number): { icon: React.ReactNode; borderColor: string } {
+  if (code === 0)  return { icon: <MdWbSunny        size={48} color="#f59e0b" />, borderColor: "#f59e0b" };
+  if (code <= 2)   return { icon: <MdFilterDrama     size={48} color="#fbbf24" />, borderColor: "#fbbf24" };
+  if (code === 3)  return { icon: <MdCloud           size={44} color="#9ca3af" />, borderColor: "#9ca3af" };
+  if (code <= 48)  return { icon: <MdCloud           size={44} color="#b0b8c8" />, borderColor: "#b0b8c8" };
+  if (code <= 57)  return { icon: <MdGrain           size={44} color="#60a5fa" />, borderColor: "#60a5fa" };
+  if (code <= 67)  return { icon: <MdOutlineWaterDrop size={44} color="#3b82f6" />, borderColor: "#3b82f6" };
+  if (code <= 77)  return { icon: <MdSnowing         size={44} color="#7dd3fc" />, borderColor: "#7dd3fc" };
+  return             { icon: <MdThunderstorm       size={44} color="#d97706" />, borderColor: "#d97706" };
 }
 
 function formatFecha(f: string | null | undefined) {
@@ -26,10 +31,10 @@ function formatFecha(f: string | null | undefined) {
   });
 }
 
-function tempGradient(t: number): string {
-  if (t >= 28) return "linear-gradient(135deg, #fbbf24, #f97316)";
-  if (t >= 22) return "linear-gradient(135deg, #a5b4fc, #818cf8)";
-  return "linear-gradient(135deg, #38bdf8, #22d3ee)";
+function tempColor(t: number): string {
+  if (t >= 28) return "#d97706";   // warm amber
+  if (t >= 22) return "#0d2b4a";   // navy
+  return "#1773a0";                  // teal/cool
 }
 
 export default function WeatherCard({
@@ -59,26 +64,18 @@ export default function WeatherCard({
     }
   };
 
-  const { icon, glow } = weatherInfo(d.weather_code);
+  const { icon, borderColor } = weatherInfo(d.weather_code);
 
   return (
     <div
-      className="glass glass-hover rounded-2xl p-5 flex flex-col gap-3 relative overflow-hidden"
-      style={{ boxShadow: `0 4px 30px ${glow}` }}
+      className="card glass-hover flex flex-col gap-3 overflow-hidden"
+      style={{ borderTop: `3px solid ${borderColor}` }}
     >
-      {/* Watermark icon */}
-      <span
-        aria-hidden
-        className="absolute -right-2 -top-1 text-7xl opacity-[0.08] pointer-events-none select-none"
-      >
-        {icon}
-      </span>
-
       {/* Header */}
-      <div className="flex items-start justify-between gap-2">
+      <div className="flex items-start justify-between gap-2 px-5 pt-4">
         <div>
-          <p className="font-semibold text-sm text-white tracking-wide">{d.municipio}</p>
-          <p className="text-xs mt-0.5" style={{ color: "rgba(100,116,139,0.9)" }}>
+          <p className="font-semibold text-sm" style={{ color: "var(--primary)" }}>{d.municipio}</p>
+          <p className="text-xs mt-0.5" style={{ color: "var(--muted)" }}>
             {d.latitud}°N · {d.longitud}°W
           </p>
         </div>
@@ -86,47 +83,52 @@ export default function WeatherCard({
           onClick={handleActualizar}
           disabled={loading}
           title="Actualizar"
-          className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-sm transition-all disabled:opacity-40"
+          className="shrink-0 w-8 h-8 rounded flex items-center justify-center transition-all disabled:opacity-40"
           style={{
-            background: "rgba(129,140,248,0.12)",
-            border: "1px solid rgba(129,140,248,0.28)",
+            background: "#e8eef7",
+            border: "1px solid var(--border)",
+            color: "var(--primary)",
           }}
         >
           {loading ? (
-            <span className="inline-block w-3 h-3 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+            <span className="inline-block w-3.5 h-3.5 border-2 rounded-full animate-spin"
+              style={{ borderColor: "var(--border-2)", borderTopColor: "var(--primary)" }} />
           ) : (
-            "🔄"
+            <MdOutlineRefresh size={17} />
           )}
         </button>
       </div>
 
-      {/* Temperature */}
-      <div>
-        <p
-          className="text-4xl font-bold leading-none"
-          style={{
-            background: tempGradient(d.temperatura_c),
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          {d.temperatura_c}°C
-        </p>
-        <p className="text-slate-400 text-xs mt-1.5">{d.descripcion_clima}</p>
+      {/* Weather icon + Temperature */}
+      <div className="flex items-center gap-4 px-5">
+        <div aria-hidden className="opacity-75 shrink-0">
+          {icon}
+        </div>
+        <div>
+          <p
+            className="text-4xl font-bold leading-none"
+            style={{ color: tempColor(d.temperatura_c) }}
+          >
+            {d.temperatura_c}°C
+          </p>
+          <p className="text-xs mt-1.5" style={{ color: "var(--muted)" }}>{d.descripcion_clima}</p>
+        </div>
       </div>
 
       {/* Timestamp */}
       {d.ultima_actualizacion && (
-        <p
-          className="text-xs pt-2.5"
-          style={{ borderTop: "1px solid var(--border)", color: "rgba(100,116,139,0.8)" }}
+        <div
+          className="flex items-center gap-1.5 px-5 py-2.5 text-xs"
+          style={{ borderTop: "1px solid var(--border)", color: "var(--muted)" }}
         >
-          🕒 {formatFecha(d.ultima_actualizacion)}
-        </p>
+          <MdAccessTime size={13} />
+          {formatFecha(d.ultima_actualizacion)}
+        </div>
       )}
 
-      {error && <p className="text-red-400 text-xs">❌ {error}</p>}
+      {error && (
+        <p className="text-xs px-5 pb-3" style={{ color: "var(--danger)" }}>{error}</p>
+      )}
     </div>
   );
 }

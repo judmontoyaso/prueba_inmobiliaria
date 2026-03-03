@@ -1,16 +1,34 @@
-# Entorno virtual
+# ── Python ────────────────────────────────────────────────────────
 .venv/
-
-# Archivos compilados de Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
 
-# Archivos temporales de Jupyter
+# ── Jupyter ───────────────────────────────────────────────────────
 .ipynb_checkpoints/
 
-# Archivos locales de sistema
+# ── Node / Next.js ────────────────────────────────────────────────
+produccion/frontend/node_modules/
+produccion/frontend/.next/
+produccion/frontend/out/
+produccion/frontend/.turbo/
+
+# ── Environment / secrets ─────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+produccion/backend/.env
+produccion/frontend/.env.local
+produccion/frontend/.env*.local
+
+# ── OS / editor ───────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
-
-# Backend secrets
-backend/.env
+*.swp
+*.swo
+.vscode/settings.json

@@ -5,18 +5,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        surface: "rgba(255,255,255,0.04)",
-        "surface-2": "rgba(255,255,255,0.07)",
+        primary:  "#0d2b4a",
+        accent:   "#bf8030",
+        surface:  "#ffffff",
+        border:   "#dce1ea",
       },
-      backdropBlur: {
-        xs: "4px",
+      borderRadius: {
+        DEFAULT: "6px",
+        sm: "4px",
+        md: "6px",
+        lg: "8px",
+        xl: "10px",
       },
       boxShadow: {
-        glow: "0 0 24px rgba(129,140,248,0.35)",
-        "glow-cyan": "0 0 24px rgba(34,211,238,0.3)",
+        card: "0 1px 4px rgba(13,43,74,0.07), 0 4px 18px rgba(13,43,74,0.05)",
+        "card-hover": "0 2px 8px rgba(13,43,74,0.10), 0 8px 28px rgba(13,43,74,0.08)",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
     },
   },

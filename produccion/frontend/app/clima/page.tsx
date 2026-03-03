@@ -3,10 +3,17 @@
 import { useCallback, useEffect, useState } from "react";
 import { getClima, actualizarClima, type ClimaRow } from "@/lib/api";
 import WeatherCard from "@/components/clima/WeatherCard";
+import {
+  MdWbCloudy, MdOutlineRefresh, MdSearch,
+  MdCheckCircleOutline, MdErrorOutline,
+} from "react-icons/md";
 
 function Spinner() {
   return (
-    <span className="inline-block w-3.5 h-3.5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+    <span
+      className="inline-block w-3.5 h-3.5 border-2 rounded-full animate-spin"
+      style={{ borderColor: "rgba(255,255,255,0.3)", borderTopColor: "#fff" }}
+    />
   );
 }
 
@@ -56,27 +63,36 @@ export default function ClimaPage() {
   }, []);
 
   return (
-    <div className="space-y-7">
+    <div className="space-y-6">
 
       {/* ── Page header ──────────────────────────────────────────────── */}
       <div className="flex items-start justify-between flex-wrap gap-4">
         <div>
-          <h1 className="text-2xl font-bold glow-text">Clima en Tiempo Real</h1>
-          <p className="text-slate-500 text-sm mt-1">Valle de Aburrá — 10 municipios via Open-Meteo</p>
+          <h1 className="text-2xl font-bold glow-text flex items-center gap-2">
+            <MdWbCloudy size={26} />
+            Clima en Tiempo Real
+          </h1>
+          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
+            Valle de Aburrá — 10 municipios via Open-Meteo
+          </p>
         </div>
 
         <div className="flex items-center gap-2 flex-wrap">
           {/* Search */}
-          <div className="relative">
-            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs">🔍</span>
+          <div className="relative flex items-center">
+            <MdSearch
+              size={16}
+              className="absolute left-2.5 pointer-events-none"
+              style={{ color: "var(--muted)" }}
+            />
             <input
               type="text"
               placeholder="Filtrar municipio…"
               value={filtro}
               onChange={(e) => setFiltro(e.target.value)}
-              className="pl-7 pr-3 py-2 rounded-xl text-sm focus:outline-none w-44"
+              className="pl-8 pr-3 py-2 rounded text-sm focus:outline-none w-44"
               style={{
-                background: "rgba(255,255,255,0.05)",
+                background: "var(--surface)",
                 border: "1px solid var(--border-2)",
                 color: "var(--text)",
               }}
@@ -87,9 +103,10 @@ export default function ClimaPage() {
           <button
             onClick={actualizarTodos}
             disabled={loading}
-            className="btn-primary px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2"
+            className="btn-primary flex items-center gap-2 px-4 py-2 rounded text-sm font-medium"
           >
-            {loading ? <><Spinner /> Actualizando…</> : "🔄 Actualizar todos"}
+            <MdOutlineRefresh size={17} />
+            {loading ? <><Spinner /> Actualizando…</> : "Actualizar todos"}
           </button>
         </div>
       </div>
@@ -97,14 +114,17 @@ export default function ClimaPage() {
       {/* ── Status banner ─────────────────────────────────────────────── */}
       {status && (
         <div
-          className="rounded-xl px-4 py-3 text-sm flex items-center gap-2"
+          className="rounded px-4 py-3 text-sm flex items-center gap-2"
           style={{
-            background: status.ok ? "rgba(52,211,153,0.08)" : "rgba(248,113,113,0.08)",
-            border: `1px solid ${status.ok ? "rgba(52,211,153,0.3)" : "rgba(248,113,113,0.3)"}`,
-            color: status.ok ? "#34d399" : "#f87171",
+            background: status.ok ? "#edf7f0" : "#fdf0ee",
+            border: `1px solid ${status.ok ? "#b8e0c4" : "#f0c0b8"}`,
+            color: status.ok ? "var(--success)" : "var(--danger)",
           }}
         >
-          <span>{status.ok ? "✅" : "❌"}</span>
+          {status.ok
+            ? <MdCheckCircleOutline size={16} />
+            : <MdErrorOutline size={16} />
+          }
           {status.msg}
         </div>
       )}
@@ -112,8 +132,11 @@ export default function ClimaPage() {
       {/* ── Loading state ─────────────────────────────────────────────── */}
       {loading && data.length === 0 && (
         <div className="flex items-center justify-center gap-3 py-16">
-          <Spinner />
-          <span className="text-slate-500 text-sm">Cargando datos del clima…</span>
+          <span
+            className="inline-block w-5 h-5 border-2 rounded-full animate-spin"
+            style={{ borderColor: "var(--border-2)", borderTopColor: "var(--primary)" }}
+          />
+          <span className="text-sm" style={{ color: "var(--muted)" }}>Cargando datos del clima…</span>
         </div>
       )}
 
@@ -126,21 +149,22 @@ export default function ClimaPage() {
             ))}
           </div>
         ) : (
-          <div className="glass rounded-2xl p-10 text-center">
-            <p className="text-slate-500 text-sm">
-              Sin resultados para &quot;<span className="text-slate-300">{filtro}</span>&quot;
+          <div className="card p-10 text-center">
+            <p className="text-sm" style={{ color: "var(--muted)" }}>
+              Sin resultados para &quot;<span style={{ color: "var(--text)" }}>{filtro}</span>&quot;
             </p>
           </div>
         )
       ) : (
         !loading && (
-          <div className="glass rounded-2xl p-10 text-center space-y-3">
-            <p className="text-2xl">🌤️</p>
-            <p className="text-slate-400 text-sm">Sin datos de clima todavía.</p>
+          <div className="card p-10 text-center space-y-3">
+            <MdWbCloudy size={40} className="mx-auto" style={{ color: "var(--border-2)" }} />
+            <p className="text-sm" style={{ color: "var(--muted)" }}>Sin datos de clima todavía.</p>
             <button
               onClick={actualizarTodos}
-              className="btn-primary px-5 py-2 rounded-xl text-sm font-medium"
+              className="btn-primary flex items-center gap-2 px-5 py-2 rounded text-sm font-medium mx-auto"
             >
+              <MdOutlineRefresh size={16} />
               Consultar Open-Meteo
             </button>
           </div>

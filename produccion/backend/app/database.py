@@ -41,7 +41,7 @@ def seed_catalogos(db: Client) -> None:
     zonas = [
         {"id_zona": 1, "id_municipio": 1, "nombre": "El Poblado",  "nombre_normalizado": "el poblado"},
         {"id_zona": 2, "id_municipio": 1, "nombre": "Laureles",    "nombre_normalizado": "laureles"},
-        {"id_zona": 3, "id_municipio": 1, "nombre": "Belen",       "nombre_normalizado": "belen"},
+        {"id_zona": 3, "id_municipio": 1, "nombre": "Belén",       "nombre_normalizado": "belen"},
         {"id_zona": 4, "id_municipio": 1, "nombre": "Robledo",     "nombre_normalizado": "robledo"},
         {"id_zona": 5, "id_municipio": 1, "nombre": "Centro",      "nombre_normalizado": "centro"},
         {"id_zona": 6, "id_municipio": 1, "nombre": "El Hueco",    "nombre_normalizado": "el hueco"},

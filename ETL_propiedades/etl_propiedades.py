@@ -47,7 +47,7 @@ MUNICIPIOS = {
 ZONAS = {
     1: {"nombre": "El Poblado",  "id_municipio": 1},
     2: {"nombre": "Laureles",    "id_municipio": 1},
-    3: {"nombre": "Belen",       "id_municipio": 1},
+    3: {"nombre": "Belén",       "id_municipio": 1},
     4: {"nombre": "Robledo",     "id_municipio": 1},
     5: {"nombre": "Centro",      "id_municipio": 1},
     6: {"nombre": "El Hueco",    "id_municipio": 1},

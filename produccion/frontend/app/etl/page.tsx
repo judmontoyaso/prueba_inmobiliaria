@@ -4,6 +4,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { uploadCSV, resetETL, getPropiedades, getAnuncios, type Reporte } from "@/lib/api";
 import ReporteStats from "@/components/etl/ReporteStats";
 import DataTable from "@/components/etl/DataTable";
+import {
+  MdOutlineUploadFile, MdOutlineTableRows, MdDeleteForever,
+  MdOutlineRefresh, MdCheckCircleOutline, MdErrorOutline, MdStorage,
+} from "react-icons/md";
 
 type Row = Record<string, unknown>;
 
@@ -17,10 +21,15 @@ interface UploadResult {
   error?: string;
 }
 
-/* ── tiny Spinner ─────────────────────────────────────────────────────────── */
-function Spinner() {
+function Spinner({ dark }: { dark?: boolean }) {
   return (
-    <span className="inline-block w-3.5 h-3.5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+    <span
+      className="inline-block w-3.5 h-3.5 border-2 rounded-full animate-spin"
+      style={{
+        borderColor: dark ? "rgba(13,43,74,0.2)" : "rgba(255,255,255,0.3)",
+        borderTopColor: dark ? "var(--primary)" : "#fff",
+      }}
+    />
   );
 }
 
@@ -92,61 +101,58 @@ export default function ETLPage() {
   };
 
   return (
-    <div className="space-y-7">
+    <div className="space-y-6">
 
       {/* ── Page header ─────────────────────────────────────────────── */}
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
-          <h1 className="text-2xl font-bold glow-text">ETL Propiedades</h1>
-          <p className="text-slate-500 text-sm mt-1">
+          <h1 className="text-2xl font-bold glow-text flex items-center gap-2">
+            <MdOutlineTableRows size={26} />
+            ETL Propiedades
+          </h1>
+          <p className="text-sm mt-1" style={{ color: "var(--muted)" }}>
             Carga y procesa datos de propiedades hacia Supabase
           </p>
         </div>
         <button
           onClick={handleReset}
           disabled={resetting || loading}
-          className="btn-danger px-4 py-2 rounded-xl text-sm font-medium"
+          className="btn-danger flex items-center gap-2 px-4 py-2 rounded text-sm font-medium"
         >
-          {resetting ? <span className="flex items-center gap-2"><Spinner /> Reiniciando…</span> : "🗑️ Reiniciar BD"}
+          <MdDeleteForever size={17} />
+          {resetting ? <><Spinner /> Reiniciando…</> : "Reiniciar BD"}
         </button>
       </div>
 
       {/* ── Upload zone ─────────────────────────────────────────────── */}
-      <div className="glass rounded-2xl p-1">
+      <div className="card p-1">
         <label
           onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
           onDragLeave={() => setDragging(false)}
           onDrop={onDrop}
-          className="flex flex-col items-center justify-center gap-3 rounded-xl py-12 cursor-pointer transition-all border-2 border-dashed"
+          className="flex flex-col items-center justify-center gap-3 rounded py-12 cursor-pointer transition-all border-2 border-dashed"
           style={{
             borderColor: dragging
               ? "var(--primary)"
               : loading
-              ? "rgba(251,191,36,0.5)"
-              : "rgba(255,255,255,0.1)",
-            background: dragging
-              ? "rgba(99,102,241,0.06)"
-              : loading
-              ? "rgba(251,191,36,0.04)"
-              : "transparent",
+              ? "var(--warning)"
+              : "var(--border-2)",
+            background: dragging ? "#e8eef7" : loading ? "#fef9ec" : "transparent",
           }}
         >
           <div
-            className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
-            style={{
-              background: "linear-gradient(135deg, rgba(99,102,241,0.25), rgba(34,211,238,0.15))",
-              border: "1px solid rgba(129,140,248,0.3)",
-            }}
+            className="w-12 h-12 rounded flex items-center justify-center"
+            style={{ background: "#e8eef7", color: "var(--primary)" }}
           >
-            {loading ? "⏳" : "📄"}
+            <MdOutlineUploadFile size={28} />
           </div>
           <div className="text-center">
-            <p className="font-medium text-sm text-slate-200">
+            <p className="font-medium text-sm" style={{ color: "var(--text)" }}>
               {loading
                 ? "Procesando CSV…"
                 : "Arrastra tu CSV aquí o haz clic para seleccionar"}
             </p>
-            <p className="text-slate-600 text-xs mt-1">Solo archivos .csv</p>
+            <p className="text-xs mt-1" style={{ color: "var(--muted)" }}>Solo archivos .csv</p>
           </div>
           <input
             ref={inputRef}
@@ -163,12 +169,12 @@ export default function ETLPage() {
       {uploads.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <h2 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+            <h2 className="text-sm font-semibold uppercase tracking-wider" style={{ color: "var(--primary)" }}>
               Historial de cargas
             </h2>
             <span
-              className="text-xs px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(129,140,248,0.15)", color: "#a5b4fc" }}
+              className="text-xs px-2 py-0.5 rounded"
+              style={{ background: "#e8eef7", color: "var(--primary)" }}
             >
               {uploads.length}
             </span>
@@ -177,24 +183,25 @@ export default function ETLPage() {
           {uploads.map((u, i) => (
             <div
               key={u.id}
-              className="glass rounded-2xl overflow-hidden"
+              className="card overflow-hidden"
               style={{
-                borderLeft: u.ok
-                  ? "3px solid rgba(52,211,153,0.6)"
-                  : "3px solid rgba(248,113,113,0.6)",
+                borderLeft: `3px solid ${u.ok ? "#1a7c32" : "#c42400"}`,
               }}
             >
               {/* Card header */}
               <div
                 className="flex items-center gap-3 px-5 py-3"
-                style={{ borderBottom: "1px solid var(--border)" }}
+                style={{ borderBottom: "1px solid var(--border)", background: "#f9fafc" }}
               >
-                <span className="text-base">{u.ok ? "✅" : "❌"}</span>
-                <span className="font-mono text-sm text-slate-200">{u.filename}</span>
+                {u.ok
+                  ? <MdCheckCircleOutline size={18} color="#1a7c32" />
+                  : <MdErrorOutline size={18} color="#c42400" />
+                }
+                <span className="font-mono text-sm" style={{ color: "var(--text)" }}>{u.filename}</span>
                 {i === 0 && (
                   <span
-                    className="ml-auto text-xs px-2 py-0.5 rounded-full"
-                    style={{ background: "rgba(129,140,248,0.15)", color: "#a5b4fc" }}
+                    className="ml-auto text-xs px-2 py-0.5 rounded font-medium"
+                    style={{ background: "#e8eef7", color: "var(--primary)" }}
                   >
                     última
                   </span>
@@ -207,34 +214,34 @@ export default function ETLPage() {
                   <>
                     <ReporteStats reporte={u.reporte} />
                     <div
-                      className="text-xs rounded-xl px-4 py-2.5 flex flex-wrap gap-x-4 gap-y-1"
-                      style={{ background: "rgba(52,211,153,0.06)", border: "1px solid rgba(52,211,153,0.18)" }}
+                      className="text-xs rounded px-4 py-2.5 flex flex-wrap gap-x-4 gap-y-1"
+                      style={{ background: "#edf7f0", border: "1px solid #b8e0c4" }}
                     >
-                      <span className="text-emerald-400">
+                      <span style={{ color: "#1a7c32" }}>
                         <strong>{u.reporte.propiedades_nuevas}</strong> props nuevas
                       </span>
-                      <span className="text-slate-400">
+                      <span style={{ color: "var(--muted)" }}>
                         <strong>{u.reporte.propiedades_omitidas}</strong> omitidas
                       </span>
-                      <span className="text-red-400">
+                      <span style={{ color: "var(--danger)" }}>
                         <strong>{u.reporte.propiedades_rechazadas}</strong> rechazadas
                       </span>
-                      <span className="text-slate-500">·</span>
-                      <span className="text-emerald-400">
+                      <span style={{ color: "var(--border-2)" }}>·</span>
+                      <span style={{ color: "#1a7c32" }}>
                         <strong>{u.reporte.anuncios_nuevos}</strong> anuncios nuevos
                       </span>
-                      <span className="text-yellow-400">
+                      <span style={{ color: "var(--warning)" }}>
                         <strong>{u.reporte.anuncios_actualizados}</strong> actualizados
                       </span>
-                      <span className="text-slate-500">
+                      <span style={{ color: "var(--muted)" }}>
                         <strong>{u.reporte.anuncios_rechazados}</strong> idénticos
                       </span>
                     </div>
-                    <DataTable rows={u.preview_propiedades ?? []} title="🏗️ Preview propiedades" />
-                    <DataTable rows={u.preview_anuncios    ?? []} title="💰 Preview anuncios" />
+                    <DataTable rows={u.preview_propiedades ?? []} title="Preview propiedades" />
+                    <DataTable rows={u.preview_anuncios    ?? []} title="Preview anuncios" />
                   </>
                 ) : (
-                  <p className="text-sm text-red-400">{u.error}</p>
+                  <p className="text-sm" style={{ color: "var(--danger)" }}>{u.error}</p>
                 )}
               </div>
             </div>
@@ -243,19 +250,19 @@ export default function ETLPage() {
       )}
 
       {/* ── DB current data ─────────────────────────────────────────── */}
-      <div className="glass rounded-2xl overflow-hidden">
+      <div className="card overflow-hidden">
         <div
           className="flex items-center justify-between px-5 py-4"
-          style={{ borderBottom: "1px solid var(--border)" }}
+          style={{ borderBottom: "1px solid var(--border)", background: "#f9fafc" }}
         >
           <div className="flex items-center gap-2">
-            <span className="text-base">🗄️</span>
-            <h2 className="text-sm font-semibold text-slate-200">
+            <MdStorage size={18} style={{ color: "var(--primary)" }} />
+            <h2 className="text-sm font-semibold" style={{ color: "var(--primary)" }}>
               Datos en Supabase
             </h2>
             <span
-              className="text-xs px-2 py-0.5 rounded-full"
-              style={{ background: "rgba(34,211,238,0.12)", color: "#67e8f9" }}
+              className="text-xs px-2 py-0.5 rounded"
+              style={{ background: "#e8eef7", color: "var(--teal)" }}
             >
               {dbProp.length} props · {dbAnun.length} anuncios
             </span>
@@ -263,21 +270,22 @@ export default function ETLPage() {
           <button
             onClick={cargarBD}
             disabled={dbLoading}
-            className="btn-ghost px-3 py-1.5 rounded-lg text-xs font-medium"
+            className="btn-ghost flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium"
           >
-            {dbLoading ? <span className="flex items-center gap-1.5"><Spinner /> Cargando…</span> : "🔄 Refrescar"}
+            <MdOutlineRefresh size={15} />
+            {dbLoading ? <><Spinner dark /> Cargando…</> : "Refrescar"}
           </button>
         </div>
         <div className="p-5 space-y-4">
           {dbLoading ? (
-            <p className="text-slate-600 text-sm text-center py-4">Cargando desde Supabase…</p>
+            <p className="text-sm text-center py-4" style={{ color: "var(--muted)" }}>Cargando desde Supabase…</p>
           ) : dbProp.length > 0 || dbAnun.length > 0 ? (
             <>
-              <DataTable rows={dbProp} title="🏗️ Propiedades — últimas 20 filas" />
-              <DataTable rows={dbAnun} title="💰 Anuncios — últimas 20 filas" />
+              <DataTable rows={dbProp} title="Propiedades — últimas 20 filas" />
+              <DataTable rows={dbAnun} title="Anuncios — últimas 20 filas" />
             </>
           ) : (
-            <p className="text-slate-600 text-sm text-center py-4">
+            <p className="text-sm text-center py-4" style={{ color: "var(--muted)" }}>
               La BD está vacía. Sube un CSV para comenzar.
             </p>
           )}

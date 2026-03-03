@@ -2,39 +2,34 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MdOutlineTableChart, MdWbSunny, MdApartment } from "react-icons/md";
 
 const links = [
-  { href: "/etl",   label: "ETL Propiedades", icon: "📊" },
-  { href: "/clima", label: "Clima",           icon: "🌤️" },
+  { href: "/etl",   label: "ETL Propiedades", icon: <MdOutlineTableChart size={16} /> },
+  { href: "/clima", label: "Clima",           icon: <MdWbSunny size={16} /> },
 ];
 
 export default function Navbar() {
   const path = usePathname();
   return (
     <header
-      className="sticky top-0 z-50 border-b"
-      style={{
-        background: "rgba(6,8,15,0.7)",
-        borderColor: "var(--border)",
-        backdropFilter: "blur(24px)",
-        WebkitBackdropFilter: "blur(24px)",
-      }}
+      className="sticky top-0 z-50 border-b bg-white"
+      style={{ borderColor: "var(--border)", boxShadow: "0 1px 4px rgba(13,43,74,0.07)" }}
     >
       <div className="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
         {/* Logo */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           <div
-            className="w-7 h-7 rounded-lg flex items-center justify-center text-sm shrink-0"
-            style={{
-              background: "linear-gradient(135deg, #6366f1, #22d3ee)",
-              boxShadow: "0 0 14px rgba(99,102,241,0.5)",
-            }}
+            className="w-8 h-8 rounded flex items-center justify-center shrink-0 text-white"
+            style={{ background: "var(--primary)" }}
           >
-            🏠
+            <MdApartment size={18} />
           </div>
-          <span className="font-semibold text-sm">
-            <span className="glow-text font-bold">Inmobiliaria</span>
-            <span className="text-slate-500 ml-1 font-light hidden sm:inline">Medellín</span>
+          <span className="font-bold text-sm" style={{ color: "var(--primary)" }}>
+            Inmobiliaria
+            <span className="font-normal ml-1 hidden sm:inline" style={{ color: "var(--muted)" }}>
+              Medellín
+            </span>
           </span>
         </div>
 
@@ -46,20 +41,18 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                  active ? "text-white" : "text-slate-400 hover:text-slate-200"
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-sm font-medium transition-all ${
+                  active
+                    ? "text-white"
+                    : "hover:bg-gray-50"
                 }`}
                 style={
                   active
-                    ? {
-                        background: "rgba(99,102,241,0.18)",
-                        border: "1px solid rgba(129,140,248,0.3)",
-                        boxShadow: "0 0 14px rgba(99,102,241,0.22)",
-                      }
-                    : { border: "1px solid transparent" }
+                    ? { background: "var(--primary)", color: "#fff" }
+                    : { color: "var(--muted)", border: "1px solid transparent" }
                 }
               >
-                <span>{l.icon}</span>
+                {l.icon}
                 <span className="hidden sm:inline">{l.label}</span>
               </Link>
             );
