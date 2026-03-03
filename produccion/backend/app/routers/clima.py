@@ -9,6 +9,7 @@ GET  /clima/municipios    → lista de municipios disponibles
 import logging
 import unicodedata
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 import requests
 from fastapi import APIRouter, HTTPException, Query
@@ -85,7 +86,7 @@ def _fetch(session: requests.Session, mun: dict) -> dict:
         "temperatura_c":        round(cur["temperature_2m"], 1),
         "weather_code":         code,
         "descripcion_clima":    WMO_CODES.get(code, f"Código {code}"),
-        "ultima_actualizacion": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "ultima_actualizacion": datetime.now(ZoneInfo("America/Bogota")).strftime("%Y-%m-%d %H:%M:%S"),
     }
 
 

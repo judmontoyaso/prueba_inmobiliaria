@@ -22,6 +22,7 @@ function formatFecha(f: string | null | undefined) {
   return d.toLocaleString("es-CO", {
     day: "2-digit", month: "short", year: "numeric",
     hour: "2-digit", minute: "2-digit",
+    timeZone: "America/Bogota",
   });
 }
 

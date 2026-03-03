@@ -225,8 +225,8 @@ async def upload_csv(file: UploadFile = File(...)):
         db.table("propiedad").upsert(prop_rows[i : i + CHUNK], on_conflict="id_propiedad").execute()
     log.info("Propiedades upsert: %d", len(prop_rows))
 
-    # Upsert anuncios en lotes
-    anun_rows = [
+    # Upsert anuncios via función SQL (lógica de negocio en la BD)
+    anun_candidatos = [
         {
             "id_propiedad":      int(r["id_propiedad"]),
             "precio_venta":      int(r["precio_clean"]),
@@ -234,9 +234,20 @@ async def upload_csv(file: UploadFile = File(...)):
         }
         for _, r in da.iterrows()
     ]
-    for i in range(0, len(anun_rows), CHUNK):
-        db.table("anuncio").upsert(anun_rows[i : i + CHUNK], on_conflict="id_propiedad,fecha_publicacion").execute()
-    log.info("Anuncios upsert: %d", len(anun_rows))
+
+    n_anun_nuevos = 0
+    n_anun_actualizados = 0
+    n_anun_rechazados = 0
+    for i in range(0, len(anun_candidatos), CHUNK):
+        chunk = anun_candidatos[i : i + CHUNK]
+        res = db.rpc("upsert_anuncios", {"rows": chunk}).execute()
+        if res.data:
+            n_anun_nuevos      += res.data.get("nuevos", 0)
+            n_anun_actualizados += res.data.get("actualizados", 0)
+            n_anun_rechazados  += res.data.get("identicos", 0)
+
+    log.info("Anuncios → nuevos: %d | actualizados: %d | idénticos: %d",
+             n_anun_nuevos, n_anun_actualizados, n_anun_rechazados)
 
     # ── Preview para el frontend (IDs raw) ───────────────────────────────
     preview_prop = dp.head(20).rename(columns={
@@ -254,6 +265,9 @@ async def upload_csv(file: UploadFile = File(...)):
             **resultado["reporte"],
             "propiedades_nuevas":       n_nuevas,
             "propiedades_actualizadas": n_actualizadas,
+            "anuncios_nuevos":          n_anun_nuevos,
+            "anuncios_actualizados":    n_anun_actualizados,
+            "anuncios_rechazados":      n_anun_rechazados,
         },
         "preview_propiedades": preview_prop,
         "preview_anuncios":    preview_anun,

@@ -157,10 +157,9 @@ export default function ETLPage() {
                 <>
                   <ReporteStats reporte={u.reporte} />
                   <p className="text-xs text-green-400">
-                    {u.reporte.propiedades_validas.toLocaleString("es-CO")} propiedades •{" "}
-                    {u.reporte.anuncios_validos.toLocaleString("es-CO")} anuncios cargados •{" "}
-                    {u.reporte.propiedades_rechazadas.toLocaleString("es-CO")} rechazadas •{" "}
-                    {u.reporte.duplicados.toLocaleString("es-CO")} duplicados
+                    Props: {u.reporte.propiedades_nuevas} nuevas • {u.reporte.propiedades_actualizadas} actualizadas • {u.reporte.propiedades_rechazadas} rechazadas
+                    {" | "}
+                    Anuncios: {u.reporte.anuncios_nuevos} nuevos • {u.reporte.anuncios_actualizados} actualizados • {u.reporte.anuncios_rechazados} idénticos
                   </p>
                   <DataTable rows={u.preview_propiedades ?? []} title="🏗️ Preview propiedades (20 filas)" />
                   <DataTable rows={u.preview_anuncios ?? []}    title="💰 Preview anuncios (20 filas)" />

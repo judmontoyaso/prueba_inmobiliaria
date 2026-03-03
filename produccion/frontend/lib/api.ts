@@ -68,6 +68,9 @@ export interface Reporte {
   propiedades_nuevas: number;
   propiedades_actualizadas: number;
   anuncios_validos: number;
+  anuncios_nuevos: number;
+  anuncios_actualizados: number;
+  anuncios_rechazados: number;
   metraje_nulo: number;
   precio_nulo: number;
   sin_tipo: number;

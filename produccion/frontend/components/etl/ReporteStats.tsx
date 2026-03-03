@@ -3,11 +3,14 @@ import type { Reporte } from "@/lib/api";
 const STATS: { key: keyof Reporte; label: string; color?: string }[] = [
   { key: "filas_crudas",             label: "Filas crudas" },
   { key: "duplicados",               label: "Duplicados" },
-  { key: "propiedades_validas",      label: "Propiedades válidas" },
-  { key: "propiedades_nuevas",       label: "Nuevas en BD",        color: "text-green-400" },
-  { key: "propiedades_actualizadas", label: "Actualizadas en BD",  color: "text-yellow-400" },
-  { key: "propiedades_rechazadas",   label: "Rechazadas (sin zona)", color: "text-red-400" },
-  { key: "anuncios_validos",         label: "Anuncios ✓" },
+  { key: "propiedades_validas",      label: "Props válidas" },
+  { key: "propiedades_nuevas",       label: "Props nuevas",        color: "text-green-400" },
+  { key: "propiedades_actualizadas", label: "Props actualizadas",  color: "text-yellow-400" },
+  { key: "propiedades_rechazadas",   label: "Props rechazadas",    color: "text-red-400" },
+  { key: "anuncios_validos",         label: "Anuncios procesados" },
+  { key: "anuncios_nuevos",          label: "Anuncios nuevos",     color: "text-green-400" },
+  { key: "anuncios_actualizados",    label: "Anuncios actualizados", color: "text-yellow-400" },
+  { key: "anuncios_rechazados",      label: "Anuncios idénticos",   color: "text-slate-500" },
   { key: "metraje_nulo",             label: "Metraje nulo" },
   { key: "precio_nulo",              label: "Precio nulo" },
   { key: "sin_tipo",                 label: "Sin tipo" },
@@ -15,7 +18,7 @@ const STATS: { key: keyof Reporte; label: string; color?: string }[] = [
 
 export default function ReporteStats({ reporte }: { reporte: Reporte }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
       {STATS.map(({ key, label, color }) => (
         <div
           key={key}
