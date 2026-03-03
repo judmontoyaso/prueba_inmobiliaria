@@ -184,7 +184,20 @@ async def upload_csv(file: UploadFile = File(...)):
 
     # ── Cargar a Supabase ─────────────────────────────────────────────────
     db = get_db()
+    # Detectar cuáles IDs ya existen en la BD para distinguir nuevas vs actualizadas
+    ids_validas = [int(r["id_propiedad"]) for _, r in dp.iterrows()]
+    if ids_validas:
+        existing_resp = (db.table("propiedad")
+                          .select("id_propiedad")
+                          .in_("id_propiedad", ids_validas)
+                          .execute())
+        ids_en_db = {r["id_propiedad"] for r in existing_resp.data}
+    else:
+        ids_en_db = set()
 
+    ids_set = set(ids_validas)
+    n_nuevas       = len(ids_set - ids_en_db)
+    n_actualizadas = len(ids_set & ids_en_db)
     # Propiedades
     prop_rows = []
     for _, r in dp.iterrows():
@@ -232,30 +245,44 @@ async def upload_csv(file: UploadFile = File(...)):
     )
 
     return {
-        "reporte": resultado["reporte"],
+        "reporte": {
+            **resultado["reporte"],
+            "propiedades_nuevas":       n_nuevas,
+            "propiedades_actualizadas": n_actualizadas,
+        },
         "preview_propiedades": preview_prop,
         "preview_anuncios":    preview_anun,
     }
 
 
 @router.get("/propiedades")
-async def listar_propiedades(limit: int = 100, offset: int = 0):
-    """Lista propiedades desde Supabase con paginación."""
+async def listar_propiedades(limit: int = 20, offset: int = 0):
+    """Lista propiedades desde Supabase con paginación (campos planos)."""
     db = get_db()
     resp = (db.table("propiedad")
-              .select("*, tipo_inmueble(descripcion), zona(nombre), estrato(descripcion)")
+              .select("id_propiedad, metraje_m2, id_estrato, tipo_inmueble(descripcion), zona(nombre), estrato(descripcion)")
               .order("id_propiedad")
               .range(offset, offset + limit - 1)
               .execute())
-    return {"data": resp.data, "count": len(resp.data)}
+    # Aplanar objetos anidados
+    flat = []
+    for r in resp.data:
+        flat.append({
+            "id_propiedad": r["id_propiedad"],
+            "tipo":         (r.get("tipo_inmueble") or {}).get("descripcion", ""),
+            "zona":         (r.get("zona")          or {}).get("nombre", ""),
+            "estrato":      (r.get("estrato")        or {}).get("descripcion", ""),
+            "metraje_m2":   r["metraje_m2"],
+        })
+    return {"data": flat, "count": len(flat)}
 
 
 @router.get("/anuncios")
-async def listar_anuncios(limit: int = 100, offset: int = 0):
+async def listar_anuncios(limit: int = 20, offset: int = 0):
     """Lista anuncios desde Supabase con paginación."""
     db = get_db()
     resp = (db.table("anuncio")
-              .select("*, propiedad(id_propiedad)")
+              .select("id_anuncio, id_propiedad, precio_venta, fecha_publicacion")
               .order("fecha_publicacion", desc=True)
               .range(offset, offset + limit - 1)
               .execute())

@@ -27,8 +27,14 @@ export async function resetETL() {
   return res.json() as Promise<{ ok: boolean; mensaje: string }>;
 }
 
-export async function getPropiedades(limit = 100, offset = 0) {
+export async function getPropiedades(limit = 20, offset = 0) {
   const res = await fetch(`/api/etl/propiedades?limit=${limit}&offset=${offset}`);
+  if (!res.ok) throw new Error(res.statusText);
+  return res.json() as Promise<{ data: Record<string, unknown>[]; count: number }>;
+}
+
+export async function getAnuncios(limit = 20, offset = 0) {
+  const res = await fetch(`/api/etl/anuncios?limit=${limit}&offset=${offset}`);
   if (!res.ok) throw new Error(res.statusText);
   return res.json() as Promise<{ data: Record<string, unknown>[]; count: number }>;
 }
@@ -59,6 +65,8 @@ export interface Reporte {
   duplicados: number;
   propiedades_validas: number;
   propiedades_rechazadas: number;
+  propiedades_nuevas: number;
+  propiedades_actualizadas: number;
   anuncios_validos: number;
   metraje_nulo: number;
   precio_nulo: number;

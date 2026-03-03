@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { uploadCSV, resetETL, getPropiedades, type Reporte } from "@/lib/api";
+import { uploadCSV, resetETL, getPropiedades, getAnuncios, type Reporte } from "@/lib/api";
 import ReporteStats from "@/components/etl/ReporteStats";
 import DataTable from "@/components/etl/DataTable";
 
@@ -24,14 +24,16 @@ export default function ETLPage() {
   const [resetting, setResetting] = useState(false);
   const [uploads, setUploads]     = useState<UploadResult[]>([]);
   const [dbProp, setDbProp]       = useState<Row[]>([]);
+  const [dbAnun, setDbAnun]       = useState<Row[]>([]);
   const [dbLoading, setDbLoading] = useState(false);
 
-  // Carga datos existentes de la BD al montar
+  // Carga preview (20 filas) de ambas tablas al montar
   const cargarBD = useCallback(async () => {
     setDbLoading(true);
     try {
-      const res = await getPropiedades(100, 0);
-      setDbProp(res.data);
+      const [rp, ra] = await Promise.all([getPropiedades(20), getAnuncios(20)]);
+      setDbProp(rp.data);
+      setDbAnun(ra.data);
     } catch {
       // silencioso — la BD puede estar vacía
     } finally {
@@ -48,6 +50,7 @@ export default function ETLPage() {
       await resetETL();
       setUploads([]);
       setDbProp([]);
+      setDbAnun([]);
     } catch (e: unknown) {
       alert(e instanceof Error ? e.message : "Error al reiniciar");
     } finally {
@@ -184,8 +187,11 @@ export default function ETLPage() {
         </div>
         {dbLoading ? (
           <p className="text-slate-500 text-sm">Cargando desde Supabase…</p>
-        ) : dbProp.length > 0 ? (
-          <DataTable rows={dbProp} title="" />
+        ) : dbProp.length > 0 || dbAnun.length > 0 ? (
+          <div className="space-y-4">
+            <DataTable rows={dbProp} title="🏗️ Propiedades — preview 20 filas" />
+            <DataTable rows={dbAnun} title="💰 Anuncios — preview 20 filas" />
+          </div>
         ) : (
           <p className="text-slate-500 text-sm">La BD está vacía. Sube un CSV para comenzar.</p>
         )}

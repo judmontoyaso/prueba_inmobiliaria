@@ -1,5 +1,11 @@
 type Row = Record<string, unknown>;
 
+function cell(v: unknown): string {
+  if (v === null || v === undefined) return "";
+  if (typeof v === "object") return JSON.stringify(v);
+  return String(v);
+}
+
 export default function DataTable({ rows, title }: { rows: Row[]; title: string }) {
   if (!rows.length) return null;
   const keys = Object.keys(rows[0]);
@@ -33,7 +39,7 @@ export default function DataTable({ rows, title }: { rows: Row[]; title: string 
               >
                 {keys.map((k) => (
                   <td key={k} className="py-1.5 pr-4 whitespace-nowrap">
-                    {String(row[k] ?? "")}
+                    {cell(row[k])}
                   </td>
                 ))}
               </tr>
